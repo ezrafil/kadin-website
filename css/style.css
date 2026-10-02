@@ -405,18 +405,27 @@ section {
     position: relative;
     width: 100%;
     height: 520px;
+    left: 100px;
 }
 
 .hero-image-main-wrap {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 90%;
-    height: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.12);
     background-color: var(--slate-100);
+}
+
+.hero-image-main-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .editorial-placeholder-bg {
@@ -433,21 +442,24 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0);
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.15) 1px,
+        transparent 0
+    );
     background-size: 24px 24px;
     opacity: 0.6;
 }
 
 .hero-card-floating {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 65%;
+    bottom: -25px;
+    left: -25%;
+    width: 90%;
     background-color: var(--white);
     border-left: 4px solid var(--gold-accent);
-    padding: 1.75rem;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.08);
+    padding: 1.75rem 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.15);
     z-index: 10;
 }
 
@@ -455,12 +467,13 @@ section {
     font-size: 1rem;
     font-weight: 800;
     color: var(--navy-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .floating-card-body {
     font-size: 0.8rem;
     color: var(--slate-700);
+    line-height: 1.6;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
