@@ -9,8 +9,15 @@ h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}
 .section-desc{margin-bottom:2.5rem}
 .section-title .serif-italic,.editorial-italic{font-family:var(--font-serif);font-style:italic;font-weight:500}
 .agenda-arrow-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;border-radius:50%;color:#1261ff;border:1px solid #dfe5ec}
-.agenda-arrow-btn:empty:after{content:"↗";font-size:18px;font-weight:800}
 .agenda-arrow-btn:hover{background:#1261ff;color:#fff}
+.agenda-item-row{display:grid;grid-template-columns:80px minmax(0,1fr) 40px;align-items:center;gap:24px;min-height:172px;padding:24px!important;box-sizing:border-box}
+.agenda-date-box{width:80px;min-width:80px;margin-right:0}
+.agenda-info-wrap{min-width:0;padding-right:0}
+.agenda-meta-inline{gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.agenda-title{margin-bottom:6px}
+.agenda-action-wrap{width:40px;height:40px}
+.agenda-arrow-btn{width:40px;height:40px;min-width:40px;min-height:40px;flex:none}
+@media(max-width:640px){.agenda-item-row{grid-template-columns:minmax(0,1fr) 40px;gap:12px;min-height:0;padding:18px!important}.agenda-date-box{grid-column:1;flex-direction:row;align-items:baseline;gap:8px;width:auto;min-width:0;margin-bottom:0}.agenda-date-day{font-size:1.75rem}.agenda-info-wrap{grid-column:1 / -1;grid-row:2}.agenda-action-wrap{grid-column:2;grid-row:1;position:static;align-self:center}}
 .article-featured-image-frame{aspect-ratio:16/10;overflow:hidden;border-radius:16px;margin-bottom:1.25rem}
 .article-featured-image-frame img{transition:transform .5s ease}
 a:hover .article-featured-image-frame img{transform:scale(1.03)}
