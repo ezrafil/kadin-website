@@ -464,9 +464,11 @@ section {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
-   6. ECONOMIC PULSE SECTION (METRICS)
+   6. ECONOMIC PULSE SECTION (METRICS) - biru #1a5cff
    ───────────────────────────────────────────────────────────────────────── */
 .pulse-root {
+    --pulse-blue: #1a5cff;
+    --pulse-blue-light: #7da6ff;
     background-color: var(--slate-900);
     color: var(--white);
     padding: 6rem 0;
@@ -475,38 +477,38 @@ section {
 }
 
 .pulse-grid {
-    display: table;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     width: 100%;
-    table-layout: fixed;
 }
 
 .pulse-cell {
-    display: table-cell;
-    vertical-align: top;
-    padding: 0 2rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding: 2.25rem 1.75rem 2rem;
+    background: linear-gradient(180deg, rgba(26, 92, 255, 0.2), rgba(26, 92, 255, 0.05));
+    border: 1px solid rgba(26, 92, 255, 0.45);
+    border-top: 5px solid var(--pulse-blue);
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
 }
 
-.pulse-cell:first-child {
-    border-left: none;
-    padding-left: 0;
-}
-
-.pulse-cell:last-child {
-    padding-right: 0;
+.pulse-cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -15px rgba(26, 92, 255, 0.6);
 }
 
 .pulse-number {
     font-size: clamp(2.5rem, 4vw, 3.75rem);
     font-weight: 900;
     line-height: 1;
-    color: var(--gold-accent);
+    color: var(--pulse-blue);
     letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .pulse-number span.plus {
-    color: var(--white);
+    color: var(--pulse-blue);
     font-size: 0.7em;
     vertical-align: super;
 }
@@ -516,14 +518,14 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--pulse-blue-light);
     margin-bottom: 0.5rem;
 }
 
 .pulse-subtext {
     font-size: 0.85rem;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
