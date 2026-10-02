@@ -28,6 +28,14 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 .news-card-modern{display:flex;flex-direction:column}
 .news-card-modern a{margin-top:auto;padding-top:1rem}
 .news-card-modern h2{padding-right:28px}
+.news-hero-modern h1{line-height:1.04!important;letter-spacing:-.055em!important;margin:0 0 18px!important}
+.news-hero-modern p{max-width:900px;margin:0!important;line-height:1.75!important}
+.news-card-modern{padding:30px!important;min-height:290px}
+.news-card-modern:after{content:none!important}
+.news-card-kicker{margin-bottom:12px}
+.news-card-modern h2{margin:0 0 12px!important;padding-right:0!important;line-height:1.18!important}
+.news-card-modern p{margin:0!important}
+.news-card-modern a{padding-top:20px}
 .source-note-modern{padding:18px 22px;line-height:1.7}
 @media print{.header-root,.footer-root,.mobile-menu-overlay{display:none!important}}
 .nav-list{flex-wrap:nowrap}.nav-item-link,.btn-premium{white-space:nowrap}
@@ -43,3 +51,10 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 .hero-root{padding:0!important}
 .hero-layout{padding:56px 0 72px!important}
 .hero-image-main-wrap{margin-left:0!important}
+.article-modern-head{margin-bottom:30px}
+.article-modern h1{line-height:1.04!important;letter-spacing:-.045em!important;margin:0 0 20px!important}
+.article-modern .article-lead{margin:0!important;line-height:1.8!important}
+.article-modern-body p{margin:0 0 16px;line-height:1.85}
+.article-source-modern{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:28px;padding:0!important;text-align:center;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.article-source-modern a{display:flex;align-items:center;justify-content:center;align-self:center;min-width:240px;min-height:50px;margin-top:8px;padding:12px 24px;border:1px solid #0b1220;border-radius:10px;background:#0b1220!important;color:#fff!important;font-size:1rem;font-weight:700;text-align:center}
+@media(max-width:600px){.article-modern-head{margin-bottom:24px}.article-modern h1{font-size:clamp(38px,10vw,56px)!important}.article-source-modern{padding:0!important}.article-source-modern a{width:auto;min-width:240px}}
