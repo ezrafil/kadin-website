@@ -58,3 +58,312 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 .article-source-modern{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:28px;padding:0!important;text-align:center;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
 .article-source-modern a{display:flex;align-items:center;justify-content:center;align-self:center;min-width:240px;min-height:50px;margin-top:8px;padding:12px 24px;border:1px solid #0b1220;border-radius:10px;background:#0b1220!important;color:#fff!important;font-size:1rem;font-weight:700;text-align:center}
 @media(max-width:600px){.article-modern-head{margin-bottom:24px}.article-modern h1{font-size:clamp(38px,10vw,56px)!important}.article-source-modern{padding:0!important}.article-source-modern a{width:auto;min-width:240px}}
+
+/*AGENDA SINGLE PAGE*/
+
+#detail-agenda {
+    background: #fff;
+    padding: 80px 0 100px;
+    border-top: 1px solid #e5eaf0;
+}
+
+.agenda-modern-detail {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* LABEL ATAS */
+
+.agenda-modern-detail .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 14px;
+    margin-bottom: 24px;
+
+    background: #eef4ff;
+    border: 1px solid #d7e5ff;
+    border-radius: 999px;
+
+    color: #1261ff;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.agenda-modern-detail .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #1261ff;
+    border-radius: 50%;
+}
+
+
+/* JUDUL */
+
+.agenda-modern-detail h1 {
+    max-width: 950px;
+
+    margin: 0 0 22px !important;
+
+    color: #0b1220 !important;
+
+    font-size: clamp(46px, 5.5vw, 72px) !important;
+    font-weight: 800 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.05em !important;
+}
+
+
+/* DESKRIPSI */
+
+.agenda-modern-detail .article-lead {
+    max-width: 850px;
+
+    margin: 0 0 45px !important;
+
+    color: #657184 !important;
+
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+}
+
+
+/* =====================================================
+   4 INFO
+===================================================== */
+
+.agenda-facts-modern {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    margin: 0 0 65px !important;
+
+    background: #0e2347 !important;
+    border: none !important;
+    border-radius: 18px !important;
+
+    overflow: hidden !important;
+
+    box-shadow: 0 20px 50px rgba(14, 35, 71, .15) !important;
+}
+
+
+.agenda-facts-modern > div {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+
+    min-height: 145px !important;
+
+    padding: 27px 25px !important;
+
+    background: transparent !important;
+
+    border: 0 !important;
+    border-right: 1px solid rgba(255,255,255,.12) !important;
+}
+
+
+.agenda-facts-modern > div:last-child {
+    border-right: none !important;
+}
+
+
+/* LABEL */
+
+.agenda-facts-modern span {
+    display: block !important;
+
+    margin: 0 0 13px !important;
+
+    color: #8eadd8 !important;
+
+    font-size: 10px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .13em !important;
+    text-transform: uppercase !important;
+}
+
+
+/* ISI */
+
+.agenda-facts-modern strong {
+    display: block !important;
+
+    color: #ffffff !important;
+
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.55 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* GARIS BIRU */
+
+.agenda-facts-modern > div::before {
+    content: "";
+
+    display: block;
+
+    width: 32px;
+    height: 3px;
+
+    margin-bottom: 18px;
+
+    background: #4d91ff;
+    border-radius: 99px;
+}
+
+
+/* =====================================================
+   RINGKASAN
+===================================================== */
+
+.agenda-modern-body {
+    max-width: 850px !important;
+
+    margin: 0 !important;
+    padding: 0 0 0 30px !important;
+
+    border-left: 3px solid #1261ff !important;
+}
+
+
+.agenda-modern-body::before {
+    content: none !important;
+}
+
+
+.agenda-modern-body h2 {
+    margin: 0 0 22px !important;
+
+    color: #0b1220 !important;
+
+    font-size: 34px !important;
+    font-weight: 800 !important;
+
+    line-height: 1.15 !important;
+    letter-spacing: -.035em !important;
+}
+
+
+.agenda-modern-body p {
+    margin: 0 0 18px !important;
+
+    color: #475569 !important;
+
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+}
+
+
+/* =====================================================
+   TOMBOL SUMBER
+===================================================== */
+
+.modern-source-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-top: 28px !important;
+
+    padding: 14px 22px !important;
+
+    background: #0b1220 !important;
+    color: #fff !important;
+
+    border: 0 !important;
+    border-radius: 10px !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    text-decoration: none !important;
+
+    transition: .2s ease !important;
+}
+
+
+.modern-source-button:hover {
+    background: #1261ff !important;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .agenda-facts-modern {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .agenda-facts-modern > div {
+        border-bottom: 1px solid rgba(255,255,255,.12) !important;
+    }
+
+}
+
+
+/* =====================================================
+   HP
+===================================================== */
+
+@media (max-width: 600px) {
+
+    #detail-agenda {
+        padding: 55px 0 70px;
+    }
+
+    .agenda-modern-detail {
+        width: calc(100% - 30px);
+    }
+
+    .agenda-modern-detail h1 {
+        font-size: 40px !important;
+    }
+
+    .agenda-modern-detail .article-lead {
+        font-size: 15px !important;
+    }
+
+    .agenda-facts-modern {
+        grid-template-columns: 1fr !important;
+    }
+
+    .agenda-facts-modern > div {
+        min-height: auto !important;
+
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,.12) !important;
+    }
+
+    .agenda-facts-modern > div:last-child {
+        border-bottom: none !important;
+    }
+
+    .agenda-modern-body {
+        padding-left: 20px !important;
+    }
+
+    .agenda-modern-body h2 {
+        font-size: 28px !important;
+    }
+
+    .modern-source-button {
+        width: 100% !important;
+    }
+
+}
