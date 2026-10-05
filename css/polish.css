@@ -927,3 +927,42 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     }
 
 }
+/*NAVBAR ACTIVE - CLEAN UNDERLINE */
+
+.nav-item-link {
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* Menu yang sedang aktif */
+.nav-item-link.active,
+.nav-item-link[aria-current="page"] {
+    background: transparent !important;
+    color: #1261ff !important;
+    border-radius: 0 !important;
+}
+
+/* Hilangkan background saat hover juga */
+.nav-item-link:hover {
+    background: transparent !important;
+}
+
+/* Garis bawah menu aktif */
+.nav-item-link.active::after,
+.nav-item-link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -8px;
+
+    height: 2px;
+
+    background: #c7a36a;
+}
+
+/* Pastikan posisi garis mengikuti menu */
+.nav-item-link {
+    position: relative;
+}
