@@ -1420,3 +1420,161 @@ section {
     .agenda-date-day { font-size: 1.75rem; }
     .agenda-action-wrap { position: absolute; right: 0; top: 2.25rem; }
 }
+
+/* ===== Kartu Berita — KADIN Surabaya ===== */
+main .bcard-grid,
+main .bcard-grid *{box-sizing:border-box}
+
+main .bcard-grid{
+  max-width:1240px;
+  margin:0 auto;
+  padding:2.5rem 1.5rem 4rem;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:2rem;
+  align-items:stretch;
+}
+
+/* Kartu */
+main .bcard{
+  background:#fff;
+  border:1px solid #e6eaf0;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  margin:0;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+main .bcard:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(15,23,42,.10);
+}
+
+/* Gambar */
+main .bcard-media{
+  display:block;
+  width:100%;
+  height:250px;
+  background:linear-gradient(135deg,#0e2347,#1d3f7a);
+  overflow:hidden;
+}
+main .bcard-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+main .bcard:hover .bcard-media img{transform:scale(1.04)}
+
+/* Isi kartu */
+main .bcard-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:1.9rem 1.85rem 1.5rem;
+}
+main .bcard-meta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.5rem 1.25rem;
+  margin:0 0 1.5rem;
+  font-size:.92rem;
+  line-height:1.3;
+}
+main .bcard-cat{
+  color:var(--gold-accent,#b8975a);
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+main .bcard-meta time{
+  color:var(--navy-primary,#0e2347);
+  font-weight:700;
+}
+
+/* Judul: tinggi minimal 2 baris supaya antar kartu sejajar */
+main .bcard-title{
+  margin:0 0 1.5rem;
+  font-size:1.4rem;
+  line-height:1.35;
+  font-weight:800;
+  min-height:2.7em;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+main .bcard-title a{
+  color:var(--navy-primary,#0e2347);
+  text-decoration:none;
+}
+main .bcard-title a:hover{color:var(--gold-accent,#b8975a)}
+
+/* Ringkasan */
+main .bcard-excerpt{
+  margin:0 0 1.25rem;
+  color:#334155;
+  font-size:1rem;
+  line-height:1.7;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* Footer kartu */
+main .bcard-foot{
+  margin-top:auto;
+  padding-top:1rem;
+  border-top:1px solid #eef1f5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  font-size:.92rem;
+  color:#475569;
+  white-space:nowrap;
+}
+main .bcard-foot span{overflow:hidden;text-overflow:ellipsis;min-width:0}
+main .bcard-foot a{
+  color:var(--navy-primary,#0e2347);
+  font-weight:700;
+  text-decoration:none;
+  white-space:nowrap;
+}
+main .bcard-foot a:hover{color:var(--gold-accent,#b8975a)}
+
+/* Tablet */
+@media (max-width:1024px){
+  main .bcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* HP */
+@media (max-width:640px){
+  main .bcard-grid{grid-template-columns:1fr;padding:1.5rem 1rem 3rem;gap:1.5rem}
+  main .bcard-media{height:210px}
+  main .bcard-body{padding:1.5rem 1.4rem 1.3rem}
+  main .bcard-title{font-size:1.2rem;min-height:0}
+}
+
+/* Kartu tanpa foto: tampilkan logo KADIN */
+main .bcard-media--empty{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+}
+main .bcard-media--empty img{
+  width:auto;
+  height:96px;
+  max-width:60%;
+  object-fit:contain;
+  opacity:.9;
+}
+main .bcard:hover .bcard-media--empty img{transform:none}

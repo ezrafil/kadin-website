@@ -1,369 +1,608 @@
-/* Lapisan rapi — dimuat terakhir */
-:root{--font-sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-serif:"Newsreader",Georgia,serif}
-body{font-family:var(--font-sans)!important;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}
-*:focus-visible{outline:3px solid #1261ff!important;outline-offset:3px;border-radius:4px}
-.sr-only:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;margin:0;clip:auto;padding:12px 16px;background:#0b1220;color:#fff;z-index:2000;border-radius:8px}
-.brand-anchor img{height:44px;width:auto;display:block;object-fit:contain;border-radius:6px}
-.footer-root .brand-anchor img{background:#fff;padding:4px;border-radius:8px}
-.section-desc{margin-bottom:2.5rem}
-.section-title .serif-italic,.editorial-italic{font-family:var(--font-serif);font-style:italic;font-weight:500}
-.agenda-arrow-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;border-radius:50%;color:#1261ff;border:1px solid #dfe5ec}
-.agenda-arrow-btn:hover{background:#1261ff;color:#fff}
-.agenda-item-row{display:grid;grid-template-columns:80px minmax(0,1fr) 40px;align-items:center;gap:24px;min-height:172px;padding:24px!important;box-sizing:border-box}
-.agenda-date-box{width:80px;min-width:80px;margin-right:0}
-.agenda-info-wrap{min-width:0;padding-right:0}
-.agenda-meta-inline{gap:12px;margin-bottom:8px;flex-wrap:wrap}
-.agenda-title{margin-bottom:6px}
-.agenda-action-wrap{width:40px;height:40px}
-.agenda-arrow-btn{width:40px;height:40px;min-width:40px;min-height:40px;flex:none}
-@media(max-width:640px){.agenda-item-row{grid-template-columns:minmax(0,1fr) 40px;gap:12px;min-height:0;padding:18px!important}.agenda-date-box{grid-column:1;flex-direction:row;align-items:baseline;gap:8px;width:auto;min-width:0;margin-bottom:0}.agenda-date-day{font-size:1.75rem}.agenda-info-wrap{grid-column:1 / -1;grid-row:2}.agenda-action-wrap{grid-column:2;grid-row:1;position:static;align-self:center}}
-.article-featured-image-frame{aspect-ratio:16/10;overflow:hidden;border-radius:16px;margin-bottom:1.25rem}
-.article-featured-image-frame img{transition:transform .5s ease}
-a:hover .article-featured-image-frame img{transform:scale(1.03)}
-.news-row-item{padding-bottom:1.5rem;margin-bottom:1.5rem;border-bottom:1px solid #e5eaf0}
-.news-row-item:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
-.news-row-item h3{font-size:1.1rem;font-weight:700;margin:.35rem 0;line-height:1.3}
-.news-row-item p{font-size:.9rem;color:#475569;line-height:1.6}
-.news-card-modern{display:flex;flex-direction:column}
-.news-card-modern a{margin-top:auto;padding-top:1rem}
-.news-card-modern h2{padding-right:28px}
-.news-hero-modern h1{line-height:1.04!important;letter-spacing:-.055em!important;margin:0 0 18px!important}
-.news-hero-modern p{max-width:900px;margin:0!important;line-height:1.75!important}
-.news-card-modern{padding:30px!important;min-height:290px}
-.news-card-modern:after{content:none!important}
-.news-card-kicker{margin-bottom:12px}
-.news-card-modern h2{margin:0 0 12px!important;padding-right:0!important;line-height:1.18!important}
-.news-card-modern p{margin:0!important}
-.news-card-modern a{padding-top:20px}
-.source-note-modern{padding:18px 22px;line-height:1.7}
-@media print{.header-root,.footer-root,.mobile-menu-overlay{display:none!important}}
-.nav-list{flex-wrap:nowrap}.nav-item-link,.btn-premium{white-space:nowrap}
-.nav-wrapper{width:auto}.brand-wrapper{width:auto;min-width:230px}
-.article-featured-image-frame img{width:100%;height:100%;object-fit:cover}
-/* hero */
-.hero-root{min-height:0!important}
-.hero-layout{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;padding:72px 0 80px!important;gap:48px!important}
-.hero-content-cell,.hero-visual-cell{width:auto!important;display:block!important;max-width:none!important}
-.hero-main-heading{font-size:clamp(38px,4.6vw,64px)!important;line-height:1.04!important;letter-spacing:-.045em!important;max-width:none!important;margin-bottom:1.25rem}
-.hero-image-main-wrap{aspect-ratio:4/5;max-height:560px}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr;padding:48px 0 56px!important}.hero-main-heading{font-size:clamp(34px,9vw,48px)!important}.hero-image-main-wrap{aspect-ratio:16/11}}
-.hero-root{padding:0!important}
-.hero-layout{padding:56px 0 72px!important}
-.hero-image-main-wrap{margin-left:0!important}
-.article-modern-head{margin-bottom:30px}
-.article-modern h1{line-height:1.04!important;letter-spacing:-.045em!important;margin:0 0 20px!important}
-.article-modern .article-lead{margin:0!important;line-height:1.8!important}
-.article-modern-body p{margin:0 0 16px;line-height:1.85}
-.article-source-modern{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:28px;padding:0!important;text-align:center;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-.article-source-modern a{display:flex;align-items:center;justify-content:center;align-self:center;min-width:240px;min-height:50px;margin-top:8px;padding:12px 24px;border:1px solid #0b1220;border-radius:10px;background:#0b1220!important;color:#fff!important;font-size:1rem;font-weight:700;text-align:center}
-@media(max-width:600px){.article-modern-head{margin-bottom:24px}.article-modern h1{font-size:clamp(38px,10vw,56px)!important}.article-source-modern{padding:0!important}.article-source-modern a{width:auto;min-width:240px}}
+/* ==========================================================================
+   KADIN SURABAYA — LAPISAN RAPI (DIMUAT TERAKHIR)
+   ========================================================================== */
 
-/*AGENDA SINGLE PAGE*/
+:root {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+}
 
+body {
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+*:focus-visible {
+  outline: 3px solid #1261ff !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.sr-only:focus {
+  position: fixed;
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  padding: 12px 16px;
+  background: #0b1220;
+  color: #fff;
+  z-index: 2000;
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Brand & Common Elements
+   -------------------------------------------------------------------------- */
+.brand-anchor img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.footer-root .brand-anchor img {
+  background: #fff;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.section-desc {
+  margin-bottom: 2.5rem;
+}
+
+.section-title .serif-italic,
+.editorial-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.nav-list {
+  flex-wrap: nowrap;
+}
+
+.nav-item-link,
+.btn-premium {
+  white-space: nowrap;
+}
+
+.nav-wrapper {
+  width: auto;
+}
+
+.brand-wrapper {
+  width: auto;
+  min-width: 230px;
+}
+
+/* --------------------------------------------------------------------------
+   Agenda Row & Timeline
+   -------------------------------------------------------------------------- */
+.agenda-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #1261ff;
+  border: 1px solid #dfe5ec;
+  flex: none;
+}
+
+.agenda-arrow-btn:hover {
+  background: #1261ff;
+  color: #fff;
+}
+
+.agenda-item-row {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 24px;
+  min-height: 172px;
+  padding: 24px !important;
+  box-sizing: border-box;
+}
+
+.agenda-date-box {
+  width: 80px;
+  min-width: 80px;
+  margin-right: 0;
+}
+
+.agenda-info-wrap {
+  min-width: 0;
+  padding-right: 0;
+}
+
+.agenda-meta-inline {
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.agenda-title {
+  margin-bottom: 6px;
+}
+
+.agenda-action-wrap {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 640px) {
+  .agenda-item-row {
+    grid-template-columns: minmax(0, 1fr) 40px;
+    gap: 12px;
+    min-height: 0;
+    padding: 18px !important;
+  }
+  .agenda-date-box {
+    grid-column: 1;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    width: auto;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+  .agenda-date-day {
+    font-size: 1.75rem;
+  }
+  .agenda-info-wrap {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .agenda-action-wrap {
+    grid-column: 2;
+    grid-row: 1;
+    position: static;
+    align-self: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Article & News Modern Layout
+   -------------------------------------------------------------------------- */
+.article-featured-image-frame {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 1.25rem;
+}
+
+.article-featured-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+a:hover .article-featured-image-frame img {
+  transform: scale(1.03);
+}
+
+.news-row-item {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.news-row-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.news-row-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: .35rem 0;
+  line-height: 1.3;
+}
+
+.news-row-item p {
+  font-size: .9rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.news-card-modern {
+  display: flex;
+  flex-direction: column;
+  padding: 30px !important;
+  min-height: 290px;
+}
+
+.news-card-modern:after {
+  content: none !important;
+}
+
+.news-card-kicker {
+  margin-bottom: 12px;
+}
+
+.news-card-modern h2 {
+  margin: 0 0 12px !important;
+  padding-right: 0 !important;
+  line-height: 1.18 !important;
+  font-size: 25px;
+}
+
+.news-card-modern p {
+  margin: 0 !important;
+}
+
+.news-card-modern a {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.news-hero-modern h1 {
+  line-height: 1.04 !important;
+  letter-spacing: -.055em !important;
+  margin: 0 0 18px !important;
+}
+
+.news-hero-modern p {
+  max-width: 900px;
+  margin: 0 !important;
+  line-height: 1.75 !important;
+}
+
+.source-note-modern {
+  padding: 18px 22px;
+  line-height: 1.7;
+}
+
+@media print {
+  .header-root,
+  .footer-root,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section Overrides
+   -------------------------------------------------------------------------- */
+.hero-root {
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: center;
+  padding: 56px 0 72px !important;
+  gap: 48px !important;
+}
+
+.hero-content-cell,
+.hero-visual-cell {
+  width: auto !important;
+  display: block !important;
+  max-width: none !important;
+}
+
+.hero-main-heading {
+  font-size: clamp(38px, 4.6vw, 64px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.045em !important;
+  max-width: none !important;
+  margin-bottom: 1.25rem;
+}
+
+.hero-image-main-wrap {
+  aspect-ratio: 4/5;
+  max-height: 560px;
+  margin-left: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    padding: 48px 0 56px !important;
+  }
+  .hero-main-heading {
+    font-size: clamp(34px, 9vw, 48px) !important;
+  }
+  .hero-image-main-wrap {
+    aspect-ratio: 16/11;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Article Detail
+   -------------------------------------------------------------------------- */
+.article-modern-head {
+  margin-bottom: 30px;
+}
+
+.article-modern h1 {
+  line-height: 1.04 !important;
+  letter-spacing: -.045em !important;
+  margin: 0 0 20px !important;
+}
+
+.article-modern .article-lead {
+  margin: 0 !important;
+  line-height: 1.8 !important;
+}
+
+.article-modern-body p {
+  margin: 0 0 16px;
+  line-height: 1.85;
+}
+
+.article-source-modern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 0 !important;
+  text-align: center;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.article-source-modern a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 240px;
+  min-height: 50px;
+  margin-top: 8px;
+  padding: 12px 24px;
+  border: 1px solid #0b1220;
+  border-radius: 10px;
+  background: #0b1220 !important;
+  color: #fff !important;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .article-modern-head {
+    margin-bottom: 24px;
+  }
+  .article-modern h1 {
+    font-size: clamp(38px, 10vw, 56px) !important;
+  }
+  .article-source-modern {
+    padding: 0 !important;
+  }
+  .article-source-modern a {
+    width: auto;
+    min-width: 240px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Agenda Single Page Detail
+   -------------------------------------------------------------------------- */
 #detail-agenda {
-    background: #fff;
-    padding: 80px 0 100px;
-    border-top: 1px solid #e5eaf0;
+  background: #fff;
+  padding: 80px 0 100px;
+  border-top: 1px solid #e5eaf0;
 }
 
 .agenda-modern-detail {
-    width: min(1100px, calc(100% - 40px));
-    margin: 0 auto;
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
 }
 
-
-/* LABEL ATAS */
-
 .agenda-modern-detail .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 9px 14px;
-    margin-bottom: 24px;
-
-    background: #eef4ff;
-    border: 1px solid #d7e5ff;
-    border-radius: 999px;
-
-    color: #1261ff;
-
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  margin-bottom: 24px;
+  background: #eef4ff;
+  border: 1px solid #d7e5ff;
+  border-radius: 999px;
+  color: #1261ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
 }
 
 .agenda-modern-detail .eyebrow::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: #1261ff;
-    border-radius: 50%;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #1261ff;
+  border-radius: 50%;
 }
-
-
-/* JUDUL */
 
 .agenda-modern-detail h1 {
-    max-width: 950px;
-
-    margin: 0 0 22px !important;
-
-    color: #0b1220 !important;
-
-    font-size: clamp(46px, 5.5vw, 72px) !important;
-    font-weight: 800 !important;
-    line-height: 1.02 !important;
-    letter-spacing: -.05em !important;
+  max-width: 950px;
+  margin: 0 0 22px !important;
+  color: #0b1220 !important;
+  font-size: clamp(46px, 5.5vw, 72px) !important;
+  font-weight: 800 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.05em !important;
 }
-
-
-/* DESKRIPSI */
 
 .agenda-modern-detail .article-lead {
-    max-width: 850px;
-
-    margin: 0 0 45px !important;
-
-    color: #657184 !important;
-
-    font-size: 17px !important;
-    line-height: 1.8 !important;
+  max-width: 850px;
+  margin: 0 0 45px !important;
+  color: #657184 !important;
+  font-size: 17px !important;
+  line-height: 1.8 !important;
 }
 
-
-/* =====================================================
-   4 INFO
-===================================================== */
-
+/* 4 Info Facts Grid */
 .agenda-facts-modern {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-
-    margin: 0 0 65px !important;
-
-    background: #0e2347 !important;
-    border: none !important;
-    border-radius: 18px !important;
-
-    overflow: hidden !important;
-
-    box-shadow: 0 20px 50px rgba(14, 35, 71, .15) !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  margin: 0 0 65px !important;
+  background: #0e2347 !important;
+  border: none !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 50px rgba(14, 35, 71, .15) !important;
 }
-
 
 .agenda-facts-modern > div {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-
-    min-height: 145px !important;
-
-    padding: 27px 25px !important;
-
-    background: transparent !important;
-
-    border: 0 !important;
-    border-right: 1px solid rgba(255,255,255,.12) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  min-height: 145px !important;
+  padding: 27px 25px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(255, 255, 255, .12) !important;
 }
-
 
 .agenda-facts-modern > div:last-child {
-    border-right: none !important;
+  border-right: none !important;
 }
-
-
-/* LABEL */
 
 .agenda-facts-modern span {
-    display: block !important;
-
-    margin: 0 0 13px !important;
-
-    color: #8eadd8 !important;
-
-    font-size: 10px !important;
-    font-weight: 800 !important;
-
-    letter-spacing: .13em !important;
-    text-transform: uppercase !important;
+  display: block !important;
+  margin: 0 0 13px !important;
+  color: #8eadd8 !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: .13em !important;
+  text-transform: uppercase !important;
 }
-
-
-/* ISI */
 
 .agenda-facts-modern strong {
-    display: block !important;
-
-    color: #ffffff !important;
-
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    line-height: 1.55 !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
+  display: block !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.55 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
-
-
-/* GARIS BIRU */
 
 .agenda-facts-modern > div::before {
-    content: "";
-
-    display: block;
-
-    width: 32px;
-    height: 3px;
-
-    margin-bottom: 18px;
-
-    background: #4d91ff;
-    border-radius: 99px;
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  margin-bottom: 18px;
+  background: #4d91ff;
+  border-radius: 99px;
 }
 
-
-/* =====================================================
-   RINGKASAN
-===================================================== */
-
+/* Agenda Ringkasan Body */
 .agenda-modern-body {
-    max-width: 850px !important;
-
-    margin: 0 !important;
-    padding: 0 0 0 30px !important;
-
-    border-left: 3px solid #1261ff !important;
+  max-width: 850px !important;
+  margin: 0 !important;
+  padding: 0 0 0 30px !important;
+  border-left: 3px solid #1261ff !important;
 }
-
 
 .agenda-modern-body::before {
-    content: none !important;
+  content: none !important;
 }
-
 
 .agenda-modern-body h2 {
-    margin: 0 0 22px !important;
-
-    color: #0b1220 !important;
-
-    font-size: 34px !important;
-    font-weight: 800 !important;
-
-    line-height: 1.15 !important;
-    letter-spacing: -.035em !important;
+  margin: 0 0 22px !important;
+  color: #0b1220 !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.035em !important;
 }
-
 
 .agenda-modern-body p {
-    margin: 0 0 18px !important;
-
-    color: #475569 !important;
-
-    font-size: 16px !important;
-    line-height: 1.85 !important;
+  margin: 0 0 18px !important;
+  color: #475569 !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
 }
 
-
-/* =====================================================
-   TOMBOL SUMBER
-===================================================== */
-
+/* Modern Source Button */
 .modern-source-button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    margin-top: 28px !important;
-
-    padding: 14px 22px !important;
-
-    background: #0b1220 !important;
-    color: #fff !important;
-
-    border: 0 !important;
-    border-radius: 10px !important;
-
-    font-size: 14px !important;
-    font-weight: 700 !important;
-
-    text-decoration: none !important;
-
-    transition: .2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 28px !important;
+  padding: 14px 22px !important;
+  background: #0b1220 !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: .2s ease !important;
 }
-
 
 .modern-source-button:hover {
-    background: #1261ff !important;
-    transform: translateY(-2px);
+  background: #1261ff !important;
+  transform: translateY(-2px);
 }
 
-
-/* =====================================================
-   TABLET
-===================================================== */
-
+/* Responsive Adjustments for Agenda Detail */
 @media (max-width: 900px) {
-
-    .agenda-facts-modern {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-
-    .agenda-facts-modern > div {
-        border-bottom: 1px solid rgba(255,255,255,.12) !important;
-    }
-
+  .agenda-facts-modern {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .agenda-facts-modern > div {
+    border-bottom: 1px solid rgba(255, 255, 255, .12) !important;
+  }
 }
-
-
-/* =====================================================
-   HP
-===================================================== */
 
 @media (max-width: 600px) {
-
-    #detail-agenda {
-        padding: 55px 0 70px;
-    }
-
-    .agenda-modern-detail {
-        width: calc(100% - 30px);
-    }
-
-    .agenda-modern-detail h1 {
-        font-size: 40px !important;
-    }
-
-    .agenda-modern-detail .article-lead {
-        font-size: 15px !important;
-    }
-
-    .agenda-facts-modern {
-        grid-template-columns: 1fr !important;
-    }
-
-    .agenda-facts-modern > div {
-        min-height: auto !important;
-
-        border-right: none !important;
-        border-bottom: 1px solid rgba(255,255,255,.12) !important;
-    }
-
-    .agenda-facts-modern > div:last-child {
-        border-bottom: none !important;
-    }
-
-    .agenda-modern-body {
-        padding-left: 20px !important;
-    }
-
-    .agenda-modern-body h2 {
-        font-size: 28px !important;
-    }
-
-    .modern-source-button {
-        width: 100% !important;
-    }
-
+  #detail-agenda {
+    padding: 55px 0 70px;
+  }
+  .agenda-modern-detail {
+    width: calc(100% - 30px);
+  }
+  .agenda-modern-detail h1 {
+    font-size: 40px !important;
+  }
+  .agenda-modern-detail .article-lead {
+    font-size: 15px !important;
+  }
+  .agenda-facts-modern {
+    grid-template-columns: 1fr !important;
+  }
+  .agenda-facts-modern > div {
+    min-height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .12) !important;
+  }
+  .agenda-facts-modern > div:last-child {
+    border-bottom: none !important;
+  }
+  .agenda-modern-body {
+    padding-left: 20px !important;
+  }
+  .agenda-modern-body h2 {
+    font-size: 28px !important;
+  }
+  .modern-source-button {
+    width: 100% !important;
+  }
 }
