@@ -367,3 +367,11 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     }
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#kontak {
+    scroll-margin-top: 100px;
+}
