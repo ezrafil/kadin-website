@@ -1113,6 +1113,36 @@ body::before {
     background: var(--theme-gold) !important;
 }
 
+.nav-list {
+    align-items: center !important;
+}
+
+.nav-item-link {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+
+    height: 48px !important;
+    padding: 0 12px !important;
+
+    line-height: 1 !important;
+}
+
+/* Garis bawah */
+.nav-item-link::after,
+.nav-item-link.active::after,
+.nav-item-link.is-active::after,
+.nav-item-link[aria-current="page"]::after {
+    bottom: 0 !important;
+    height: 2px !important;
+}
+
+/* Aktif */
+.nav-item-link.active::after,
+.nav-item-link.is-active::after,
+.nav-item-link[aria-current="page"]::after {
+    background: #c7a36a !important;
+}
 
 /* =========================================================
    REGISTRASI ANGGOTA
@@ -1238,6 +1268,88 @@ body::before {
     color: var(--theme-navy) !important;
 }
 
+.cta-root {
+    padding: 80px 0 !important;
+}
+
+.cta-panel {
+    min-height: 440px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 60px 80px !important;
+}
+
+.cta-panel-layout {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.5fr) auto !important;
+
+    align-items: center !important;
+    gap: 70px !important;
+}
+
+/* Bagian teks */
+.cta-text-cell {
+    align-self: center !important;
+}
+
+.cta-title {
+    margin-top: 0 !important;
+}
+
+.cta-desc {
+    margin-bottom: 0 !important;
+}
+
+/* Tombol kanan benar-benar di tengah */
+.cta-panel-layout > .btn-premium {
+    align-self: center !important;
+    justify-self: center !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .cta-panel {
+        min-height: auto !important;
+        padding: 50px 40px !important;
+    }
+
+    .cta-panel-layout {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .cta-panel-layout > .btn-premium {
+        justify-self: start !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cta-root {
+        padding: 55px 0 !important;
+    }
+
+    .cta-panel {
+        padding: 38px 25px !important;
+    }
+
+    .cta-panel-layout > .btn-premium {
+        width: 100% !important;
+        justify-self: stretch !important;
+    }
+}
 
 /* =========================================================
    STAT / PULSE
