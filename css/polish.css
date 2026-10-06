@@ -929,22 +929,18 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 }
 /*NAVBAR ACTIVE - CLEAN UNDERLINE */
 
+/* Navbar */
 .nav-item-link {
+    position: relative;
     background: transparent !important;
     border-radius: 0 !important;
 }
 
-/* Menu yang sedang aktif */
+/* Menu aktif */
 .nav-item-link.active,
 .nav-item-link[aria-current="page"] {
     background: transparent !important;
-    color: #1261ff !important;
-    border-radius: 0 !important;
-}
-
-/* Hilangkan background saat hover juga */
-.nav-item-link:hover {
-    background: transparent !important;
+    color: #c7a36a !important;
 }
 
 /* Garis bawah menu aktif */
@@ -952,19 +948,18 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 .nav-item-link[aria-current="page"]::after {
     content: "";
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: -8px;
 
     height: 2px;
-
     background: #c7a36a;
 }
 
-/* Pastikan posisi garis mengikuti menu */
-.nav-item-link {
-    position: relative;
+/* Hover */
+.nav-item-link:hover {
+    background: transparent !important;
+    color: #c7a36a !important;
 }
 
 /* ===== Paginasi Berita ===== */
@@ -1011,4 +1006,927 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     .news-pagination { padding: 2rem 0 3.5rem; }
     .news-pagination-inner { justify-content: center; text-align: center; padding-top: 2rem; }
     .page-btn { min-width: 42px; height: 42px; font-size: .95rem; padding: 0 .7rem; }
+}
+
+/* =========================================================
+   KADIN SURABAYA — UNIFIED NAVY & GOLD THEME
+   Tempel PALING BAWAH CSS
+========================================================= */
+
+:root {
+    --du-ink: #0b1220;
+    --du-navy: #0e2347;
+
+    /* aksen utama */
+    --du-blue: #c7a36a;
+    --du-cyan: #d8bd91;
+    --du-gold: #c7a36a;
+
+    /* background */
+    --du-paper: #f7f5f1;
+    --du-card: #ffffff;
+
+    /* border & text */
+    --du-line: #e4ded4;
+    --du-muted: #667085;
+
+    --du-radius: 16px;
+    --du-shadow: 0 18px 45px rgba(14, 35, 71, .10);
+
+    --theme-navy: #0e2347;
+    --theme-gold: #c7a36a;
+    --theme-gold-soft: #f4ede3;
+    --theme-paper: #f7f5f1;
+    --theme-white: #ffffff;
+}
+
+
+/* =========================================================
+   BODY / BACKGROUND
+========================================================= */
+
+body {
+    background: var(--theme-paper) !important;
+    color: var(--du-ink) !important;
+}
+
+body::before {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(199,163,106,.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(199,163,106,.035) 1px,
+            transparent 1px
+        ) !important;
+
+    background-size: 48px 48px !important;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.header-root {
+    background: rgba(255,255,255,.96) !important;
+    border-bottom: 1px solid #ebe5dc !important;
+
+    box-shadow:
+        0 5px 20px rgba(14,35,71,.05) !important;
+}
+
+
+/* menu biasa */
+
+.nav-item-link {
+    background: transparent !important;
+    color: var(--theme-navy) !important;
+}
+
+
+/* hover */
+
+.nav-item-link:hover {
+    background: transparent !important;
+    color: var(--theme-gold) !important;
+}
+
+
+/* menu aktif */
+
+.nav-item-link.active,
+.nav-item-link.is-active,
+.nav-item-link[aria-current="page"] {
+    background: transparent !important;
+    color: var(--theme-gold) !important;
+}
+
+
+/* underline */
+
+.nav-item-link.active::after,
+.nav-item-link.is-active::after,
+.nav-item-link[aria-current="page"]::after {
+    background: var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   REGISTRASI ANGGOTA
+========================================================= */
+
+.header-root .btn-premium.primary {
+    background: var(--theme-navy) !important;
+    border-color: var(--theme-navy) !important;
+    color: #fff !important;
+}
+
+.header-root .btn-premium.primary:hover {
+    background: var(--theme-gold) !important;
+    border-color: var(--theme-gold) !important;
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-root {
+    background: var(--theme-navy) !important;
+}
+
+
+/* lingkaran dekorasi */
+
+.hero-root::after {
+    border-color: rgba(199,163,106,.20) !important;
+
+    box-shadow:
+        0 0 0 55px rgba(199,163,106,.035),
+        0 0 0 110px rgba(199,163,106,.02) !important;
+}
+
+
+/* badge hero */
+
+.hero-tagline-wrap {
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(199,163,106,.35) !important;
+}
+
+.hero-tagline-text {
+    color: var(--theme-gold) !important;
+}
+
+.hero-tagline-dot {
+    background: var(--theme-gold) !important;
+}
+
+
+/* judul */
+
+.hero-main-heading {
+    color: #fff !important;
+}
+
+
+/* tulisan italic */
+
+.editorial-italic,
+.hero-main-heading .editorial-italic {
+    color: #d7b77f !important;
+}
+
+
+/* deskripsi */
+
+.hero-description {
+    color: #c8d1df !important;
+}
+
+
+/* frame gambar */
+
+.hero-frame-container {
+    border-color: rgba(199,163,106,.30) !important;
+
+    background:
+        rgba(255,255,255,.05) !important;
+}
+
+
+/* floating card */
+
+.hero-card-floating {
+    border-left: 4px solid var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-root .btn-premium.primary {
+    background: var(--theme-gold) !important;
+    border-color: var(--theme-gold) !important;
+    color: var(--theme-navy) !important;
+}
+
+.hero-root .btn-premium.primary:hover {
+    background: #fff !important;
+    border-color: #fff !important;
+    color: var(--theme-navy) !important;
+}
+
+
+.hero-root .btn-premium.secondary {
+    background: transparent !important;
+
+    border:
+        1px solid rgba(255,255,255,.35) !important;
+
+    color: #fff !important;
+}
+
+.hero-root .btn-premium.secondary:hover {
+    background: var(--theme-gold) !important;
+    border-color: var(--theme-gold) !important;
+    color: var(--theme-navy) !important;
+}
+
+
+/* =========================================================
+   STAT / PULSE
+========================================================= */
+
+.pulse-root {
+    background: #fff !important;
+}
+
+.pulse-number {
+    color: var(--theme-gold) !important;
+}
+
+.pulse-label {
+    color: var(--theme-navy) !important;
+}
+
+.pulse-cell {
+    border-color: #e7dfd4 !important;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section-kicker {
+    color: var(--theme-gold) !important;
+}
+
+.section-title {
+    color: var(--theme-navy) !important;
+}
+
+.section-title .serif-italic {
+    color: var(--theme-gold) !important;
+}
+
+.section-desc {
+    color: var(--du-muted) !important;
+}
+
+
+/* =========================================================
+   BENTO / LAYANAN
+========================================================= */
+
+.bento-cell {
+    background: #fff !important;
+    border-color: #e6e0d7 !important;
+}
+
+
+/* garis kiri */
+
+.bento-cell::before {
+    background:
+        linear-gradient(
+            var(--theme-navy),
+            var(--theme-gold)
+        ) !important;
+}
+
+
+.bento-cell:hover {
+    border-color: #d8c6a8 !important;
+
+    box-shadow:
+        0 18px 45px rgba(14,35,71,.10) !important;
+}
+
+
+.bento-headline {
+    color: var(--theme-navy) !important;
+}
+
+
+.bento-icon-wrapper {
+    background: var(--theme-gold-soft) !important;
+    border-color: #e5d6c0 !important;
+    color: var(--theme-navy) !important;
+}
+
+
+.bento-action-link {
+    color: var(--theme-navy) !important;
+}
+
+.bento-action-link:hover {
+    color: var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   AGENDA
+========================================================= */
+
+.agenda-root {
+    background: #f2eee8 !important;
+}
+
+
+.agenda-flagship-card {
+    background: var(--theme-navy) !important;
+}
+
+
+.flagship-badge {
+    color: #dfc493 !important;
+}
+
+
+.flagship-title {
+    color: #fff !important;
+}
+
+
+.flagship-meta {
+    color: #c9d3e1 !important;
+}
+
+
+/* timeline */
+
+.timeline-container {
+    border-left-color: #d8c6aa !important;
+}
+
+
+/* agenda card */
+
+.agenda-item-row {
+    background: #fff !important;
+    border-color: #e5ded4 !important;
+}
+
+
+.agenda-item-row:hover {
+    border-color: #d1b88e !important;
+}
+
+
+/* tanggal */
+
+.agenda-date-box {
+    background: var(--theme-gold-soft) !important;
+}
+
+.agenda-date-day {
+    color: var(--theme-navy) !important;
+}
+
+.agenda-date-month {
+    color: var(--theme-gold) !important;
+}
+
+
+/* kategori */
+
+.agenda-category-tag {
+    background: var(--theme-gold-soft) !important;
+    color: #967345 !important;
+}
+
+
+/* arrow */
+
+.agenda-arrow-btn {
+    border-color: #ddd4c7 !important;
+    color: var(--theme-navy) !important;
+}
+
+.agenda-arrow-btn::before {
+    color: var(--theme-navy) !important;
+}
+
+.agenda-item-row:hover .agenda-arrow-btn,
+.agenda-arrow-btn:hover {
+    background: var(--theme-gold) !important;
+    border-color: var(--theme-gold) !important;
+}
+
+.agenda-item-row:hover .agenda-arrow-btn::before,
+.agenda-arrow-btn:hover::before {
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-card-modern {
+    background: #fff !important;
+    border-color: #e5ded4 !important;
+}
+
+
+.news-card-modern:hover {
+    border-color: #d1b88e !important;
+}
+
+
+.news-card-kicker {
+    color: var(--theme-gold) !important;
+}
+
+
+.news-card-modern h2 {
+    color: var(--theme-navy) !important;
+}
+
+
+.news-card-modern a {
+    color: var(--theme-navy) !important;
+}
+
+.news-card-modern a:hover {
+    color: var(--theme-gold) !important;
+}
+
+
+/* featured */
+
+.news-card-featured {
+    background: var(--theme-navy) !important;
+}
+
+.news-card-featured h2 {
+    color: #fff !important;
+}
+
+.news-card-featured .news-card-kicker {
+    color: #d7b77f !important;
+}
+
+.news-card-featured a {
+    color: #d7b77f !important;
+}
+
+
+/* =========================================================
+   NEWS SINGLE
+========================================================= */
+
+.news-category {
+    background: var(--theme-gold-soft) !important;
+    border-color: #e5d5bd !important;
+    color: #9b7543 !important;
+}
+
+
+.news-info-label {
+    color: var(--theme-gold) !important;
+}
+
+
+.news-highlight {
+    background: var(--theme-navy) !important;
+}
+
+
+.highlight-label {
+    color: #d7b77f !important;
+}
+
+
+/* =========================================================
+   AGENDA DETAIL
+========================================================= */
+
+.agenda-modern-detail .eyebrow {
+    background: var(--theme-gold-soft) !important;
+    border-color: #e5d5bd !important;
+    color: #9b7543 !important;
+}
+
+.agenda-modern-detail .eyebrow::before {
+    background: var(--theme-gold) !important;
+}
+
+
+.agenda-facts-modern {
+    background: var(--theme-navy) !important;
+}
+
+
+.agenda-facts-modern span {
+    color: #d6bb8c !important;
+}
+
+
+.agenda-facts-modern > div::before {
+    background: var(--theme-gold) !important;
+}
+
+
+.agenda-modern-body {
+    border-left-color: var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   GLOBAL BUTTONS
+========================================================= */
+
+.modern-source-button,
+.news-source-button,
+.news-back-button {
+    background: var(--theme-navy) !important;
+    border-color: var(--theme-navy) !important;
+    color: #fff !important;
+}
+
+
+.modern-source-button:hover,
+.news-source-button:hover,
+.news-back-button:hover {
+    background: var(--theme-gold) !important;
+    border-color: var(--theme-gold) !important;
+    color: #fff !important;
+
+    box-shadow:
+        0 10px 25px rgba(199,163,106,.20) !important;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.article-source-modern a {
+    background: var(--theme-navy) !important;
+    border-color: var(--theme-navy) !important;
+    color: #fff !important;
+}
+
+.article-source-modern a:hover {
+    background: var(--theme-gold) !important;
+    border-color: var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+*:focus-visible {
+    outline-color: var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-root {
+    background: var(--theme-navy) !important;
+}
+
+
+.footer-root .footer-link:hover {
+    color: var(--theme-gold) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .mobile-menu-overlay {
+        background: #fff !important;
+    }
+
+    .mobile-menu-overlay .nav-item-link {
+        color: var(--theme-navy) !important;
+        background: transparent !important;
+    }
+
+    .mobile-menu-overlay .nav-item-link:hover,
+    .mobile-menu-overlay .nav-item-link.active,
+    .mobile-menu-overlay .nav-item-link.is-active,
+    .mobile-menu-overlay .nav-item-link[aria-current="page"] {
+        color: var(--theme-gold) !important;
+        background: transparent !important;
+    }
+
+    .mobile-menu-overlay .btn-premium {
+        background: var(--theme-navy) !important;
+        border-color: var(--theme-navy) !important;
+        color: #fff !important;
+    }
+
+    .mobile-menu-overlay .btn-premium:hover {
+        background: var(--theme-gold) !important;
+        border-color: var(--theme-gold) !important;
+    }
+}
+
+/* =========================================
+   REGISTRASI ANGGOTA - DESKTOP
+========================================= */
+
+.header-root .btn-premium {
+    background: #0e2347 !important;
+    border-color: #0e2347 !important;
+    color: #ffffff !important;
+    transition: all .25s ease;
+}
+
+.header-root .btn-premium:hover {
+    background: #c7a36a !important;
+    border-color: #c7a36a !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+
+/*REGISTRASI ANGGOTA - MOBILE*/
+
+.mobile-menu-overlay .btn-premium,
+.mobile-menu-overlay .mobile-cta,
+.mobile-nav .btn-premium {
+    background: #0e2347 !important;
+    border-color: #0e2347 !important;
+    color: #ffffff !important;
+}
+
+.mobile-menu-overlay .btn-premium:hover,
+.mobile-menu-overlay .mobile-cta:hover,
+.mobile-nav .btn-premium:hover {
+    background: #c7a36a !important;
+    border-color: #c7a36a !important;
+    color: #ffffff !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    .mobile-menu-overlay .btn-premium,
+    .mobile-menu-overlay .mobile-cta,
+    .mobile-nav .btn-premium {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+
+        background: #0e2347 !important;
+        color: #ffffff !important;
+
+        border: 1px solid #0e2347 !important;
+        border-radius: 10px;
+    }
+}
+
+/* =========================================================
+   GLOBAL BUTTON SYSTEM — KADIN SURABAYA
+   Navy + Gold
+========================================================= */
+
+:root {
+    --btn-navy: #0e2347;
+    --btn-navy-hover: #162f5c;
+    --btn-gold: #c7a36a;
+    --btn-white: #ffffff;
+}
+
+
+/* =========================================================
+   BASE BUTTON
+========================================================= */
+
+.btn-premium,
+.modern-source-button,
+.news-source-button,
+.news-back-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-height: 46px;
+
+    border-radius: 10px !important;
+
+    font-weight: 700 !important;
+    text-decoration: none !important;
+
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease !important;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   Contoh:
+   - Registrasi Anggota
+   - Eksplorasi Agenda
+   - Lihat Detail
+   - Tombol Sumber
+========================================================= */
+
+.btn-premium.primary,
+.modern-source-button,
+.news-source-button,
+.news-back-button {
+    background: var(--btn-navy) !important;
+    border: 1px solid var(--btn-navy) !important;
+    color: var(--btn-white) !important;
+
+    box-shadow: none !important;
+}
+
+
+/* HOVER PRIMARY */
+
+.btn-premium.primary:hover,
+.modern-source-button:hover,
+.news-source-button:hover,
+.news-back-button:hover {
+    background: var(--btn-gold) !important;
+    border-color: var(--btn-gold) !important;
+    color: var(--btn-white) !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(199, 163, 106, .22) !important;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   Contoh: Layanan Advokasi
+========================================================= */
+
+.btn-premium.secondary {
+    background: transparent !important;
+
+    border: 1px solid rgba(255,255,255,.30) !important;
+
+    color: var(--btn-white) !important;
+
+    box-shadow: none !important;
+}
+
+
+/* SECONDARY HOVER */
+
+.btn-premium.secondary:hover {
+    background: var(--btn-gold) !important;
+    border-color: var(--btn-gold) !important;
+    color: var(--btn-white) !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   AGENDA ARROW BUTTON
+========================================================= */
+
+.agenda-arrow-btn {
+    background: transparent !important;
+
+    border: 1px solid #d9e0e8 !important;
+
+    color: var(--btn-navy) !important;
+
+    transition: all .25s ease !important;
+}
+
+.agenda-arrow-btn::before {
+    color: var(--btn-navy) !important;
+}
+
+
+/* HOVER AGENDA */
+
+.agenda-item-row:hover .agenda-arrow-btn,
+.agenda-arrow-btn:hover {
+    background: var(--btn-gold) !important;
+    border-color: var(--btn-gold) !important;
+
+    transform: translateX(3px);
+}
+
+.agenda-item-row:hover .agenda-arrow-btn::before,
+.agenda-arrow-btn:hover::before {
+    color: var(--btn-white) !important;
+}
+
+
+/* =========================================================
+   LINK BUTTON DALAM CARD
+========================================================= */
+
+.bento-action-link,
+.news-card-modern a {
+    color: var(--btn-navy) !important;
+    font-weight: 700 !important;
+    transition: color .2s ease !important;
+}
+
+.bento-action-link:hover,
+.news-card-modern a:hover {
+    color: var(--btn-gold) !important;
+}
+
+
+/* =========================================================
+   HERO KHUSUS BACKGROUND NAVY
+========================================================= */
+
+.hero-root .btn-premium.primary {
+    background: var(--btn-gold) !important;
+    border-color: var(--btn-gold) !important;
+    color: var(--btn-navy) !important;
+}
+
+.hero-root .btn-premium.primary:hover {
+    background: var(--btn-white) !important;
+    border-color: var(--btn-white) !important;
+    color: var(--btn-navy) !important;
+}
+
+
+/* =========================================================
+   HEADER — REGISTRASI ANGGOTA
+========================================================= */
+
+.header-root .btn-premium.primary {
+    background: var(--btn-navy) !important;
+    border-color: var(--btn-navy) !important;
+    color: var(--btn-white) !important;
+}
+
+.header-root .btn-premium.primary:hover {
+    background: var(--btn-gold) !important;
+    border-color: var(--btn-gold) !important;
+    color: var(--btn-white) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .mobile-menu-overlay .btn-premium,
+    .mobile-nav .btn-premium {
+        width: 100% !important;
+
+        background: var(--btn-navy) !important;
+        border: 1px solid var(--btn-navy) !important;
+
+        color: var(--btn-white) !important;
+
+        text-align: center;
+        justify-content: center;
+
+        border-radius: 10px !important;
+    }
+
+    .mobile-menu-overlay .btn-premium:hover,
+    .mobile-nav .btn-premium:hover {
+        background: var(--btn-gold) !important;
+        border-color: var(--btn-gold) !important;
+        color: var(--btn-white) !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE FULL WIDTH BUTTON
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .modern-source-button,
+    .news-source-button,
+    .news-back-button {
+        width: 100% !important;
+    }
+
 }

@@ -9,7 +9,7 @@
     --slate-100: #f1f5f9;
     --slate-50:  #f8fafc;
     
-    --navy-primary: #0a2540;
+    --navy-primary: #000000;
     --navy-light:   #639fab;
     
     --gold-accent:     #c5a880;
@@ -515,15 +515,8 @@ section {
     font-size: clamp(2.5rem, 4vw, 3.75rem);
     font-weight: 900;
     line-height: 1;
-    color: var(--pulse-blue);
     letter-spacing: -0.02em;
     margin-bottom: 0.75rem;
-}
-
-.pulse-number span.plus {
-    color: var(--pulse-blue);
-    font-size: 0.7em;
-    vertical-align: super;
 }
 
 .pulse-label {
@@ -531,7 +524,6 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-weight: 700;
-    color: var(--pulse-blue-light);
     margin-bottom: 0.5rem;
 }
 
