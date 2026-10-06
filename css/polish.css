@@ -2042,3 +2042,55 @@ body::before {
     }
 
 }
+
+/* ==========================================================
+   FIX KONTRAS FOOTER (latar navy)
+   Tempel di PALING BAWAH css/polish.css
+   ========================================================== */
+
+/* Logo & nama brand di footer */
+.footer-root .brand-title {
+  color: #ffffff !important;
+}
+.footer-root .brand-subtitle {
+  color: #e6c987 !important;   /* emas terang, jelas di atas navy */
+  opacity: 1 !important;
+}
+
+/* Deskripsi & teks paragraf footer */
+.footer-root .footer-brand-desc,
+.footer-root .footer-column p,
+.footer-root .footer-bottom-bar,
+.footer-root .footer-bottom-bar div {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Judul kolom */
+.footer-root .footer-heading {
+  color: #ffffff !important;
+}
+
+/* Nama sekretariat (sebelumnya navy di atas navy) */
+.footer-root .footer-column p[style*="navy-primary"] {
+  color: #ffffff !important;
+}
+
+/* Email & telepon */
+.footer-root a[href^="mailto:"],
+.footer-root a[href^="tel:"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.footer-root div[style*="slate-700"] {
+  color: #ffffff !important;
+}
+
+/* Link navigasi & sosial */
+.footer-root .footer-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+.footer-root .footer-link:hover,
+.footer-root a[href^="mailto:"]:hover,
+.footer-root a[href^="tel:"]:hover {
+  color: #e6c987 !important;
+}

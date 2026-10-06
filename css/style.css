@@ -1719,3 +1719,43 @@ main .bcard:hover .bcard-media--empty img{transform:none}
         font-size: 0.95rem;
     }
 }
+
+/* ===== Ikon sosial footer (Instagram & LinkedIn) =====
+   Tempel di PALING BAWAH css/style.css (atau muat setelah polish.css) */
+
+.footer-root .social-links-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.footer-root .social-links-container a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.9;
+  transform: none !important;
+  transition: background-color .2s, color .2s, border-color .2s, opacity .2s;
+}
+
+.footer-root .social-links-container a svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.footer-root .social-links-container a:hover,
+.footer-root .social-links-container a:focus-visible {
+  opacity: 1;
+  color: var(--navy-primary, #0e2347) !important;
+  background-color: var(--gold-accent, #c5a880);
+  border-color: var(--gold-accent, #c5a880);
+}
+
+.footer-root .social-links-container a:focus-visible {
+  outline: 2px solid var(--gold-accent, #c5a880);
+  outline-offset: 3px;
+}
