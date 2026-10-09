@@ -1371,6 +1371,172 @@ body::before {
     border-color: #e7dfd4 !important;
 }
 
+/* =========================================================
+   HISTORY / ORGANIZATION TIMELINE
+========================================================= */
+
+.history-root {
+    padding: 92px 0;
+    background: var(--slate-50);
+    border-bottom: 1px solid var(--du-line);
+}
+
+.history-intro {
+    margin-bottom: 48px;
+}
+
+.history-intro .section-desc {
+    max-width: 850px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: 48px;
+}
+
+.history-subtitle {
+    margin: 0 0 24px;
+    color: var(--theme-navy);
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+.history-leadership-list,
+.history-office-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-leadership-item,
+.history-office-item {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--du-line);
+}
+
+.history-period {
+    color: var(--theme-gold);
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.history-leadership-item h4 {
+    margin: 0 0 5px;
+    color: var(--theme-navy);
+    font-size: 1rem;
+}
+
+.history-leadership-item p,
+.history-office-item p {
+    margin: 0;
+    color: var(--du-muted);
+    line-height: 1.7;
+}
+
+.leader-profile-copy h4 {
+    margin: 1.5rem 0 0.6rem;
+    color: var(--theme-navy);
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.leader-profile-copy h4:first-child {
+    margin-top: 0;
+}
+
+.leader-profile-copy p,
+.leader-profile-list {
+    color: var(--slate-700);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.leader-profile-copy p {
+    margin: 0 0 0.9rem;
+}
+
+.leader-profile-editorial {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    padding: clamp(24px, 5vw, 52px);
+    border: 1px solid var(--du-line);
+    border-radius: 16px;
+    background: var(--white);
+    color: var(--slate-700);
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+.leader-profile-editorial > h3 {
+    margin: 0 0 1.25rem;
+    color: var(--theme-navy);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.25;
+}
+
+.leader-profile-editorial h4 {
+    margin: 2rem 0 0.75rem;
+    color: var(--theme-navy);
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.leader-profile-editorial p {
+    margin: 0 0 1rem;
+}
+
+.leader-profile-editorial .leader-profile-quote {
+    margin: 0 0 1rem;
+}
+
+.leader-profile-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+}
+
+.leader-profile-list li {
+    padding-left: 0.25rem;
+}
+
+.leader-profile-quote {
+    margin: 0 0 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--theme-gold);
+    color: var(--slate-800);
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .history-root {
+        padding: 65px 0;
+    }
+
+    .history-leadership-item,
+    .history-office-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 17px 0;
+    }
+}
+
 
 /* =========================================================
    SECTION
