@@ -1615,27 +1615,6 @@ body::before {
 
 .agenda-root {
     background: #f2eee8 !important;
-
-    /* FIX: jarak atas/bawah seksi agenda terlalu besar (warisan "section" 7.5rem) */
-    padding-top: 3.5rem !important;
-    padding-bottom: 5rem !important;
-
-    /* FIX: saat menu "Agenda Kerja" diklik, seksi berhenti tepat di bawah navbar fixed */
-    scroll-margin-top: 130px;
-}
-
-@media (max-width: 1024px) {
-    .agenda-root {
-        padding-top: 3rem !important;
-        padding-bottom: 4rem !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .agenda-root {
-        padding-top: 2.5rem !important;
-        scroll-margin-top: 90px;
-    }
 }
 
 
@@ -1724,65 +1703,6 @@ body::before {
     color: #fff !important;
 }
 
-
-/* FIX: hilangkan celah putih antara navbar dan seksi agenda
-   Latar krem dipakai di body, main, dan seksi supaya tidak ada strip putih. */
-body:has(.agenda-root),
-main:has(.agenda-root) {
-    background: #f2eee8 !important;
-}
-
-main:has(.agenda-root) {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-}
-
-/* Elemen apa pun tepat sebelum seksi agenda tidak boleh menyisakan jarak/latar putih */
-.agenda-root {
-    margin-top: 0 !important;
-    border-top: 0 !important;
-}
-
-/* Kalau seksi agenda adalah yang pertama di bawah navbar fixed:
-   isi tetap turun melewati tinggi navbar, tapi latar krem mulai dari paling atas. */
-main > .agenda-root:first-child,
-main > section.agenda-root:first-of-type {
-    padding-top: 9.5rem !important;
-}
-
-@media (max-width: 768px) {
-    main > .agenda-root:first-child,
-    main > section.agenda-root:first-of-type {
-        padding-top: 7rem !important;
-    }
-}
-
-/* FIX 2: strip abu-kebiruan di antara navbar dan seksi agenda.
-   Semua elemen kosong (spacer / pembungkus tanpa isi) di halaman agenda
-   disamakan dengan latar krem, tanpa garis dan bayangan sendiri. */
-body:has(.agenda-root) main > :not(.agenda-root):not(header):not(footer):not(script):not(style):not(:has(h1, h2, h3, h4, p, img, a, button, input, ul, ol, svg)),
-body:has(.agenda-root) [class*="spacer"],
-body:has(.agenda-root) [class*="offset"],
-body:has(.agenda-root) .header-root + :not(main):not(.agenda-root):not(:has(h1, h2, h3, p, img, a)) {
-    background: #f2eee8 !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    min-height: 0 !important;
-}
-
-/* Latar krem juga di html supaya tidak ada warna lain yang mengintip */
-html:has(.agenda-root) {
-    background: #f2eee8;
-}
-
-/* FIX 3: tutup rapat strip di atas seksi agenda, apa pun elemen penyebabnya.
-   Bayangan krem seksi agenda "dilebarkan" 160px ke atas sehingga menimpa latar
-   elemen apa pun (spacer, pembungkus, padding main) yang ada di antara navbar
-   dan seksi agenda. Teks dan kartu di dalam seksi tidak terpengaruh. */
-body:has(.agenda-root) .agenda-root {
-    box-shadow: 0 -160px 0 0 #f2eee8 !important;
-}
 
 /* =========================================================
    NEWS
