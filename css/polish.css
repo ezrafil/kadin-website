@@ -25,17 +25,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 .news-row-item:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
 .news-row-item h3{font-size:1.1rem;font-weight:700;margin:.35rem 0;line-height:1.3}
 .news-row-item p{font-size:.9rem;color:#475569;line-height:1.6}
-.news-card-modern{display:flex;flex-direction:column}
-.news-card-modern a{margin-top:auto;padding-top:1rem}
-.news-card-modern h2{padding-right:28px}
-.news-hero-modern h1{line-height:1.04!important;letter-spacing:-.055em!important;margin:0 0 18px!important}
-.news-hero-modern p{max-width:900px;margin:0!important;line-height:1.75!important}
-.news-card-modern{padding:30px!important;min-height:290px}
-.news-card-modern:after{content:none!important}
-.news-card-kicker{margin-bottom:12px}
-.news-card-modern h2{margin:0 0 12px!important;padding-right:0!important;line-height:1.18!important}
-.news-card-modern p{margin:0!important}
-.news-card-modern a{padding-top:20px}
 .source-note-modern{padding:18px 22px;line-height:1.7}
 @media print{.header-root,.footer-root,.mobile-menu-overlay{display:none!important}}
 .nav-list{flex-wrap:nowrap}.nav-item-link,.btn-premium{white-space:nowrap}
@@ -51,13 +40,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 .hero-root{padding:0!important}
 .hero-layout{padding:56px 0 72px!important}
 .hero-image-main-wrap{margin-left:0!important}
-.article-modern-head{margin-bottom:30px}
-.article-modern h1{line-height:1.04!important;letter-spacing:-.045em!important;margin:0 0 20px!important}
-.article-modern .article-lead{margin:0!important;line-height:1.8!important}
-.article-modern-body p{margin:0 0 16px;line-height:1.85}
-.article-source-modern{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:28px;padding:0!important;text-align:center;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-.article-source-modern a{display:flex;align-items:center;justify-content:center;align-self:center;min-width:240px;min-height:50px;margin-top:8px;padding:12px 24px;border:1px solid #0b1220;border-radius:10px;background:#0b1220!important;color:#fff!important;font-size:1rem;font-weight:700;text-align:center}
-@media(max-width:600px){.article-modern-head{margin-bottom:24px}.article-modern h1{font-size:clamp(38px,10vw,56px)!important}.article-source-modern{padding:0!important}.article-source-modern a{width:auto;min-width:240px}}
 
 /*AGENDA SINGLE PAGE*/
 
@@ -71,7 +53,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     width: min(1100px, calc(100% - 40px));
     margin: 0 auto;
 }
-
 
 /* LABEL ATAS */
 
@@ -102,7 +83,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     border-radius: 50%;
 }
 
-
 /* JUDUL */
 
 .agenda-modern-detail h1 {
@@ -118,7 +98,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     letter-spacing: -.05em !important;
 }
 
-
 /* DESKRIPSI */
 
 .agenda-modern-detail .article-lead {
@@ -131,7 +110,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     font-size: 17px !important;
     line-height: 1.8 !important;
 }
-
 
 /* =====================================================
    4 INFO
@@ -152,7 +130,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     box-shadow: 0 20px 50px rgba(14, 35, 71, .15) !important;
 }
 
-
 .agenda-facts-modern > div {
     display: flex !important;
     flex-direction: column !important;
@@ -168,11 +145,9 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     border-right: 1px solid rgba(255,255,255,.12) !important;
 }
 
-
 .agenda-facts-modern > div:last-child {
     border-right: none !important;
 }
-
 
 /* LABEL */
 
@@ -190,7 +165,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     text-transform: uppercase !important;
 }
 
-
 /* ISI */
 
 .agenda-facts-modern strong {
@@ -205,7 +179,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     opacity: 1 !important;
     visibility: visible !important;
 }
-
 
 /* GARIS BIRU */
 
@@ -223,7 +196,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     border-radius: 99px;
 }
 
-
 /* =====================================================
    RINGKASAN
 ===================================================== */
@@ -237,11 +209,9 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     border-left: 3px solid #1261ff !important;
 }
 
-
 .agenda-modern-body::before {
     content: none !important;
 }
-
 
 .agenda-modern-body h2 {
     margin: 0 0 22px !important;
@@ -255,7 +225,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     letter-spacing: -.035em !important;
 }
 
-
 .agenda-modern-body p {
     margin: 0 0 18px !important;
 
@@ -264,7 +233,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     font-size: 16px !important;
     line-height: 1.85 !important;
 }
-
 
 /* =====================================================
    TOMBOL SUMBER
@@ -293,12 +261,10 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     transition: .2s ease !important;
 }
 
-
 .modern-source-button:hover {
     background: #1261ff !important;
     transform: translateY(-2px);
 }
-
 
 /* =====================================================
    TABLET
@@ -315,7 +281,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     }
 
 }
-
 
 /* =====================================================
    HP
@@ -364,566 +329,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
 
     .modern-source-button {
         width: 100% !important;
-    }
-
-}
-
-/* =========================================================
-   NEWS SINGLE — CLEAN EDITORIAL
-   ========================================================= */
-
-.news-single-page {
-    background:
-        linear-gradient(rgba(18, 97, 255, .035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(18, 97, 255, .035) 1px, transparent 1px),
-        #f8fafc;
-    background-size: 52px 52px;
-
-    padding: 70px 0 110px;
-}
-
-.news-single-article {
-    width: min(1180px, calc(100% - 40px));
-    margin: 0 auto;
-}
-
-
-/* BACK */
-
-.news-back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-
-    margin-bottom: 45px;
-
-    color: #64748b;
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    transition: .2s ease;
-}
-
-.news-back-link span {
-    color: #1261ff;
-    font-size: 18px;
-}
-
-.news-back-link:hover {
-    color: #1261ff;
-    transform: translateX(-3px);
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.news-single-header {
-    max-width: 1050px;
-}
-
-.news-single-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    margin-bottom: 24px;
-
-    color: #64748b;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
-.news-category {
-    display: inline-flex;
-    align-items: center;
-
-    padding: 8px 12px;
-
-    background: #eaf2ff;
-
-    border: 1px solid #d4e3ff;
-    border-radius: 999px;
-
-    color: #1261ff;
-    font-weight: 800;
-}
-
-.news-meta-divider {
-    width: 4px;
-    height: 4px;
-
-    background: #cbd5e1;
-    border-radius: 50%;
-}
-
-
-/* TITLE */
-
-.news-single-header h1 {
-    max-width: 1000px;
-
-    margin: 0 0 26px !important;
-
-    color: #0b1220 !important;
-
-    font-size: clamp(48px, 5.5vw, 76px) !important;
-    font-weight: 800 !important;
-
-    line-height: 1.03 !important;
-    letter-spacing: -.055em !important;
-}
-
-
-/* LEAD */
-
-.news-single-lead {
-    max-width: 850px;
-
-    margin: 0 !important;
-
-    color: #64748b !important;
-
-    font-size: 18px !important;
-    line-height: 1.8 !important;
-}
-
-
-/* DIVIDER */
-
-.news-single-divider {
-    width: 100%;
-    height: 1px;
-
-    margin: 50px 0;
-
-    background: #dfe5ec;
-}
-
-
-/* =========================================================
-   ARTICLE LAYOUT
-========================================================= */
-
-.news-single-layout {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 760px)
-        minmax(240px, 300px);
-
-    justify-content: space-between;
-
-    gap: 80px;
-
-    align-items: start;
-}
-
-
-/* =========================================================
-   BODY
-========================================================= */
-
-.news-single-body {
-    min-width: 0;
-}
-
-.news-single-body > p {
-    margin: 0 0 25px !important;
-
-    color: #3f4d61 !important;
-
-    font-size: 17px !important;
-    font-weight: 400 !important;
-
-    line-height: 1.9 !important;
-}
-
-.news-single-body > p:first-child {
-    color: #26364b !important;
-
-    font-size: 18px !important;
-    font-weight: 500 !important;
-}
-
-
-/* =========================================================
-   HIGHLIGHT
-========================================================= */
-
-.news-highlight {
-    position: relative;
-
-    margin: 42px 0 !important;
-    padding: 30px 32px !important;
-
-    background: #0e2347;
-
-    border: 0 !important;
-    border-radius: 16px;
-
-    box-shadow: 0 20px 45px rgba(14, 35, 71, .12);
-}
-
-.highlight-label {
-    display: block;
-
-    margin-bottom: 13px;
-
-    color: #86b4ff;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: .13em;
-    text-transform: uppercase;
-}
-
-.news-highlight p {
-    margin: 0 !important;
-
-    color: #fff !important;
-
-    font-size: 19px !important;
-    font-weight: 600 !important;
-
-    line-height: 1.65 !important;
-}
-
-
-/* =========================================================
-   SIDEBAR
-========================================================= */
-
-.news-single-sidebar {
-    position: sticky;
-    top: 120px;
-}
-
-.news-info-card {
-    padding: 26px;
-
-    background: #fff;
-
-    border: 1px solid #e1e7ef;
-    border-radius: 16px;
-
-    box-shadow: 0 12px 35px rgba(15, 23, 42, .06);
-}
-
-.news-info-label {
-    display: block;
-
-    padding-bottom: 17px;
-    margin-bottom: 4px;
-
-    color: #1261ff;
-
-    border-bottom: 1px solid #e5eaf0;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: .14em;
-}
-
-.news-info-item {
-    padding: 17px 0;
-
-    border-bottom: 1px solid #edf0f4;
-}
-
-.news-info-item:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
-}
-
-.news-info-item span {
-    display: block;
-
-    margin-bottom: 6px;
-
-    color: #94a3b8;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
-.news-info-item strong {
-    display: block;
-
-    color: #0e2347;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   SOURCE
-========================================================= */
-
-.news-source-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
-
-    margin-top: 50px;
-    padding: 24px;
-
-    background: #fff;
-
-    border: 1px solid #e1e7ef;
-    border-radius: 14px;
-}
-
-.news-source-info span {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #94a3b8;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.news-source-info strong {
-    color: #0e2347;
-
-    font-size: 14px;
-}
-
-.news-source-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    flex-shrink: 0;
-
-    padding: 12px 17px;
-
-    background: #0e2347;
-
-    border-radius: 9px;
-
-    color: #fff !important;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    text-decoration: none;
-
-    transition: .2s ease;
-}
-
-.news-source-button:hover {
-    background: #1261ff;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 10px 25px rgba(18, 97, 255, .18);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .news-single-page {
-        padding-top: 50px;
-    }
-
-    .news-single-layout {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .news-single-sidebar {
-        position: static;
-    }
-
-    .news-info-card {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 25px;
-    }
-
-    .news-info-label {
-        grid-column: 1 / -1;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .news-single-page {
-        padding: 35px 0 65px;
-    }
-
-    .news-single-article {
-        width: calc(100% - 30px);
-    }
-
-    .news-back-link {
-        margin-bottom: 30px;
-    }
-
-    .news-single-header h1 {
-        font-size: 40px !important;
-        line-height: 1.07 !important;
-    }
-
-    .news-single-lead {
-        font-size: 15px !important;
-        line-height: 1.75 !important;
-    }
-
-    .news-single-divider {
-        margin: 35px 0;
-    }
-
-    .news-single-body > p,
-    .news-single-body > p:first-child {
-        font-size: 15px !important;
-        line-height: 1.85 !important;
-    }
-
-    .news-highlight {
-        margin: 32px 0 !important;
-        padding: 24px !important;
-    }
-
-    .news-highlight p {
-        font-size: 17px !important;
-    }
-
-    .news-info-card {
-        grid-template-columns: 1fr;
-    }
-
-    .news-source-card {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .news-source-button {
-        width: 100%;
-    }
-
-}
-/* ==============================
-   BACK TO NEWS BUTTON
-============================== */
-
-.news-bottom-navigation {
-    margin-top: 45px;
-    padding-top: 30px;
-    border-top: 1px solid #e2e8f0;
-}
-
-.news-back-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-
-    padding: 14px 20px;
-
-    background: #0e2347;
-    border: 1px solid #0e2347;
-    border-radius: 12px;
-
-    color: #fff !important;
-    text-decoration: none !important;
-
-    transition: all .25s ease;
-}
-
-.news-back-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 38px;
-    height: 38px;
-
-    background: rgba(255,255,255,.1);
-    border-radius: 8px;
-
-    font-size: 20px;
-
-    transition: transform .25s ease;
-}
-
-.news-back-button small {
-    display: block;
-
-    margin-bottom: 2px;
-
-    color: #9fb2cf;
-
-    font-size: 9px;
-    font-weight: 700;
-
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.news-back-button strong {
-    display: block;
-
-    color: #fff;
-
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.news-back-button:hover {
-    background: #1261ff;
-    border-color: #1261ff;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 12px 28px rgba(18, 97, 255, .18);
-}
-
-.news-back-button:hover .news-back-icon {
-    transform: translateX(-3px);
-}
-
-
-/* HP */
-
-@media (max-width: 600px) {
-
-    .news-back-button {
-        width: 100%;
     }
 
 }
@@ -1040,7 +445,6 @@ a:hover .article-featured-image-frame img{transform:scale(1.03)}
     --theme-white: #ffffff;
 }
 
-
 /* =========================================================
    BODY / BACKGROUND
 ========================================================= */
@@ -1065,7 +469,6 @@ body::before {
     background-size: 48px 48px !important;
 }
 
-
 /* =========================================================
    NAVBAR
 ========================================================= */
@@ -1078,7 +481,6 @@ body::before {
         0 5px 20px rgba(14,35,71,.05) !important;
 }
 
-
 /* menu biasa */
 
 .nav-item-link {
@@ -1086,14 +488,12 @@ body::before {
     color: var(--theme-navy) !important;
 }
 
-
 /* hover */
 
 .nav-item-link:hover {
     background: transparent !important;
     color: var(--theme-gold) !important;
 }
-
 
 /* menu aktif */
 
@@ -1103,7 +503,6 @@ body::before {
     background: transparent !important;
     color: var(--theme-gold) !important;
 }
-
 
 /* underline */
 
@@ -1160,7 +559,6 @@ body::before {
     color: #fff !important;
 }
 
-
 /* =========================================================
    HERO
 ========================================================= */
@@ -1168,7 +566,6 @@ body::before {
 .hero-root {
     background: var(--theme-navy) !important;
 }
-
 
 /* lingkaran dekorasi */
 
@@ -1179,7 +576,6 @@ body::before {
         0 0 0 55px rgba(199,163,106,.035),
         0 0 0 110px rgba(199,163,106,.02) !important;
 }
-
 
 /* badge hero */
 
@@ -1196,13 +592,11 @@ body::before {
     background: var(--theme-gold) !important;
 }
 
-
 /* judul */
 
 .hero-main-heading {
     color: #fff !important;
 }
-
 
 /* tulisan italic */
 
@@ -1211,13 +605,11 @@ body::before {
     color: #d7b77f !important;
 }
 
-
 /* deskripsi */
 
 .hero-description {
     color: #c8d1df !important;
 }
-
 
 /* frame gambar */
 
@@ -1228,13 +620,11 @@ body::before {
         rgba(255,255,255,.05) !important;
 }
 
-
 /* floating card */
 
 .hero-card-floating {
     border-left: 4px solid var(--theme-gold) !important;
 }
-
 
 /* =========================================================
    HERO BUTTON
@@ -1251,7 +641,6 @@ body::before {
     border-color: #fff !important;
     color: var(--theme-navy) !important;
 }
-
 
 .hero-root .btn-premium.secondary {
     background: transparent !important;
@@ -1312,7 +701,6 @@ body::before {
     margin: 0 !important;
 }
 
-
 /* =========================
    TABLET / MOBILE
 ========================= */
@@ -1333,7 +721,6 @@ body::before {
         justify-self: start !important;
     }
 }
-
 
 @media (max-width: 600px) {
 
@@ -1537,7 +924,6 @@ body::before {
     }
 }
 
-
 /* =========================================================
    SECTION
 ========================================================= */
@@ -1558,7 +944,6 @@ body::before {
     color: var(--du-muted) !important;
 }
 
-
 /* =========================================================
    BENTO / LAYANAN
 ========================================================= */
@@ -1567,7 +952,6 @@ body::before {
     background: #fff !important;
     border-color: #e6e0d7 !important;
 }
-
 
 /* garis kiri */
 
@@ -1579,7 +963,6 @@ body::before {
         ) !important;
 }
 
-
 .bento-cell:hover {
     border-color: #d8c6a8 !important;
 
@@ -1587,18 +970,15 @@ body::before {
         0 18px 45px rgba(14,35,71,.10) !important;
 }
 
-
 .bento-headline {
     color: var(--theme-navy) !important;
 }
-
 
 .bento-icon-wrapper {
     background: var(--theme-gold-soft) !important;
     border-color: #e5d6c0 !important;
     color: var(--theme-navy) !important;
 }
-
 
 .bento-action-link {
     color: var(--theme-navy) !important;
@@ -1608,7 +988,6 @@ body::before {
     color: var(--theme-gold) !important;
 }
 
-
 /* =========================================================
    AGENDA
 ========================================================= */
@@ -1617,33 +996,27 @@ body::before {
     background: #f2eee8 !important;
 }
 
-
 .agenda-flagship-card {
     background: var(--theme-navy) !important;
 }
-
 
 .flagship-badge {
     color: #dfc493 !important;
 }
 
-
 .flagship-title {
     color: #fff !important;
 }
 
-
 .flagship-meta {
     color: #c9d3e1 !important;
 }
-
 
 /* timeline */
 
 .timeline-container {
     border-left-color: #d8c6aa !important;
 }
-
 
 /* agenda card */
 
@@ -1652,11 +1025,9 @@ body::before {
     border-color: #e5ded4 !important;
 }
 
-
 .agenda-item-row:hover {
     border-color: #d1b88e !important;
 }
-
 
 /* tanggal */
 
@@ -1672,14 +1043,12 @@ body::before {
     color: var(--theme-gold) !important;
 }
 
-
 /* kategori */
 
 .agenda-category-tag {
     background: var(--theme-gold-soft) !important;
     color: #967345 !important;
 }
-
 
 /* arrow */
 
@@ -1703,86 +1072,6 @@ body::before {
     color: #fff !important;
 }
 
-
-/* =========================================================
-   NEWS
-========================================================= */
-
-.news-card-modern {
-    background: #fff !important;
-    border-color: #e5ded4 !important;
-}
-
-
-.news-card-modern:hover {
-    border-color: #d1b88e !important;
-}
-
-
-.news-card-kicker {
-    color: var(--theme-gold) !important;
-}
-
-
-.news-card-modern h2 {
-    color: var(--theme-navy) !important;
-}
-
-
-.news-card-modern a {
-    color: var(--theme-navy) !important;
-}
-
-.news-card-modern a:hover {
-    color: var(--theme-gold) !important;
-}
-
-
-/* featured */
-
-.news-card-featured {
-    background: var(--theme-navy) !important;
-}
-
-.news-card-featured h2 {
-    color: #fff !important;
-}
-
-.news-card-featured .news-card-kicker {
-    color: #d7b77f !important;
-}
-
-.news-card-featured a {
-    color: #d7b77f !important;
-}
-
-
-/* =========================================================
-   NEWS SINGLE
-========================================================= */
-
-.news-category {
-    background: var(--theme-gold-soft) !important;
-    border-color: #e5d5bd !important;
-    color: #9b7543 !important;
-}
-
-
-.news-info-label {
-    color: var(--theme-gold) !important;
-}
-
-
-.news-highlight {
-    background: var(--theme-navy) !important;
-}
-
-
-.highlight-label {
-    color: #d7b77f !important;
-}
-
-
 /* =========================================================
    AGENDA DETAIL
 ========================================================= */
@@ -1797,43 +1086,29 @@ body::before {
     background: var(--theme-gold) !important;
 }
 
-
 .agenda-facts-modern {
     background: var(--theme-navy) !important;
 }
-
 
 .agenda-facts-modern span {
     color: #d6bb8c !important;
 }
 
-
 .agenda-facts-modern > div::before {
     background: var(--theme-gold) !important;
 }
-
 
 .agenda-modern-body {
     border-left-color: var(--theme-gold) !important;
 }
 
-
-/* =========================================================
-   GLOBAL BUTTONS
-========================================================= */
-
-.modern-source-button,
-.news-source-button,
-.news-back-button {
+.modern-source-button {
     background: var(--theme-navy) !important;
     border-color: var(--theme-navy) !important;
     color: #fff !important;
 }
 
-
-.modern-source-button:hover,
-.news-source-button:hover,
-.news-back-button:hover {
+.modern-source-button:hover {
     background: var(--theme-gold) !important;
     border-color: var(--theme-gold) !important;
     color: #fff !important;
@@ -1841,23 +1116,6 @@ body::before {
     box-shadow:
         0 10px 25px rgba(199,163,106,.20) !important;
 }
-
-
-/* =========================================================
-   LINKS
-========================================================= */
-
-.article-source-modern a {
-    background: var(--theme-navy) !important;
-    border-color: var(--theme-navy) !important;
-    color: #fff !important;
-}
-
-.article-source-modern a:hover {
-    background: var(--theme-gold) !important;
-    border-color: var(--theme-gold) !important;
-}
-
 
 /* =========================================================
    FOCUS
@@ -1867,7 +1125,6 @@ body::before {
     outline-color: var(--theme-gold) !important;
 }
 
-
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1876,11 +1133,9 @@ body::before {
     background: var(--theme-navy) !important;
 }
 
-
 .footer-root .footer-link:hover {
     color: var(--theme-gold) !important;
 }
-
 
 /* =========================================================
    MOBILE
@@ -1935,7 +1190,6 @@ body::before {
     transform: translateY(-2px);
 }
 
-
 /*REGISTRASI ANGGOTA - MOBILE*/
 
 .mobile-menu-overlay .btn-premium,
@@ -1953,7 +1207,6 @@ body::before {
     border-color: #c7a36a !important;
     color: #ffffff !important;
 }
-
 
 /* MOBILE */
 @media (max-width: 900px) {
@@ -1985,15 +1238,8 @@ body::before {
     --btn-white: #ffffff;
 }
 
-
-/* =========================================================
-   BASE BUTTON
-========================================================= */
-
 .btn-premium,
-.modern-source-button,
-.news-source-button,
-.news-back-button {
+.modern-source-button {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -2013,20 +1259,8 @@ body::before {
         box-shadow .25s ease !important;
 }
 
-
-/* =========================================================
-   PRIMARY BUTTON
-   Contoh:
-   - Registrasi Anggota
-   - Eksplorasi Agenda
-   - Lihat Detail
-   - Tombol Sumber
-========================================================= */
-
 .btn-premium.primary,
-.modern-source-button,
-.news-source-button,
-.news-back-button {
+.modern-source-button {
     background: var(--btn-navy) !important;
     border: 1px solid var(--btn-navy) !important;
     color: var(--btn-white) !important;
@@ -2034,13 +1268,8 @@ body::before {
     box-shadow: none !important;
 }
 
-
-/* HOVER PRIMARY */
-
 .btn-premium.primary:hover,
-.modern-source-button:hover,
-.news-source-button:hover,
-.news-back-button:hover {
+.modern-source-button:hover {
     background: var(--btn-gold) !important;
     border-color: var(--btn-gold) !important;
     color: var(--btn-white) !important;
@@ -2050,7 +1279,6 @@ body::before {
     box-shadow:
         0 10px 24px rgba(199, 163, 106, .22) !important;
 }
-
 
 /* =========================================================
    SECONDARY BUTTON
@@ -2067,7 +1295,6 @@ body::before {
     box-shadow: none !important;
 }
 
-
 /* SECONDARY HOVER */
 
 .btn-premium.secondary:hover {
@@ -2077,7 +1304,6 @@ body::before {
 
     transform: translateY(-2px);
 }
-
 
 /* =========================================================
    AGENDA ARROW BUTTON
@@ -2097,7 +1323,6 @@ body::before {
     color: var(--btn-navy) !important;
 }
 
-
 /* HOVER AGENDA */
 
 .agenda-item-row:hover .agenda-arrow-btn,
@@ -2113,23 +1338,15 @@ body::before {
     color: var(--btn-white) !important;
 }
 
-
-/* =========================================================
-   LINK BUTTON DALAM CARD
-========================================================= */
-
-.bento-action-link,
-.news-card-modern a {
+.bento-action-link {
     color: var(--btn-navy) !important;
     font-weight: 700 !important;
     transition: color .2s ease !important;
 }
 
-.bento-action-link:hover,
-.news-card-modern a:hover {
+.bento-action-link:hover {
     color: var(--btn-gold) !important;
 }
-
 
 /* =========================================================
    HERO KHUSUS BACKGROUND NAVY
@@ -2147,7 +1364,6 @@ body::before {
     color: var(--btn-navy) !important;
 }
 
-
 /* =========================================================
    HEADER — REGISTRASI ANGGOTA
 ========================================================= */
@@ -2163,7 +1379,6 @@ body::before {
     border-color: var(--btn-gold) !important;
     color: var(--btn-white) !important;
 }
-
 
 /* =========================================================
    MOBILE
@@ -2194,16 +1409,13 @@ body::before {
     }
 }
 
-
 /* =========================================================
    MOBILE FULL WIDTH BUTTON
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    .modern-source-button,
-    .news-source-button,
-    .news-back-button {
+    .modern-source-button {
         width: 100% !important;
     }
 

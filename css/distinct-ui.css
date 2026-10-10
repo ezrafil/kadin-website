@@ -402,122 +402,21 @@ body:before {
   color: var(--du-muted) !important;
 }
 
-/* --------------------------------------------------------------------------
-   Modern Newsroom
-   -------------------------------------------------------------------------- */
-.news-hero-modern,
-.article-modern,
 .agenda-modern-detail {
   max-width: 1180px;
   margin: auto;
   padding: 88px 20px 35px;
 }
 
-.news-hero-modern {
-  position: relative;
-}
-
-.news-hero-modern:after {
-  content: "NEWS / 2026";
-  position: absolute;
-  right: 20px;
-  top: 90px;
-  font-size: 11px;
-  letter-spacing: .18em;
-  color: #a1aaba;
-  font-weight: 900;
-}
-
-.news-hero-modern h1,
-.article-modern h1,
 .agenda-modern-detail h1 {
   font-size: clamp(42px, 6.5vw, 78px) !important;
   line-height: .93 !important;
   letter-spacing: -.065em !important;
 }
 
-.news-hero-modern p,
 .article-lead {
   color: var(--du-muted) !important;
   line-height: 1.8 !important;
-}
-
-.news-grid-modern {
-  max-width: 1180px;
-  margin: auto;
-  padding: 20px 20px 70px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 14px;
-}
-
-.news-card-modern {
-  grid-column: span 4;
-  background: #fff !important;
-  border: 1px solid var(--du-line) !important;
-  border-radius: 16px !important;
-  padding: 28px !important;
-  min-height: 280px;
-  box-shadow: none !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.news-card-modern:after {
-  content: "↗";
-  position: absolute;
-  right: 22px;
-  top: 20px;
-  color: #b0bac8;
-  font-size: 20px;
-}
-
-.news-card-modern:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: var(--du-shadow) !important;
-}
-
-.news-card-featured {
-  grid-column: span 8 !important;
-  min-height: 360px;
-  background: var(--du-navy) !important;
-  color: #fff !important;
-  border: 0 !important;
-}
-
-.news-card-kicker {
-  color: var(--du-blue) !important;
-  font-size: 10px !important;
-  letter-spacing: .16em !important;
-  font-weight: 900 !important;
-}
-
-.news-card-featured .news-card-kicker {
-  color: #8db8ff !important;
-}
-
-.news-card-modern h2 {
-  font-size: 25px !important;
-  line-height: 1.08 !important;
-  letter-spacing: -.035em !important;
-}
-
-.news-card-modern p {
-  color: var(--du-muted) !important;
-  line-height: 1.7 !important;
-}
-
-.news-card-featured p {
-  color: #c8d5e8 !important;
-}
-
-.news-card-modern a {
-  color: var(--du-blue) !important;
-  font-weight: 900 !important;
-}
-
-.news-card-featured a {
-  color: #fff !important;
 }
 
 .source-note-modern {
@@ -529,27 +428,9 @@ body:before {
   color: var(--du-muted) !important;
 }
 
-/* --------------------------------------------------------------------------
-   Article & Agenda Detail
-   -------------------------------------------------------------------------- */
-.article-modern-layout {
-  gap: 70px !important;
-}
-
-.article-modern-body,
 .agenda-modern-body {
   color: #334155 !important;
   line-height: 1.9 !important;
-}
-
-.article-source-modern {
-  background: var(--du-ink) !important;
-  border-radius: 16px !important;
-  box-shadow: var(--du-shadow) !important;
-}
-
-.article-source-modern a {
-  color: #8db8ff !important;
 }
 
 .agenda-facts-modern {
@@ -567,12 +448,8 @@ body:before {
   border-radius: 10px !important;
 }
 
-/* --------------------------------------------------------------------------
-   Generic Cards + Services
-   -------------------------------------------------------------------------- */
 .service-card,
 .program-card,
-.news-card,
 .agenda-card {
   border: 1px solid var(--du-line) !important;
   border-radius: 16px !important;
@@ -581,7 +458,6 @@ body:before {
 
 .service-card:hover,
 .program-card:hover,
-.news-card:hover,
 .agenda-card:hover {
   transform: translateY(-4px) !important;
   box-shadow: var(--du-shadow) !important;
@@ -631,13 +507,6 @@ body:before {
   .agenda-sticky-cell {
     position: static;
   }
-  .news-card-modern,
-  .news-card-featured {
-    grid-column: span 12 !important;
-  }
-  .news-hero-modern:after {
-    display: none;
-  }
   .hero-layout {
     padding: 65px 0 !important;
   }
@@ -671,17 +540,8 @@ body:before {
   .agenda-root {
     scroll-margin-top: 16px;
   }
-  .news-hero-modern,
-  .article-modern,
   .agenda-modern-detail {
     padding: 62px 12px 25px;
-  }
-  .news-grid-modern {
-    padding: 15px 12px 55px;
-  }
-  .news-card-modern {
-    padding: 24px !important;
-    min-height: 245px;
   }
   .agenda-facts-modern {
     grid-template-columns: 1fr !important;

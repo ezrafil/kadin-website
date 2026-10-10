@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Halaman Berita & Sektor — gaya mengikuti kadinjatim.id/berita
+   Palet: navy #0a2540, gold #c5a880, slate. Konten HTML tidak diubah.
+   Dimuat setelah distinct-ui.css & polish.css, di-scope ke body.page-berita.
+   ========================================================================== */
+body.page-berita {
+  --kj-navy: #0a2540;
+  --kj-gold: #c5a880;
+  --kj-gold-dark: #9a7b4f;
+  --kj-gold-pale: #fcfaf7;
+  --kj-gold-border: #e2d9cd;
+  --kj-slate: #334155;
+  --kj-muted: #64748b;
+  background: #fff !important;
+  color: var(--kj-slate) !important;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+body.page-berita:before { display: none !important; }
+
+/* ---------- Hero / page header ---------- */
+.page-berita .news-hero-kj {
+  background: var(--kj-gold-pale);
+  border-bottom: 1px solid var(--kj-gold-border);
+  padding: clamp(56px, 9vw, 96px) 20px clamp(40px, 6vw, 64px);
+  text-align: center;
+}
+.page-berita .news-hero-kj .eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: .75rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--kj-gold-dark); margin-bottom: 18px;
+}
+.page-berita .news-hero-kj .eyebrow::before,
+.page-berita .news-hero-kj .eyebrow::after {
+  content: ""; width: 32px; height: 1px; background: var(--kj-gold);
+}
+.page-berita .news-hero-kj h1 {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-weight: 700; color: var(--kj-navy);
+  font-size: clamp(2rem, 4.6vw, 3.25rem); line-height: 1.15; letter-spacing: -.01em;
+  max-width: 820px; margin: 0 auto 16px;
+}
+.page-berita .news-hero-kj p {
+  max-width: 680px; margin: 0 auto; color: var(--kj-muted);
+  font-size: 1.05rem; line-height: 1.75;
+}
+
+/* ---------- Grid kartu ---------- */
+.page-berita main { background: #fff; }
+.page-berita .bcard-grid {
+  width: min(1280px, calc(100% - 40px)); margin: 0 auto;
+  padding: clamp(40px, 6vw, 64px) 0 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+}
+.page-berita .bcard {
+  display: flex; flex-direction: column; background: #fff;
+  border: 1px solid var(--kj-gold-border); border-radius: 12px; overflow: hidden;
+  transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s, border-color .3s;
+}
+.page-berita .bcard[hidden] { display: none; }
+.page-berita .bcard:hover {
+  transform: translateY(-4px); border-color: var(--kj-gold);
+  box-shadow: 0 18px 40px -16px rgba(10, 37, 64, .22);
+}
+.page-berita .bcard-media {
+  display: block; aspect-ratio: 3 / 2; overflow: hidden;
+  background: var(--kj-gold-pale) url("../img/logo-kadin-sby.png") center / 64px no-repeat;
+}
+.page-berita .bcard-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .6s cubic-bezier(.16,1,.3,1);
+}
+.page-berita .bcard:hover .bcard-media img { transform: scale(1.04); }
+.page-berita .bcard-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 22px; }
+.page-berita .bcard-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  font-size: .75rem; color: var(--kj-muted); margin-bottom: 12px;
+}
+.page-berita .bcard-cat {
+  font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--kj-gold-dark);
+}
+.page-berita .bcard-meta time::before { content: "•"; margin-right: 10px; color: var(--kj-gold); }
+.page-berita .bcard-title {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 1.3rem; line-height: 1.3; font-weight: 700; margin: 0 0 10px; letter-spacing: 0;
+}
+.page-berita .bcard-title a { color: var(--kj-navy); text-decoration: none; transition: color .2s; }
+.page-berita .bcard-title a:hover { color: var(--kj-gold-dark); }
+.page-berita .bcard-excerpt {
+  font-size: .92rem; line-height: 1.7; color: var(--kj-slate); margin: 0 0 18px;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+.page-berita .bcard-foot {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid #eef1f5;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  font-size: .8rem; color: var(--kj-muted);
+}
+.page-berita .bcard-foot a {
+  color: var(--kj-navy); font-weight: 700; text-decoration: none; white-space: nowrap; transition: color .2s;
+}
+.page-berita .bcard-foot a:hover { color: var(--kj-gold-dark); }
+
+/* ---------- Paginasi ---------- */
+.page-berita .news-pagination { padding: 24px 0 clamp(56px, 8vw, 88px); }
+.page-berita .news-pagination[hidden] { display: none; }
+.page-berita .news-pagination .container { width: min(1280px, calc(100% - 40px)) !important; }
+.page-berita .news-pagination-inner {
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+  border-top: 1px solid var(--kj-gold-border); padding-top: 28px;
+}
+.page-berita .news-pagination-info { margin: 0; font-size: .875rem; color: var(--kj-muted); }
+.page-berita .news-pagination-info strong { color: var(--kj-navy); }
+.page-berita .news-pagination-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.page-berita .page-btn {
+  min-width: 42px; height: 42px; padding: 0 14px; border-radius: 8px; cursor: pointer;
+  font: 600 .875rem "Plus Jakarta Sans", system-ui, sans-serif; color: var(--kj-navy);
+  background: #fff; border: 1px solid var(--kj-gold-border);
+  transition: background .2s, color .2s, border-color .2s;
+}
+.page-berita .page-btn:hover:not(:disabled):not(.is-active) { border-color: var(--kj-gold); background: var(--kj-gold-pale); }
+.page-berita .page-btn.is-active { background: var(--kj-navy); border-color: var(--kj-navy); color: #fff; cursor: default; }
+.page-berita .page-btn:disabled { opacity: .4; cursor: not-allowed; }
+.page-berita .page-btn:focus-visible,
+.page-berita .bcard a:focus-visible { outline: 2px solid var(--kj-gold); outline-offset: 2px; }
+
+/* ---------- Responsif ---------- */
+@media (max-width: 1024px) { .page-berita .bcard-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+@media (max-width: 640px) {
+  .page-berita .bcard-grid { grid-template-columns: 1fr; gap: 20px; }
+  .page-berita .bcard-title { font-size: 1.2rem; }
+  .page-berita .page-btn { min-width: 38px; height: 38px; padding: 0 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-berita .bcard, .page-berita .bcard-media img { transition: none; }
+  .page-berita .bcard:hover { transform: none; }
+}
+
+/* ---------- Fakta ringkas di hero ---------- */
+.page-berita .news-hero-facts {
+  list-style: none; margin: 28px auto 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px;
+  font-size: .85rem; color: var(--kj-muted);
+}
+.page-berita .news-hero-facts li { display: flex; align-items: baseline; gap: 6px; }
+.page-berita .news-hero-facts strong { font-family: "Times New Roman", Times, Georgia, serif; font-size: 1.35rem; color: var(--kj-navy); }
+
+/* ---------- Toolbar: sektor + pencarian ---------- */
+.page-berita .news-toolbar { border-bottom: 1px solid var(--kj-gold-border); background: #fff; position: sticky; top: 78px; z-index: 20; }
+.page-berita .news-toolbar-inner {
+  width: min(1280px, calc(100% - 40px)); margin: 0 auto; padding: 14px 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap;
+}
+.page-berita .sector-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.page-berita .sector-chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer;
+  background: #fff; border: 1px solid var(--kj-gold-border); color: var(--kj-navy);
+  font: 600 .85rem "Plus Jakarta Sans", system-ui, sans-serif; transition: background .2s, color .2s, border-color .2s;
+}
+.page-berita .sector-chip span { font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--kj-gold-pale); color: var(--kj-gold-dark); }
+.page-berita .sector-chip:hover { border-color: var(--kj-gold); background: var(--kj-gold-pale); }
+.page-berita .sector-chip.is-active { background: var(--kj-navy); border-color: var(--kj-navy); color: #fff; }
+@media (min-width: 761px) { .page-berita .news-search { margin-left: auto; } }
+.page-berita .sector-chip.is-active span { background: rgba(255,255,255,.16); color: #fff; }
+.page-berita .news-search { flex: 1 1 200px; max-width: 280px; }
+.page-berita .news-search input {
+  width: 100%; height: 42px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--kj-gold-border);
+  font: 500 .9rem "Plus Jakarta Sans", system-ui, sans-serif; color: var(--kj-navy); background: var(--kj-gold-pale);
+}
+.page-berita .news-search input:focus { outline: 2px solid var(--kj-gold); outline-offset: 1px; background: #fff; }
+.page-berita .news-result { width: min(1280px, calc(100% - 40px)); margin: 22px auto 0; font-size: .85rem; color: var(--kj-muted); min-height: 1.2em; }
+.page-berita .bcard-grid { padding-top: 20px; }
+.page-berita .bcard-grid[hidden] { display: none; }
+.page-berita .news-empty { text-align: center; padding: 64px 20px 80px; color: var(--kj-muted); }
+.page-berita .news-empty[hidden] { display: none; }
+.page-berita .news-empty p { margin: 0 0 18px; }
+.page-berita .news-pagination-info:empty { display: none; }
+@media (max-width: 760px) {
+  .page-berita .news-toolbar { position: static; }
+  .page-berita .sector-chips { flex-wrap: nowrap; overflow-x: auto; width: 100%; padding-bottom: 4px; scrollbar-width: none; }
+  .page-berita .sector-chips::-webkit-scrollbar { display: none; }
+  .page-berita .sector-chip { white-space: nowrap; flex: none; }
+  .page-berita .news-search { flex-basis: 100%; }
+}
+
+/* reset padding section bawaan tema agar sejajar */
+.page-berita section.news-toolbar,
+.page-berita section.bcard-grid,
+.page-berita section.artikel-related { padding-left: 0 !important; padding-right: 0 !important; }
+.page-berita section.news-toolbar { padding-top: 0 !important; padding-bottom: 0 !important; }
+.page-berita section.bcard-grid { padding-bottom: 24px !important; }

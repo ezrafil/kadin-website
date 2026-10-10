@@ -21,10 +21,9 @@
     <link href="css/distinct-ui.css" rel="stylesheet" />
     <link href="css/polish.css" rel="stylesheet" />
     <link href="css/berita.css" rel="stylesheet" />
-    <link href="css/pagination.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="page-berita">
     <a class="sr-only" href="#main-content">Lompat ke Konten Utama</a>
 
     <!-- HEADER / NAVIGATION ARCHITECTURE -->
@@ -93,295 +92,177 @@
     </div>
 
     <main id="main-content">
-        <section class="news-hero-modern">
+        <section class="news-hero-kj">
             <div class="eyebrow">WARTA KADIN SURABAYA · 2026</div>
             <h1>Berita &amp; Kegiatan Dunia Usaha Surabaya</h1>
             <p>Rangkuman informasi yang berkaitan dengan KADIN Surabaya, kolaborasi bersama pemerintah, serta kegiatan
                 yang melibatkan dunia usaha di Kota Surabaya.</p>
+            <ul class="news-hero-facts" aria-label="Ringkasan arsip">
+                <li><strong>15</strong> berita</li>
+                <li><strong>4</strong> sektor</li>
+                <li><strong>7</strong> sumber</li>
+                <li><strong>2019–2026</strong> periode</li>
+            </ul>
         </section>
+
+        <section class="news-toolbar" aria-label="Saring berita">
+            <div class="news-toolbar-inner">
+                <div class="sector-chips" role="group" aria-label="Sektor"><button type="button" class="sector-chip is-active" data-sektor="semua" aria-pressed="true">Semua <span>15</span></button><button type="button" class="sector-chip" data-sektor="investasi-kerja-sama" aria-pressed="false">Investasi &amp; Kerja Sama <span>5</span></button><button type="button" class="sector-chip" data-sektor="umkm-ekonomi-kreatif" aria-pressed="false">UMKM &amp; Ekonomi Kreatif <span>3</span></button><button type="button" class="sector-chip" data-sektor="kebijakan-layanan-publik" aria-pressed="false">Kebijakan &amp; Layanan Publik <span>3</span></button><button type="button" class="sector-chip" data-sektor="organisasi" aria-pressed="false">Organisasi <span>4</span></button></div>
+                <form class="news-search" role="search" onsubmit="return false">
+                    <input id="news-q" type="search" placeholder="Cari judul atau isi berita…" aria-label="Cari berita" autocomplete="off">
+                </form>
+            </div>
+        </section>
+
+        <p class="news-result" id="news-result" aria-live="polite"></p>
 
         <section class="bcard-grid" id="news-grid" data-per-page="9" aria-label="Daftar berita">
-            <article class="bcard">
-                <a class="bcard-media" href="https://dpm-ptsp.surabaya.go.id/berita.php?id=Nzk1" target="_blank"
-                    rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://dpm-ptsp.surabaya.go.id/fileberita/ifbc-dpmptsp-2026-09-16%28BERITA%29.jpeg" alt=""
-                        referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+            <article class="bcard" data-sector="umkm-ekonomi-kreatif" data-date="2026-09-13" data-search="ifbc expo 2026 di surabaya libatkan perwakilan kadin surabaya kewirausahaan umkm &amp; ekonomi kreatif sumber: dpmptsp national roadshow ifbc expo 2026 di grand city convex menghadirkan medy prakoso, wakil ketua kadin surabaya, sebagai salah satu pembicara. national roadshow ifbc expo 2026 di grand city convex, surabaya, dijadwalkan pada minggu, 13 september 2026 pukul 15.00–16.00 wib. kegiatan ini mengangkat tema “empowering local entrepreneurship: bangun bisnis lebih mudah &amp; cuan di surabaya”. menurut informasi dpmptsp kota surabaya, agenda tersebut menghadirkan ulvia zulvia dari tim pelayanan perizinan berusaha dpmptsp kota surabaya dan medy prakoso, wakil ketua kadin surabaya. diskusi dijadwalkan dipandu rofian akbar dari asosiasi franchise indonesia sekaligus ceo majalah franchise. pembahasan acara berfokus pada kemudahan memulai dan mengembangkan usaha, pelayanan perizinan, serta peluang kewirausahaan lokal. kolaborasi pemerintah, kadin, dan ekosistem waralaba dimaksudkan untuk mempertemukan calon pengusaha dengan informasi bisnis dan jalur legalitas usaha. ifbc expo merupakan ruang untuk mengenal model usaha, termasuk waralaba dan peluang kemitraan. namun, keikutsertaan dalam pameran bukan jaminan bahwa suatu usaha pasti berhasil. calon mitra tetap perlu memeriksa isi kontrak, biaya awal dan berkala, dukungan operasional, serta kondisi pasar sebelum mengambil keputusan. tanggal 13 september merupakan tanggal pelaksanaan yang dicantumkan pada informasi agenda; artikel sumber dpmptsp diterbitkan pada 16 september 2026. dengan demikian, berita ini menjelaskan kegiatan yang telah dijadwalkan berlangsung, bukan pengumuman bahwa seluruh peluang bisnis di dalamnya sudah terealisasi.">
+                <a class="bcard-media" href="berita-ifbc-expo-2026-di-surabaya-libatkan-perwakilan-kadin-surabaya.html" tabindex="-1" aria-hidden="true"><img src="https://dpm-ptsp.surabaya.go.id/fileberita/ifbc-dpmptsp-2026-09-16%28BERITA%29.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">KEWIRAUSAHAAN</span><time>13 September 2026</time>
-                    </div>
-                    <h2 class="bcard-title"><a href="https://dpm-ptsp.surabaya.go.id/berita.php?id=Nzk1" target="_blank"
-                            rel="noopener noreferrer">IFBC Expo 2026 di Surabaya Libatkan Perwakilan KADIN Surabaya</a>
-                    </h2>
-                    <p class="bcard-excerpt">National Roadshow IFBC Expo 2026 di Grand City Convex menghadirkan Medy
-                        Prakoso, Wakil Ketua KADIN Surabaya, sebagai salah satu pembicara.</p>
-                    <div class="bcard-foot"><span>Sumber: DPMPTSP</span><a
-                            href="https://dpm-ptsp.surabaya.go.id/berita.php?id=Nzk1" target="_blank"
-                            rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">KEWIRAUSAHAAN</span><time datetime="2026-09-13">13 September 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-ifbc-expo-2026-di-surabaya-libatkan-perwakilan-kadin-surabaya.html">IFBC Expo 2026 di Surabaya Libatkan Perwakilan KADIN Surabaya</a></h2>
+                    <p class="bcard-excerpt">National Roadshow IFBC Expo 2026 di Grand City Convex menghadirkan Medy Prakoso, Wakil Ketua KADIN Surabaya, sebagai salah satu pembicara.</p>
+                    <div class="bcard-foot"><span>Sumber: DPMPTSP</span><a href="berita-ifbc-expo-2026-di-surabaya-libatkan-perwakilan-kadin-surabaya.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media" href="https://pajak.go.id/en/node/120229" target="_blank"
-                    rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://pajak.go.id/sites/default/files/styles/medium/public/2026-07/_DSC0406.JPG?itok=2h_RQckH"
-                        alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="kebijakan-layanan-publik" data-date="2026-07-14" data-search="forum konsultasi publik &amp; dialog perpajakan perpajakan kebijakan &amp; layanan publik sumber: djp kanwil djp jawa timur i menggelar forum dalam rangka hari pajak 2026. kadin surabaya termasuk pihak yang mengikuti forum tersebut. kantor wilayah direktorat jenderal pajak (kanwil djp) jawa timur i menggelar forum konsultasi publik dalam rangka memperingati hari pajak 2026 di surabaya pada selasa, 14 juli 2026. forum ini menjadi wadah bagi otoritas pajak untuk menerima masukan dari wajib pajak dan pemangku kepentingan mengenai kualitas layanan perpajakan. kepala kanwil djp jawa timur i, max darmawan, menyampaikan bahwa masukan langsung dari pengguna layanan dapat menjadi bahan evaluasi untuk meningkatkan kualitas pelayanan publik. peserta mendapat kesempatan menyampaikan pengalaman, pandangan, dan usulan terkait layanan di lingkungan kanwil djp jawa timur i. pembahasan yang diberitakan mencakup pelayanan perpajakan, edukasi, kemitraan kelembagaan, dan komunikasi publik. forum seperti ini membantu mempertemukan pengalaman pengguna layanan dengan pihak yang bertanggung jawab atas pelaksanaan administrasi perpajakan. bagi dunia usaha, informasi pajak yang jelas dan layanan yang mudah diakses dapat membantu pemenuhan kewajiban administrasi. meski demikian, forum konsultasi tidak otomatis mengubah peraturan pajak. untuk memastikan kewajiban dan ketentuan yang berlaku, wajib pajak perlu merujuk pada peraturan serta penjelasan resmi djp. ringkasan ini mengacu pada pemberitaan suara surabaya tentang forum kanwil djp jawa timur i pada 14 juli 2026. informasi mengenai peserta tertentu hanya dicantumkan jika terkonfirmasi oleh sumber.">
+                <a class="bcard-media" href="berita-forum-konsultasi-publik-dialog-perpajakan.html" tabindex="-1" aria-hidden="true"><img src="https://pajak.go.id/sites/default/files/styles/medium/public/2026-07/_DSC0406.JPG?itok=2h_RQckH" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">PERPAJAKAN</span><time>14 Juli 2026</time></div>
-                    <h2 class="bcard-title"><a href="https://pajak.go.id/en/node/120229" target="_blank"
-                            rel="noopener noreferrer">Forum Konsultasi Publik &amp; Dialog Perpajakan</a></h2>
-                    <p class="bcard-excerpt">Kanwil DJP Jawa Timur I menggelar forum dalam rangka Hari Pajak 2026. KADIN
-                        Surabaya termasuk pihak yang mengikuti forum tersebut.</p>
-                    <div class="bcard-foot"><span>Sumber: DJP</span><a href="https://pajak.go.id/en/node/120229"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">PERPAJAKAN</span><time datetime="2026-07-14">14 Juli 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-forum-konsultasi-publik-dialog-perpajakan.html">Forum Konsultasi Publik &amp; Dialog Perpajakan</a></h2>
+                    <p class="bcard-excerpt">Kanwil DJP Jawa Timur I menggelar forum dalam rangka Hari Pajak 2026. KADIN Surabaya termasuk pihak yang mengikuti forum tersebut.</p>
+                    <div class="bcard-foot"><span>Sumber: DJP</span><a href="berita-forum-konsultasi-publik-dialog-perpajakan.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/1075720/kadin-surabaya-gangguan-listrik-bawa-dampak-besar-bagi-umkm"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://cdn.antaranews.com/cache/800x533/2026/06/22/WhatsApp-Image-2026-06-22-at-11.31.08.jpeg"
-                        alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="kebijakan-layanan-publik" data-date="2026-06-22" data-search="kadin surabaya soroti dampak gangguan listrik bagi umkm infrastruktur kebijakan &amp; layanan publik sumber: antara kadin surabaya menyoroti gangguan pasokan listrik yang berdampak pada umkm, usaha rumahan, industri kecil dan menengah, serta sektor perdagangan dan jasa. kadin surabaya menilai gangguan pasokan listrik yang terjadi di sejumlah wilayah selama sekitar dua pekan hingga 22 juni 2026 berdampak pada aktivitas usaha, terutama umkm, usaha rumahan, industri kecil dan menengah, perdagangan, serta jasa. hal tersebut disampaikan ketua kadin surabaya m. ali affandi l.n.m. kepada antara di surabaya. gangguan listrik dapat menghambat produksi dan layanan usaha yang bergantung pada mesin, pendingin, atau peralatan elektronik. dalam keterangan yang diberitakan antara, contoh usaha yang rentan terdampak antara lain penjual makanan beku, katering, toko roti, penjual minuman dingin, warung makan, laundry, penjahit, percetakan kecil, bengkel, toko kelontong, dan usaha digital. ali affandi menekankan bahwa gangguan listrik bukan hanya persoalan teknis jaringan karena dampaknya dapat menjalar ke produktivitas, perdagangan, rantai pasok, dan pendapatan keluarga. umkm dan usaha rumahan dinilai lebih rentan apabila tidak memiliki sumber daya cadangan seperti genset atau penyimpanan energi. kadin juga menyoroti perlunya infrastruktur kelistrikan yang memadai seiring berkembangnya kawasan industri, logistik, perdagangan, layanan digital, dan investasi. keandalan pasokan energi menjadi salah satu faktor pendukung kegiatan ekonomi yang berjalan setiap hari. berita antara ini terbit pada senin, 22 juni 2026 pukul 11.44 wib. artikel ini membahas pernyataan kadin tentang dampak gangguan yang dilaporkan saat itu; kondisi dan jadwal pemulihan listrik di wilayah tertentu harus merujuk pada informasi terbaru dari pln.">
+                <a class="bcard-media" href="berita-kadin-surabaya-soroti-dampak-gangguan-listrik-bagi-umkm.html" tabindex="-1" aria-hidden="true"><img src="https://cdn.antaranews.com/cache/800x533/2026/06/22/WhatsApp-Image-2026-06-22-at-11.31.08.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">INFRASTRUKTUR</span><time>22 Juni 2026</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/1075720/kadin-surabaya-gangguan-listrik-bawa-dampak-besar-bagi-umkm"
-                            target="_blank" rel="noopener noreferrer">KADIN Surabaya Soroti Dampak Gangguan Listrik bagi
-                            UMKM</a></h2>
-                    <p class="bcard-excerpt">KADIN Surabaya menyoroti gangguan pasokan listrik yang berdampak pada UMKM,
-                        usaha rumahan, industri kecil dan menengah, serta sektor perdagangan dan jasa.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/1075720/kadin-surabaya-gangguan-listrik-bawa-dampak-besar-bagi-umkm"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">INFRASTRUKTUR</span><time datetime="2026-06-22">22 Juni 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-soroti-dampak-gangguan-listrik-bagi-umkm.html">KADIN Surabaya Soroti Dampak Gangguan Listrik bagi UMKM</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya menyoroti gangguan pasokan listrik yang berdampak pada UMKM, usaha rumahan, industri kecil dan menengah, serta sektor perdagangan dan jasa.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-kadin-surabaya-soroti-dampak-gangguan-listrik-bagi-umkm.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/1075740/kadin-surabaya-minta-informasi-dan-jadwal-jelas-soal-mati-listrik"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://cdn.antaranews.com/cache/800x533/2026/06/22/WhatsApp-Image-2026-06-22-at-11.31.08_1.jpeg"
-                        alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="kebijakan-layanan-publik" data-date="2026-06-22" data-search="kadin surabaya minta informasi pemadaman listrik lebih jelas infrastruktur kebijakan &amp; layanan publik sumber: antara pada hari yang sama, kadin surabaya meminta pln memberikan informasi mengenai pemadaman secara lebih awal, rinci, dan mudah diakses oleh masyarakat maupun pelaku usaha. kadin surabaya meminta agar informasi mengenai gangguan dan pemadaman listrik disampaikan secara jelas kepada masyarakat dan pelaku usaha. permintaan ini berkaitan dengan gangguan pasokan listrik yang dilaporkan berdampak pada kegiatan ekonomi di sejumlah wilayah surabaya dan sekitarnya pada juni 2026. informasi yang cepat dan rinci membantu pelaku usaha menyesuaikan jadwal produksi, menjaga bahan yang memerlukan pendinginan, mengatur layanan pelanggan, dan memperkirakan dampak operasional. bagi usaha kecil, gangguan yang tidak terduga dapat menimbulkan biaya tambahan atau hilangnya waktu kerja. pemberitahuan yang bermanfaat idealnya menyebut wilayah terdampak, perkiraan waktu mulai dan selesai, serta pembaruan jika perkiraan berubah. kejelasan kanal komunikasi juga penting agar warga dan pengusaha tidak mengandalkan kabar yang belum terkonfirmasi. pokok persoalan yang disoroti adalah pentingnya komunikasi yang konsisten serta keandalan pasokan listrik bagi aktivitas ekonomi. rincian jadwal pemadaman berbeda-beda menurut wilayah dan kondisi jaringan, sehingga pembaca perlu mengecek pengumuman resmi pln untuk mengetahui situasi terkini. artikel ini merangkum isu komunikasi pemadaman yang berkaitan dengan pemberitaan antara pada 22 juni 2026. ini bukan jadwal pemadaman aktif dan tidak dimaksudkan sebagai pengganti pengumuman resmi penyedia listrik.">
+                <a class="bcard-media" href="berita-kadin-surabaya-minta-informasi-pemadaman-listrik-lebih-jelas.html" tabindex="-1" aria-hidden="true"><img src="https://cdn.antaranews.com/cache/800x533/2026/06/22/WhatsApp-Image-2026-06-22-at-11.31.08_1.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">INFRASTRUKTUR</span><time>22 Juni 2026</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/1075740/kadin-surabaya-minta-informasi-dan-jadwal-jelas-soal-mati-listrik"
-                            target="_blank" rel="noopener noreferrer">KADIN Surabaya Minta Informasi Pemadaman Listrik
-                            Lebih Jelas</a></h2>
-                    <p class="bcard-excerpt">Pada hari yang sama, KADIN Surabaya meminta PLN memberikan informasi
-                        mengenai pemadaman secara lebih awal, rinci, dan mudah diakses oleh masyarakat maupun pelaku
-                        usaha.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/1075740/kadin-surabaya-minta-informasi-dan-jadwal-jelas-soal-mati-listrik"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">INFRASTRUKTUR</span><time datetime="2026-06-22">22 Juni 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-minta-informasi-pemadaman-listrik-lebih-jelas.html">KADIN Surabaya Minta Informasi Pemadaman Listrik Lebih Jelas</a></h2>
+                    <p class="bcard-excerpt">Pada hari yang sama, KADIN Surabaya meminta PLN memberikan informasi mengenai pemadaman secara lebih awal, rinci, dan mudah diakses oleh masyarakat maupun pelaku usaha.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-kadin-surabaya-minta-informasi-pemadaman-listrik-lebih-jelas.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media" href="https://dpm-ptsp.surabaya.go.id/berita.php?id=NzYz" target="_blank"
-                    rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://dpm-ptsp.surabaya.go.id/fileberita/BKPM-RI-Juni-2026-2026-06-10%28BERITA%29.jpeg"
-                        alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="investasi-kerja-sama" data-date="2026-06-10" data-search="kadin surabaya hadir dalam koordinasi perizinan dan investasi investasi investasi &amp; kerja sama sumber: dpmptsp kadin surabaya menjadi salah satu organisasi yang hadir dalam pertemuan pemkot surabaya dengan kementerian investasi dan hilirisasi/bkpm ri terkait perizinan dan penanaman modal. pemerintah kota surabaya menerima kunjungan direktur wilayah iv bidang pengendalian pelaksanaan penanaman modal kementerian investasi dan hilirisasi/bkpm ri, ady soegiharto, pada rabu, 10 juni 2026. pertemuan berlangsung di ruang rapat sekretaris daerah kota surabaya untuk memperkuat koordinasi perizinan berusaha dan penanaman modal. pertemuan dipimpin kepala dpmptsp kota surabaya, ir. lasidi, s.t., m.t., dan dihadiri kadin surabaya, hipmi surabaya, serta sejumlah perangkat daerah yang berkaitan dengan layanan perizinan dan investasi. diskusi membahas dinamika pelaksanaan perizinan berusaha dan tantangan dalam menciptakan iklim investasi yang kondusif. koordinasi pemerintah daerah dengan kementerian terkait juga ditujukan untuk menyamakan langkah dalam pengendalian pelaksanaan penanaman modal agar berjalan sesuai ketentuan. dpmptsp kota surabaya menekankan pentingnya sinergi pemerintah daerah dan pusat untuk menghadirkan pelayanan yang efektif, transparan, dan memberi kepastian bagi pelaku usaha serta investor. pertemuan juga menjadi ruang bertukar masukan mengenai strategi peningkatan realisasi investasi di surabaya. pertemuan tersebut merupakan forum koordinasi; tidak berarti seluruh hambatan perizinan langsung selesai atau aturan baru otomatis berlaku. perubahan prosedur dan kebijakan harus mengacu pada keputusan atau pengumuman resmi dari instansi berwenang.">
+                <a class="bcard-media" href="berita-kadin-surabaya-hadir-dalam-koordinasi-perizinan-dan-investasi.html" tabindex="-1" aria-hidden="true"><img src="https://dpm-ptsp.surabaya.go.id/fileberita/BKPM-RI-Juni-2026-2026-06-10%28BERITA%29.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">INVESTASI</span><time>10 Juni 2026</time></div>
-                    <h2 class="bcard-title"><a href="https://dpm-ptsp.surabaya.go.id/berita.php?id=NzYz" target="_blank"
-                            rel="noopener noreferrer">KADIN Surabaya Hadir dalam Koordinasi Perizinan dan Investasi</a>
-                    </h2>
-                    <p class="bcard-excerpt">KADIN Surabaya menjadi salah satu organisasi yang hadir dalam pertemuan
-                        Pemkot Surabaya dengan Kementerian Investasi dan Hilirisasi/BKPM RI terkait perizinan dan
-                        penanaman modal.</p>
-                    <div class="bcard-foot"><span>Sumber: DPMPTSP</span><a
-                            href="https://dpm-ptsp.surabaya.go.id/berita.php?id=NzYz" target="_blank"
-                            rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">INVESTASI</span><time datetime="2026-06-10">10 Juni 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-hadir-dalam-koordinasi-perizinan-dan-investasi.html">KADIN Surabaya Hadir dalam Koordinasi Perizinan dan Investasi</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya menjadi salah satu organisasi yang hadir dalam pertemuan Pemkot Surabaya dengan Kementerian Investasi dan Hilirisasi/BKPM RI terkait perizinan dan penanaman modal.</p>
+                    <div class="bcard-foot"><span>Sumber: DPMPTSP</span><a href="berita-kadin-surabaya-hadir-dalam-koordinasi-perizinan-dan-investasi.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media" href="https://dpm-ptsp.surabaya.go.id/berita.php?id=NzYx" target="_blank"
-                    rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://dpm-ptsp.surabaya.go.id/fileberita/dpmptsp-semarang-juni-2026-2026-06-08%28BERITA%29.jpeg"
-                        alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="investasi-kerja-sama" data-date="2026-06-08" data-search="temu bisnis investasi kota semarang digelar di surabaya kolaborasi investasi &amp; kerja sama sumber: dpmptsp kegiatan yang diselenggarakan pemkot semarang melalui dpmptsp ini menggandeng kadin surabaya bersama sejumlah mitra untuk memperkenalkan potensi investasi kota semarang. pemerintah kota semarang melalui dpmptsp mengadakan temu bisnis pada senin, 8 juni 2026 di hotel morazen surabaya. kegiatan ini bertujuan memperkenalkan potensi investasi kota semarang kepada pelaku usaha dan mitra strategis di jawa timur. dalam kegiatan tersebut, pemkot semarang menggandeng sejumlah konsulat jenderal negara sahabat di surabaya, pemkot surabaya, kadin kota surabaya, serta hipmi kota surabaya. dpmptsp kota surabaya turut hadir, dengan kepala dpmptsp ir. lasidi, s.t., m.t. sebagai narasumber mengenai iklim investasi, layanan perizinan, dan strategi pengembangan investasi daerah. forum ini mempertemukan pelaku usaha dari berbagai sektor untuk berdiskusi tentang peluang investasi, potensi kerja sama antardaerah, dan pengembangan sektor usaha yang dipandang memiliki prospek. pertemuan juga menjadi kesempatan berbagi pengalaman mengenai cara membangun ekosistem investasi yang kondusif dan kompetitif. kolaborasi antara pemerintah daerah, pelaku usaha, dan mitra internasional dipandang dapat memperluas jejaring serta membuka peluang tindak lanjut. namun, acara promosi investasi tidak dengan sendirinya berarti proyek telah mendapat pendanaan, kontrak telah ditandatangani, atau pembangunan telah dimulai. informasi kegiatan ini bersumber dari publikasi dpmptsp kota surabaya bertanggal 8 juni 2026. perkembangan kerja sama setelah acara perlu dikonfirmasi melalui pengumuman resmi para pihak.">
+                <a class="bcard-media" href="berita-temu-bisnis-investasi-kota-semarang-digelar-di-surabaya.html" tabindex="-1" aria-hidden="true"><img src="https://dpm-ptsp.surabaya.go.id/fileberita/dpmptsp-semarang-juni-2026-2026-06-08%28BERITA%29.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">KOLABORASI</span><time>8 Juni 2026</time></div>
-                    <h2 class="bcard-title"><a href="https://dpm-ptsp.surabaya.go.id/berita.php?id=NzYx" target="_blank"
-                            rel="noopener noreferrer">Temu Bisnis Investasi Kota Semarang Digelar di Surabaya</a></h2>
-                    <p class="bcard-excerpt">Kegiatan yang diselenggarakan Pemkot Semarang melalui DPMPTSP ini
-                        menggandeng KADIN Surabaya bersama sejumlah mitra untuk memperkenalkan potensi investasi Kota
-                        Semarang.</p>
-                    <div class="bcard-foot"><span>Sumber: DPMPTSP</span><a
-                            href="https://dpm-ptsp.surabaya.go.id/berita.php?id=NzYx" target="_blank"
-                            rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">KOLABORASI</span><time datetime="2026-06-08">8 Juni 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-temu-bisnis-investasi-kota-semarang-digelar-di-surabaya.html">Temu Bisnis Investasi Kota Semarang Digelar di Surabaya</a></h2>
+                    <p class="bcard-excerpt">Kegiatan yang diselenggarakan Pemkot Semarang melalui DPMPTSP ini menggandeng KADIN Surabaya bersama sejumlah mitra untuk memperkenalkan potensi investasi Kota Semarang.</p>
+                    <div class="bcard-foot"><span>Sumber: DPMPTSP</span><a href="berita-temu-bisnis-investasi-kota-semarang-digelar-di-surabaya.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/1066621/pengurus-kadin-surabaya-dilantik-usung-semangat-kolaborasi"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://cdn.antaranews.com/cache/800x533/2026/05/18/1230881.jpg" alt=""
-                        referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="organisasi" data-date="2026-05-18" data-search="kadin surabaya perkuat kolaborasi dan pertumbuhan ekonomi inklusif kadin surabaya organisasi sumber: antara sebanyak 155 pengurus kadin surabaya periode 2024–2029 dilantik dengan komitmen mengusung kolaborasi dan pertumbuhan inklusif. sebanyak 155 pengurus kadin surabaya periode 2024–2029 dilantik dengan komitmen mengusung kolaborasi dan pertumbuhan inklusif. kolaborasi menjadi penting karena tantangan ekonomi daerah biasanya melibatkan banyak pihak, mulai dari pelaku usaha dan asosiasi hingga pemerintah serta komunitas. kerja sama dapat membuka ruang berbagi informasi, memperluas jaringan, dan mencari solusi terhadap hambatan bisnis. pertumbuhan ekonomi yang inklusif berarti manfaat kegiatan ekonomi diupayakan dapat dirasakan oleh pelaku usaha dengan skala dan latar yang beragam. dukungan terhadap umkm, peningkatan kapasitas, dan akses ke jaringan usaha merupakan contoh area yang dapat dibahas dalam agenda kolaborasi. pelantikan 155 pengurus merupakan awal dari masa kerja kepengurusan. dampak nyata komitmen tersebut akan bergantung pada program, pelaksanaan, dan evaluasi yang dilakukan secara berkelanjutan.">
+                <a class="bcard-media" href="berita-kadin-surabaya-perkuat-kolaborasi-dan-pertumbuhan-ekonomi-inklusif.html" tabindex="-1" aria-hidden="true"><img src="https://cdn.antaranews.com/cache/800x533/2026/05/18/1230881.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">KADIN SURABAYA</span><time>18 Mei 2026</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/1066621/pengurus-kadin-surabaya-dilantik-usung-semangat-kolaborasi"
-                            target="_blank" rel="noopener noreferrer">KADIN Surabaya Perkuat Kolaborasi dan Pertumbuhan
-                            Ekonomi Inklusif</a></h2>
-                    <p class="bcard-excerpt">Sebanyak 155 pengurus KADIN Surabaya periode 2024–2029 dilantik dengan
-                        komitmen mengusung kolaborasi dan pertumbuhan inklusif.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/1066621/pengurus-kadin-surabaya-dilantik-usung-semangat-kolaborasi"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">KADIN SURABAYA</span><time datetime="2026-05-18">18 Mei 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-perkuat-kolaborasi-dan-pertumbuhan-ekonomi-inklusif.html">KADIN Surabaya Perkuat Kolaborasi dan Pertumbuhan Ekonomi Inklusif</a></h2>
+                    <p class="bcard-excerpt">Sebanyak 155 pengurus KADIN Surabaya periode 2024–2029 dilantik dengan komitmen mengusung kolaborasi dan pertumbuhan inklusif.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-kadin-surabaya-perkuat-kolaborasi-dan-pertumbuhan-ekonomi-inklusif.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media" href="berita-single.html" tabindex="-1" aria-hidden="true"><img
-                        src="https://surabaya.go.id/uploads/images/posts/post_25165/blob_8214_0.jpg" alt=""
-                        referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="organisasi" data-date="2026-05-17" data-search="pengurus kadin surabaya 2024–2029 resmi dilantik di taman surya kadin surabaya organisasi oleh: kadin surabaya kepengurusan kadin surabaya masa bakti 2024–2029 resmi dilantik di taman surya. ali affandi la nyalla mahmud mattalitti mengemban amanah sebagai ketua kadin kota surabaya. kepengurusan kamar dagang dan industri (kadin) kota surabaya masa bakti 2024–2029 resmi dilantik di halaman balai kota surabaya (taman surya) pada minggu, 17 mei 2026. dalam pelantikan tersebut, ali affandi la nyalla mahmud mattalitti resmi mengemban amanah sebagai ketua kadin kota surabaya. prosesi pelantikan berlangsung di ruang terbuka dan diramaikan pesta rakyat serta gebyar umkm. sebagai bagian dari komitmen lingkungan, kadin surabaya juga menyerahkan secara simbolis 733 bibit pohon mahoni kepada pemerintah kota surabaya. menurut keterangan pemerintah kota surabaya, kepengurusan baru akan berfokus pada pembukaan jejaring pasar global, penguatan sumber daya manusia, aktivasi dan pelatihan umkm, serta persiapan porprov 2027 bersama koni surabaya untuk mendorong ekonomi kreatif dan perputaran ekonomi bagi pedagang kecil. ali affandi juga menyampaikan bahwa sebelum pelantikan resmi, kadin surabaya telah menjalankan lebih dari 139 agenda kerja selama sekitar 1,5 tahun. kolaborasi dengan pemerintah kota surabaya termasuk dengan dpmptsp disebut mencakup kurasi produk, pelatihan naik kelas, serta pendampingan pengurusan nib dan sertifikasi halal gratis. pelantikan kepengurusan menjadi penanda dimulainya masa kerja organisasi dan tanggung jawab pengurus untuk menjalankan program. bagi organisasi dunia usaha, kepengurusan memiliki peran dalam membangun komunikasi dengan anggota, pemerintah, asosiasi, dan mitra lainnya. komitmen kolaborasi dapat diwujudkan melalui dialog rutin, pertukaran informasi, dan dukungan terhadap kebutuhan pelaku usaha di berbagai sektor. program yang terarah juga membantu organisasi menyampaikan masukan dunia usaha secara lebih terstruktur. informasi mengenai susunan pengurus dan agenda kerja selanjutnya sebaiknya mengacu pada pengumuman resmi kadin surabaya.">
+                <a class="bcard-media" href="berita-single.html" tabindex="-1" aria-hidden="true"><img src="https://surabaya.go.id/uploads/images/posts/post_25165/blob_8214_0.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">KADIN SURABAYA</span><time>17 Mei 2026</time></div>
-                    <h2 class="bcard-title"><a href="berita-single.html">Pengurus KADIN Surabaya 2024–2029 Resmi
-                            Dilantik di Taman Surya</a></h2>
-                    <p class="bcard-excerpt">Kepengurusan KADIN Surabaya masa bakti 2024–2029 resmi dilantik di Taman
-                        Surya. Ali Affandi La Nyalla Mahmud Mattalitti mengemban amanah sebagai Ketua KADIN Kota
-                        Surabaya.</p>
-                    <div class="bcard-foot"><span>Oleh: KADIN Surabaya</span><a href="berita-single.html">Baca Artikel
-                            →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">KADIN SURABAYA</span><time datetime="2026-05-17">17 Mei 2026</time></div>
+                    <h2 class="bcard-title"><a href="berita-single.html">Pengurus KADIN Surabaya 2024–2029 Resmi Dilantik di Taman Surya</a></h2>
+                    <p class="bcard-excerpt">Kepengurusan KADIN Surabaya masa bakti 2024–2029 resmi dilantik di Taman Surya. Ali Affandi La Nyalla Mahmud Mattalitti mengemban amanah sebagai Ketua KADIN Kota Surabaya.</p>
+                    <div class="bcard-foot"><span>Oleh: KADIN Surabaya</span><a href="berita-single.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/894741/pemkot-surabaya-tingkatkan-ekonomi-lewat-ramadhan-kreatif-fest-2025"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://cdn.antaranews.com/cache/800x533/2025/03/15/1001885926.jpg" alt=""
-                        referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="umkm-ekonomi-kreatif" data-date="2025-03-14" data-search="kadin dan pemkot surabaya hadirkan ramadhan kreatif fest 2025 ekonomi kreatif umkm &amp; ekonomi kreatif sumber: antara kadin surabaya bersama pemkot surabaya menyelenggarakan ramadhan kreatif fest 2025 di plaza internatio kota lama. kadin surabaya bersama pemkot surabaya menyelenggarakan ramadhan kreatif fest 2025 di plaza internatio kota lama. ramadhan kreatif fest menghadirkan kegiatan yang menghubungkan suasana ramadan dengan kreativitas dan aktivitas ekonomi. acara di kawasan kota lama dapat menjadi ruang bagi pengunjung untuk menikmati kegiatan sekaligus mengenal produk dan usaha lokal. kolaborasi antara kadin dan pemerintah kota dapat membantu mempertemukan penyelenggara, pelaku usaha, dan masyarakat. kegiatan publik seperti ini berpotensi mendukung promosi produk, memperluas jangkauan pelanggan, dan meningkatkan aktivitas kawasan selama acara berlangsung. besarnya dampak ekonomi bergantung pada partisipasi pengunjung, jenis kegiatan, dan keterlibatan usaha lokal. informasi ini merupakan rangkuman konteks kegiatan; rincian acara dan hasil resminya mengikuti dokumentasi penyelenggara.">
+                <a class="bcard-media" href="berita-kadin-dan-pemkot-surabaya-hadirkan-ramadhan-kreatif-fest-2025.html" tabindex="-1" aria-hidden="true"><img src="https://cdn.antaranews.com/cache/800x533/2025/03/15/1001885926.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">EKONOMI KREATIF</span><time>14–23 Maret 2025</time>
-                    </div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/894741/pemkot-surabaya-tingkatkan-ekonomi-lewat-ramadhan-kreatif-fest-2025"
-                            target="_blank" rel="noopener noreferrer">KADIN dan Pemkot Surabaya Hadirkan Ramadhan
-                            Kreatif Fest 2025</a></h2>
-                    <p class="bcard-excerpt">KADIN Surabaya bersama Pemkot Surabaya menyelenggarakan Ramadhan Kreatif
-                        Fest 2025 di Plaza Internatio Kota Lama.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/894741/pemkot-surabaya-tingkatkan-ekonomi-lewat-ramadhan-kreatif-fest-2025"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">EKONOMI KREATIF</span><time datetime="2025-03-14">14–23 Maret 2025</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-dan-pemkot-surabaya-hadirkan-ramadhan-kreatif-fest-2025.html">KADIN dan Pemkot Surabaya Hadirkan Ramadhan Kreatif Fest 2025</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya bersama Pemkot Surabaya menyelenggarakan Ramadhan Kreatif Fest 2025 di Plaza Internatio Kota Lama.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-kadin-dan-pemkot-surabaya-hadirkan-ramadhan-kreatif-fest-2025.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/321062/kadin-surabaya-usulkan-kerja-sama-jangka-panjang-dengan-australia"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://img.antaranews.com/cache/1200x800/2019/09/28/IMG-20190928-WA0060_1.jpg"
-                        alt="Kadin Surabaya usulkan kerja sama jangka panjang dengan Australia" loading="lazy"></a>
+<article class="bcard" data-sector="organisasi" data-date="2024-10-12" data-search="kadin surabaya gelar mukota, 400 pengusaha siap hadir organisasi organisasi oleh: kadin surabaya mukota vii kadin surabaya akan dihadiri sekitar 400 pelaku usaha dan ratusan asosiasi yang siap membahas arah ekonomi surabaya ke depan. musyawarah kota (mukota) vii kadin surabaya dijadwalkan berlangsung pada 17 oktober 2024 di hotel westin surabaya dengan sekitar 400 undangan dari kalangan pelaku usaha dan asosiasi anggota. forum ini mengusung tema “kadin surabaya maju, kota surabaya melaju.” rencana tersebut disampaikan panitia dalam konferensi pers di graha kadin jatim pada 11 oktober 2024. selain membahas arah organisasi, mukota vii juga menjadi forum pemilihan ketua kadin surabaya untuk periode 2024–2029. panitia menyebut tiga misi utama. pertama, menghimpun aspirasi pelaku usaha dan asosiasi anggota mengenai dinamika, kendala, dan tantangan berusaha. kedua, menyelaraskan program kerja dan prioritas pokok dengan peran kadin surabaya sebagai mitra strategis pemerintah. ketiga, mengoptimalkan infrastruktur internal untuk mendukung layanan keanggotaan serta hubungan dengan pemerintah dan pemangku kepentingan lain. ketua panitia pelaksana, arditto grahadi, menjelaskan bahwa misi kedua berkaitan dengan penyelarasan program kerja dan prioritas pokok. ketua dewan pertimbangan kadin surabaya, jamhadi, menyebut pertumbuhan apbd kota surabaya hingga rp11,5 triliun sebagai salah satu contoh kolaborasi kadin dengan pemerintah kota surabaya. pendaftaran bakal calon ketua dibuka pada september 2024. menurut pemberitaan tersebut, hanya satu calon yang mendaftar, yaitu ali affandi yang memimpin kadin surabaya pada periode 2019–2024. informasi di atas merujuk pada pemberitaan menjelang acara. hasil dan keputusan mukota sebaiknya dilihat pada pengumuman resmi kadin surabaya.">
+                <a class="bcard-media" href="berita-kadin-surabaya-gelar-mukota-400-pengusaha-siap-hadir.html" tabindex="-1" aria-hidden="true"><img src="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Surabaya/o/1728699950760-IMG-20241012-WA0016/0uj2sob8lkgdfc8.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">EKONOMI REGIONAL</span><time>28 September
-                            2019</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/321062/kadin-surabaya-usulkan-kerja-sama-jangka-panjang-dengan-australia"
-                            target="_blank" rel="noopener noreferrer">KADIN Surabaya Usulkan Kerja Sama Jangka Panjang
-                            dengan Australia</a></h2>
-                    <p class="bcard-excerpt">KADIN Surabaya mengusulkan kolaborasi jangka panjang dengan Australia,
-                        mulai dari transfer teknologi, pendidikan kewirausahaan, hingga kerja sama dagang dan
-                        pariwisata.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/321062/kadin-surabaya-usulkan-kerja-sama-jangka-panjang-dengan-australia"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">ORGANISASI</span><time datetime="2024-10-12">12 Oktober 2024</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-gelar-mukota-400-pengusaha-siap-hadir.html">KADIN Surabaya Gelar MUKOTA, 400 Pengusaha Siap Hadir</a></h2>
+                    <p class="bcard-excerpt">Mukota VII KADIN Surabaya akan dihadiri sekitar 400 pelaku usaha dan ratusan asosiasi yang siap membahas arah ekonomi Surabaya ke depan.</p>
+                    <div class="bcard-foot"><span>Oleh: KADIN Surabaya</span><a href="berita-kadin-surabaya-gelar-mukota-400-pengusaha-siap-hadir.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://rri.co.id/surabaya/bisnis/766057/ketua-kadin-surabaya-beberkan-rencana-revitalisasi-thr-dan-trs"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Surabaya/o/1718782498051-IMG-20240619-WA0012/79a304yk549vdsb.jpeg"
-                        alt="Ketua Kadin Surabaya Beberkan Rencana Revitalisasi THR dan TRS" loading="lazy"></a>
+<article class="bcard" data-sector="organisasi" data-date="2024-07-24" data-search="kadin ajak pelaku usaha geliatkan perekonomian wisata kota lama surabaya organisasi organisasi sumber: inews surabaya kadin surabaya mendorong sinergi pelaku usaha untuk menghidupkan kembali potensi ekonomi wisata di kawasan kota lama surabaya. kadin surabaya mendorong sinergi pelaku usaha untuk menghidupkan kembali potensi ekonomi wisata di kawasan kota lama surabaya. kawasan kota lama memiliki nilai sejarah dan daya tarik wisata yang dapat membuka peluang bagi usaha lokal. kehadiran pengunjung dapat memberi manfaat bagi pelaku kuliner, toko, jasa wisata, ekonomi kreatif, dan usaha kecil di sekitar kawasan. kolaborasi dunia usaha dengan pengelola kawasan dan pemerintah diperlukan agar promosi wisata berjalan berkelanjutan. pelaku usaha dapat berkontribusi melalui produk lokal, layanan yang berkualitas, kegiatan kreatif, serta pengalaman berkunjung yang menarik. pengembangan kawasan wisata tidak hanya berfokus pada jumlah kunjungan, tetapi juga pada pemerataan manfaat ekonomi bagi warga dan usaha setempat. informasi ini merangkum arah ajakan kadin; rincian program dan target pelaksanaan perlu merujuk pada pengumuman resmi.">
+                <a class="bcard-media" href="berita-kadin-ajak-pelaku-usaha-geliatkan-perekonomian-wisata-kota-lama.html" tabindex="-1" aria-hidden="true"><img src="https://img.inews.co.id/media/600/files/networks/2024/07/24/9d88f_kadin-surabaya.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">INOVASI</span><time>19 Juni 2024</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://rri.co.id/surabaya/bisnis/766057/ketua-kadin-surabaya-beberkan-rencana-revitalisasi-thr-dan-trs"
-                            target="_blank" rel="noopener noreferrer">Ketua Kadin Surabaya Beberkan Rencana Revitalisasi
-                            THR dan TRS</a></h2>
-                    <p class="bcard-excerpt">KADIN Surabaya menilai revitalisasi THR dan TRS bisa menjadi pusat inovasi,
-                        wisata, dan kreativitas untuk generasi muda serta pengusaha Surabaya.</p>
-                    <div class="bcard-foot"><span>Sumber: RRI Surabaya</span><a
-                            href="https://rri.co.id/surabaya/bisnis/766057/ketua-kadin-surabaya-beberkan-rencana-revitalisasi-thr-dan-trs"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">ORGANISASI</span><time datetime="2024-07-24">24 Juli 2024</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-ajak-pelaku-usaha-geliatkan-perekonomian-wisata-kota-lama.html">Kadin Ajak Pelaku Usaha Geliatkan Perekonomian Wisata Kota Lama Surabaya</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya mendorong sinergi pelaku usaha untuk menghidupkan kembali potensi ekonomi wisata di kawasan Kota Lama Surabaya.</p>
+                    <div class="bcard-foot"><span>Sumber: iNews Surabaya</span><a href="berita-kadin-ajak-pelaku-usaha-geliatkan-perekonomian-wisata-kota-lama.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://surabaya.inews.id/read/472041/kadin-ajak-pelaku-usaha-geliatkan-perekonomian-wisata-kota-lama-surabaya"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://img.inews.co.id/media/600/files/networks/2024/07/24/9d88f_kadin-surabaya.jpg"
-                        alt="Kadin Ajak Pelaku Usaha Geliatkan Perekonomian Wisata Kota Lama Surabaya"
-                        loading="lazy"></a>
+<article class="bcard" data-sector="umkm-ekonomi-kreatif" data-date="2024-06-19" data-search="ketua kadin surabaya beberkan rencana revitalisasi thr dan trs inovasi umkm &amp; ekonomi kreatif sumber: rri surabaya kadin surabaya menilai revitalisasi thr dan trs bisa menjadi pusat inovasi, wisata, dan kreativitas untuk generasi muda serta pengusaha surabaya. kadin surabaya menilai revitalisasi thr dan trs bisa menjadi pusat inovasi, wisata, dan kreativitas untuk generasi muda serta pengusaha surabaya. rencana revitalisasi kawasan thr dan trs dipandang sebagai peluang untuk menghidupkan kembali fungsi kawasan sebagai ruang rekreasi, kreativitas, dan aktivitas ekonomi. pengembangan yang terencana berpotensi membuka ruang bagi pelaku usaha dan kegiatan komunitas. agar kawasan dapat dimanfaatkan secara berkelanjutan, perencanaan perlu mempertimbangkan akses pengunjung, fasilitas, keamanan, pemeliharaan, serta peluang keterlibatan usaha lokal. konsep kegiatan yang relevan bagi generasi muda juga dapat membantu membangun daya tarik baru. gagasan revitalisasi perlu dibedakan dari pekerjaan yang sudah disetujui atau dilaksanakan. detail desain, pembiayaan, jadwal, dan bentuk investasi harus mengikuti pengumuman resmi pemerintah atau pihak pengelola.">
+                <a class="bcard-media" href="berita-ketua-kadin-surabaya-beberkan-rencana-revitalisasi-thr-dan-trs.html" tabindex="-1" aria-hidden="true"><img src="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Surabaya/o/1718782498051-IMG-20240619-WA0012/79a304yk549vdsb.jpeg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">ORGANISASI</span><time>24 Juli 2024</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://surabaya.inews.id/read/472041/kadin-ajak-pelaku-usaha-geliatkan-perekonomian-wisata-kota-lama-surabaya"
-                            target="_blank" rel="noopener noreferrer">Kadin Ajak Pelaku Usaha Geliatkan Perekonomian
-                            Wisata Kota Lama Surabaya</a></h2>
-                    <p class="bcard-excerpt">KADIN Surabaya mendorong sinergi pelaku usaha untuk menghidupkan kembali
-                        potensi ekonomi wisata di kawasan Kota Lama Surabaya.</p>
-                    <div class="bcard-foot"><span>Sumber: iNews Surabaya</span><a
-                            href="https://surabaya.inews.id/read/472041/kadin-ajak-pelaku-usaha-geliatkan-perekonomian-wisata-kota-lama-surabaya"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">INOVASI</span><time datetime="2024-06-19">19 Juni 2024</time></div>
+                    <h2 class="bcard-title"><a href="berita-ketua-kadin-surabaya-beberkan-rencana-revitalisasi-thr-dan-trs.html">Ketua Kadin Surabaya Beberkan Rencana Revitalisasi THR dan TRS</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya menilai revitalisasi THR dan TRS bisa menjadi pusat inovasi, wisata, dan kreativitas untuk generasi muda serta pengusaha Surabaya.</p>
+                    <div class="bcard-foot"><span>Sumber: RRI Surabaya</span><a href="berita-ketua-kadin-surabaya-beberkan-rencana-revitalisasi-thr-dan-trs.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media" href="berita-single.html" tabindex="-1" aria-hidden="true"><img
-                        src="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Surabaya/o/1728699950760-IMG-20241012-WA0016/0uj2sob8lkgdfc8.jpeg"
-                        alt="Kadin Surabaya gelar Mukota VII" loading="lazy"></a>
+<article class="bcard" data-sector="investasi-kerja-sama" data-date="2024-06-07" data-search="pemkot dan kadin surabaya buka peluang investasi eks thr-trs investasi investasi &amp; kerja sama sumber: antara pemkot surabaya menggandeng kadin untuk mempromosikan peluang investasi di kota surabaya, salah satunya pengembangan kawasan eks thr-trs. pemkot surabaya menggandeng kadin untuk mempromosikan peluang investasi di kota surabaya, salah satunya pengembangan kawasan eks thr-trs. promosi peluang investasi kawasan eks thr-trs merupakan bagian dari upaya mencari pemanfaatan kawasan yang dapat memberi nilai ekonomi bagi kota. kolaborasi pemerintah dengan dunia usaha dapat membantu mempertemukan rencana pengembangan dengan pihak yang memiliki minat dan kapasitas investasi. pengembangan kawasan berskala besar biasanya membutuhkan kajian mengenai fungsi ruang, akses, kebutuhan masyarakat, model pengelolaan, serta keberlanjutan finansial. informasi yang terbuka mengenai aspek-aspek tersebut akan membantu calon investor memahami peluang dan tanggung jawabnya. berita ini menjelaskan adanya upaya membuka peluang investasi, bukan memastikan bahwa seluruh rencana telah terealisasi. perkembangan resmi mengenai skema, mitra, dan jadwal pelaksanaan perlu menunggu pengumuman dari pemerintah kota.">
+                <a class="bcard-media" href="berita-pemkot-dan-kadin-surabaya-buka-peluang-investasi-eks-thr.html" tabindex="-1" aria-hidden="true"><img src="https://cdn.antaranews.com/cache/800x533/2024/06/08/1000081483.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">ORGANISASI</span><time>12 Oktober 2024</time></div>
-                    <h2 class="bcard-title"><a href="berita-single.html">KADIN Surabaya Gelar MUKOTA, 400 Pengusaha Siap
-                            Hadir</a></h2>
-                    <p class="bcard-excerpt">Mukota VII KADIN Surabaya akan dihadiri sekitar 400 pelaku usaha dan
-                        ratusan asosiasi yang siap membahas arah ekonomi Surabaya ke depan.</p>
-                    <div class="bcard-foot"><span>Oleh: KADIN Surabaya</span><a href="berita-single.html">Baca Artikel
-                            →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">INVESTASI</span><time datetime="2024-06-07">7–8 Juni 2024</time></div>
+                    <h2 class="bcard-title"><a href="berita-pemkot-dan-kadin-surabaya-buka-peluang-investasi-eks-thr.html">Pemkot dan KADIN Surabaya Buka Peluang Investasi Eks THR-TRS</a></h2>
+                    <p class="bcard-excerpt">Pemkot Surabaya menggandeng KADIN untuk mempromosikan peluang investasi di Kota Surabaya, salah satunya pengembangan kawasan eks THR-TRS.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-pemkot-dan-kadin-surabaya-buka-peluang-investasi-eks-thr.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/793314/pemkot-surabaya-gandeng-kadin-tarik-investor-masuk-ke-thr"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://cdn.antaranews.com/cache/800x533/2024/06/08/1000081483.jpg" alt=""
-                        referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="investasi-kerja-sama" data-date="2024-06-06" data-search="kadin surabaya bahas peluang kerja sama ekonomi dengan thailand kerja sama investasi &amp; kerja sama sumber: antara kadin surabaya membahas peluang kerja sama dengan thailand. ali affandi menyampaikan keinginan untuk bertukar informasi mengenai kebutuhan thailand dan potensi yang dapat ditawarkan surabaya. kadin surabaya membahas peluang kerja sama dengan thailand. ali affandi menyampaikan keinginan untuk bertukar informasi mengenai kebutuhan thailand dan potensi yang dapat ditawarkan surabaya. pertukaran informasi mengenai kebutuhan pasar thailand dan potensi produk maupun layanan dari surabaya dapat menjadi langkah awal untuk menemukan bidang kerja sama yang saling menguntungkan. pelaku usaha perlu memahami kebutuhan calon mitra, ketentuan perdagangan, serta standar produk yang berlaku. peluang kerja sama lintas negara tidak hanya berkaitan dengan jual beli barang. jaringan bisnis, pertukaran pengetahuan, promosi potensi daerah, dan hubungan antarpelaku usaha juga dapat mendukung terbentuknya kemitraan. pembahasan tersebut menunjukkan penjajakan peluang, bukan kepastian bahwa kesepakatan dagang telah ditandatangani. perkembangan berikutnya bergantung pada komunikasi antarpihak dan tindak lanjut dari dunia usaha terkait.">
+                <a class="bcard-media" href="berita-kadin-surabaya-bahas-peluang-kerja-sama-ekonomi-dengan-thailand.html" tabindex="-1" aria-hidden="true"><img src="https://cdn.antaranews.com/cache/800x533/2024/06/06/IMG_20240606_191003.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">INVESTASI</span><time>7–8 Juni 2024</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/793314/pemkot-surabaya-gandeng-kadin-tarik-investor-masuk-ke-thr"
-                            target="_blank" rel="noopener noreferrer">Pemkot dan KADIN Surabaya Buka Peluang Investasi
-                            Eks THR-TRS</a></h2>
-                    <p class="bcard-excerpt">Pemkot Surabaya menggandeng KADIN untuk mempromosikan peluang investasi di
-                        Kota Surabaya, salah satunya pengembangan kawasan eks THR-TRS.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/793314/pemkot-surabaya-gandeng-kadin-tarik-investor-masuk-ke-thr"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">KERJA SAMA</span><time datetime="2024-06-06">6 Juni 2024</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-bahas-peluang-kerja-sama-ekonomi-dengan-thailand.html">KADIN Surabaya Bahas Peluang Kerja Sama Ekonomi dengan Thailand</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya membahas peluang kerja sama dengan Thailand. Ali Affandi menyampaikan keinginan untuk bertukar informasi mengenai kebutuhan Thailand dan potensi yang dapat ditawarkan Surabaya.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-kadin-surabaya-bahas-peluang-kerja-sama-ekonomi-dengan-thailand.html">Baca Artikel →</a></div>
                 </div>
             </article>
-            <article class="bcard">
-                <a class="bcard-media"
-                    href="https://jatim.antaranews.com/berita/792927/kadin-surabaya-punya-peluang-besar-jalin-kerja-sama-dengan-thailand"
-                    target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img
-                        src="https://cdn.antaranews.com/cache/800x533/2024/06/06/IMG_20240606_191003.jpg" alt=""
-                        referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
+<article class="bcard" data-sector="investasi-kerja-sama" data-date="2019-09-28" data-search="kadin surabaya usulkan kerja sama jangka panjang dengan australia ekonomi regional investasi &amp; kerja sama sumber: antara kadin surabaya mengusulkan kolaborasi jangka panjang dengan australia, mulai dari transfer teknologi, pendidikan kewirausahaan, hingga kerja sama dagang dan pariwisata. kadin surabaya mengusulkan kolaborasi jangka panjang dengan australia, mulai dari transfer teknologi, pendidikan kewirausahaan, hingga kerja sama dagang dan pariwisata. kerja sama jangka panjang memberi ruang bagi hubungan ekonomi yang tidak berhenti pada transaksi dagang. pertukaran pengetahuan, pengembangan keterampilan, dan hubungan antarpelaku usaha dapat membantu membangun kemitraan yang lebih konsisten. bidang yang disebutkan mencakup transfer teknologi, pendidikan kewirausahaan, perdagangan, dan pariwisata. setiap bidang membutuhkan pemetaan kebutuhan mitra, kesiapan pelaku usaha, serta tindak lanjut yang jelas agar peluang dapat diterjemahkan menjadi kegiatan nyata. bagi pelaku usaha surabaya, penjajakan internasional dapat menjadi kesempatan untuk memahami standar pasar dan mencari mitra baru. usulan ini merupakan arah kolaborasi yang dibahas, bukan berarti seluruh program telah resmi berjalan.">
+                <a class="bcard-media" href="berita-kadin-surabaya-usulkan-kerja-sama-jangka-panjang-dengan-australia.html" tabindex="-1" aria-hidden="true"><img src="https://img.antaranews.com/cache/1200x800/2019/09/28/IMG-20190928-WA0060_1.jpg" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()"></a>
                 <div class="bcard-body">
-                    <div class="bcard-meta"><span class="bcard-cat">KERJA SAMA</span><time>6 Juni 2024</time></div>
-                    <h2 class="bcard-title"><a
-                            href="https://jatim.antaranews.com/berita/792927/kadin-surabaya-punya-peluang-besar-jalin-kerja-sama-dengan-thailand"
-                            target="_blank" rel="noopener noreferrer">KADIN Surabaya Bahas Peluang Kerja Sama Ekonomi
-                            dengan Thailand</a></h2>
-                    <p class="bcard-excerpt">KADIN Surabaya membahas peluang kerja sama dengan Thailand. Ali Affandi
-                        menyampaikan keinginan untuk bertukar informasi mengenai kebutuhan Thailand dan potensi yang
-                        dapat ditawarkan Surabaya.</p>
-                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a
-                            href="https://jatim.antaranews.com/berita/792927/kadin-surabaya-punya-peluang-besar-jalin-kerja-sama-dengan-thailand"
-                            target="_blank" rel="noopener noreferrer">Baca Artikel →</a></div>
+                    <div class="bcard-meta"><span class="bcard-cat">EKONOMI REGIONAL</span><time datetime="2019-09-28">28 September 2019</time></div>
+                    <h2 class="bcard-title"><a href="berita-kadin-surabaya-usulkan-kerja-sama-jangka-panjang-dengan-australia.html">KADIN Surabaya Usulkan Kerja Sama Jangka Panjang dengan Australia</a></h2>
+                    <p class="bcard-excerpt">KADIN Surabaya mengusulkan kolaborasi jangka panjang dengan Australia, mulai dari transfer teknologi, pendidikan kewirausahaan, hingga kerja sama dagang dan pariwisata.</p>
+                    <div class="bcard-foot"><span>Sumber: ANTARA</span><a href="berita-kadin-surabaya-usulkan-kerja-sama-jangka-panjang-dengan-australia.html">Baca Artikel →</a></div>
                 </div>
             </article>
         </section>
 
-        <!-- PAGINASI BERITA -->
+        <div class="news-empty" id="news-empty" hidden>
+            <p>Tidak ada berita yang cocok dengan pencarian Anda.</p>
+            <button type="button" class="page-btn" id="news-reset">Tampilkan semua berita</button>
+        </div>
+
         <nav class="news-pagination" id="news-pagination" aria-label="Navigasi halaman berita" hidden>
             <div class="container">
                 <div class="news-pagination-inner">
-                    <p class="news-pagination-info" id="pagination-info" aria-live="polite"></p>
+                    <p class="news-pagination-info" id="pagination-info"></p>
                     <div class="news-pagination-nav" id="pagination-nav"></div>
                 </div>
             </div>
@@ -511,65 +392,7 @@
     </footer>
 
     <script src="js/main.js" defer></script>
-    <script>
-        (function () {
-            var grid = document.getElementById('news-grid');
-            var nav = document.getElementById('news-pagination');
-            var info = document.getElementById('pagination-info');
-            var btnWrap = document.getElementById('pagination-nav');
-            if (!grid || !nav) return;
-
-            var cards = Array.prototype.slice.call(grid.querySelectorAll('.bcard'));
-            var perPage = parseInt(grid.getAttribute('data-per-page'), 10) || 9;
-            var total = cards.length;
-            var pages = Math.ceil(total / perPage);
-            if (pages <= 1) return;
-
-            var current = 1;
-            var m = /[?&]halaman=(\d+)/.exec(location.search);
-            if (m) current = Math.min(Math.max(parseInt(m[1], 10), 1), pages);
-
-            function makeBtn(label, page, opts) {
-                var b = document.createElement('button');
-                b.type = 'button';
-                b.className = 'page-btn' + (opts.active ? ' is-active' : '');
-                b.textContent = label;
-                if (opts.aria) b.setAttribute('aria-label', opts.aria);
-                if (opts.active) b.setAttribute('aria-current', 'page');
-                if (opts.disabled) b.disabled = true;
-                else if (!opts.active) b.addEventListener('click', function () { go(page, true); });
-                return b;
-            }
-
-            function render() {
-                var start = (current - 1) * perPage;
-                var end = Math.min(start + perPage, total);
-                cards.forEach(function (c, i) { c.hidden = !(i >= start && i < end); });
-
-                info.innerHTML = 'Menampilkan <strong>' + (start + 1) + '\u2013' + end +
-                    '</strong> dari <strong>' + total + '</strong> berita';
-
-                btnWrap.innerHTML = '';
-                btnWrap.appendChild(makeBtn('\u2190 Sebelumnya', current - 1, { disabled: current === 1 }));
-                for (var p = 1; p <= pages; p++) {
-                    btnWrap.appendChild(makeBtn(String(p), p, { active: p === current, aria: 'Halaman ' + p }));
-                }
-                btnWrap.appendChild(makeBtn('Selanjutnya \u2192', current + 1, { disabled: current === pages }));
-                nav.hidden = false;
-            }
-
-            function go(page, scroll) {
-                current = page;
-                render();
-                var url = new URL(location.href);
-                if (page === 1) url.searchParams.delete('halaman'); else url.searchParams.set('halaman', page);
-                history.replaceState(null, '', url);
-                if (scroll) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-
-            render();
-        })();
-    </script>
+    <script src="js/berita.js" defer></script>
 </body>
 
 </html>
