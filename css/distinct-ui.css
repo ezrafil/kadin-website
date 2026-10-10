@@ -316,6 +316,7 @@ body:before {
    -------------------------------------------------------------------------- */
 .agenda-root {
   background: #edf2f7 !important;
+  scroll-margin-top: 100px;
 }
 
 .agenda-layout-table {
@@ -646,6 +647,9 @@ body:before {
   .header-container {
     min-height: 70px !important;
   }
+  .agenda-root {
+    scroll-margin-top: 24px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -663,6 +667,9 @@ body:before {
   .news-root {
     padding-top: 65px !important;
     padding-bottom: 65px !important;
+  }
+  .agenda-root {
+    scroll-margin-top: 16px;
   }
   .news-hero-modern,
   .article-modern,
