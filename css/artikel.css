@@ -71,3 +71,70 @@
   .page-artikel .artikel-nav-link.is-next { grid-column: auto; text-align: left; }
 }
 @media (max-width: 640px) { .page-artikel .artikel-body p { font-size: 1rem; } }
+
+
+/* Typography refinement for article detail pages */
+body.page-artikel {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+.page-artikel .artikel-head h1,
+.page-artikel .artikel-info h2,
+.page-artikel .artikel-related h2 {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  letter-spacing: -0.035em;
+}
+.page-artikel .artikel-head h1 {
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  line-height: 1.22;
+  font-weight: 800;
+  text-wrap: balance;
+}
+.page-artikel .artikel-meta { font-size: .82rem; line-height: 1.6; }
+.page-artikel .artikel-body {
+  max-width: 720px;
+  margin-inline: auto;
+}
+.page-artikel .artikel-body p {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: clamp(.98rem, 1.2vw, 1.06rem);
+  line-height: 1.9;
+  letter-spacing: 0;
+  margin: 0 0 1.25rem;
+  color: #334155;
+}
+.page-artikel .artikel-body .artikel-lead {
+  font-size: clamp(1.04rem, 1.5vw, 1.16rem);
+  font-weight: 600;
+  line-height: 1.8;
+  color: #0a2540;
+  padding-left: 18px;
+  border-left: 3px solid var(--kj-gold);
+}
+.page-artikel .artikel-body .artikel-catatan {
+  font-size: .86rem;
+  line-height: 1.75;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 1.6rem;
+}
+.page-artikel .artikel-sumber {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  line-height: 1.65;
+}
+.page-artikel .artikel-sumber a {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .page-artikel .artikel-wrap { width: min(100% - 30px, 820px); }
+  .page-artikel .artikel-head { margin: 20px 0 22px; }
+  .page-artikel .artikel-hero { margin-bottom: 26px; }
+  .page-artikel .artikel-info dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .page-artikel .artikel-nav { grid-template-columns: 1fr; }
+  .page-artikel .artikel-nav-link.is-next { grid-column: auto; text-align: left; }
+}
