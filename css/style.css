@@ -113,7 +113,8 @@ button, input, select, textarea {
     border: 0;
 }
 
-section {
+/* Halaman artikel (body.page-artikel) mengatur jarak section sendiri di css/artikel.css */
+body:not(.page-artikel) section {
     padding: 7.5rem 0;
 }
 
@@ -1264,7 +1265,7 @@ section {
    13. RESPONSIVE ARCHITECTURE (MEDIA QUERIES & MOBILE DRAWER)
    ───────────────────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-    section { padding: 5rem 0; }
+    body:not(.page-artikel) section { padding: 5rem 0; }
     .hero-root { min-height: auto; padding-bottom: 6rem; }
     .hero-layout, .hero-content-cell, .hero-visual-cell { display: block; width: 100%; }
     .hero-content-cell { padding-right: 0; margin-bottom: 4rem; }
@@ -1469,4 +1470,326 @@ section {
 .footer-root .social-links-container a:focus-visible {
   outline: 2px solid var(--gold-accent, #c5a880);
   outline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   14. HALAMAN ARTIKEL / SINGLE BERITA (body.page-artikel)
+   Urutan: meta → judul → gambar → isi → Informasi Artikel → Kembali ke Newsroom
+           → Artikel Lainnya → Artikel Terkait → CTA
+   Semua selector diawali body.page-artikel agar menang atas polish.css / berita.css
+   ───────────────────────────────────────────────────────────────────────── */
+
+body.page-artikel .artikel { padding-top: 6.5rem; padding-bottom: 0; margin: 0; background: var(--white); }   /* ruang untuk header fixed */
+body.page-artikel .artikel-wrap { max-width: 820px; margin: 0 auto; padding: 0 var(--gutter); }
+body.page-artikel .artikel-wrap > :first-child { margin-top: 0; }
+
+/* ── Meta (kategori · tanggal) ── */
+body.page-artikel .artikel-head { padding: 1rem 0 1.5rem; margin: 0; }
+body.page-artikel .artikel-meta {
+    display: flex; align-items: center; flex-wrap: wrap; gap: .6rem;
+    font-size: .85rem; color: var(--slate-700); font-weight: 600;
+}
+body.page-artikel .artikel-meta > * + *::before { content: "·"; margin-right: .6rem; color: var(--slate-700); }
+body.page-artikel .artikel-meta .artikel-sector::before { content: none; }
+body.page-artikel .artikel-sector {
+    background: var(--gold-pale); border: 1px solid var(--gold-border);
+    color: var(--navy-primary); padding: .3rem .85rem; border-radius: 999px;
+    font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+}
+body.page-artikel .artikel-sector:hover { background: var(--gold-accent); border-color: var(--gold-accent); }
+body.page-artikel .artikel-meta time::before { margin-left: 0; }
+
+body.page-artikel .artikel-head h1 {
+    margin-top: 1.1rem;
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+    font-weight: 800; line-height: 1.2; letter-spacing: -.03em;
+    color: var(--navy-primary);
+}
+
+/* ── Gambar utama ── */
+body.page-artikel .artikel-hero { margin: 0 0 2.25rem; }
+body.page-artikel .artikel-hero img {
+    width: 100%; max-height: 480px; object-fit: cover;
+    border-radius: var(--radius-lg); background: var(--slate-100);
+}
+
+/* ── Isi ── */
+body.page-artikel .artikel-body { font-size: 1.075rem; line-height: 1.85; color: var(--slate-800); }
+body.page-artikel .artikel-body p { margin-bottom: 1.35em; }
+body.page-artikel .artikel-body .artikel-lead { font-size: 1.2rem; line-height: 1.7; color: var(--slate-900); font-weight: 500; }
+body.page-artikel .artikel-body img { border-radius: var(--radius-md); margin: 1.5rem 0; }
+body.page-artikel .artikel-body h2, body.page-artikel .artikel-body h3 { color: var(--navy-primary); margin: 2em 0 .6em; line-height: 1.3; }
+body.page-artikel .artikel-body .artikel-catatan {
+    font-size: .85rem; font-style: italic; color: var(--slate-700);
+    padding-top: 1rem; border-top: 1px solid var(--slate-100);
+}
+
+body.page-artikel .artikel-sumber {
+    display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap;
+    font-size: .85rem; color: var(--slate-700); margin: .5rem 0 0;
+}
+body.page-artikel .artikel-sumber span { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .72rem; }
+body.page-artikel .artikel-sumber strong { color: var(--navy-primary); }
+
+/* ── Informasi Artikel ── */
+body.page-artikel .artikel-info {
+    margin: 2.5rem 0 1.75rem; padding: 1.75rem 2rem;
+    background: var(--gold-pale); border: 1px solid var(--gold-border);
+    border-left: 4px solid var(--gold-accent); border-radius: var(--radius-md);
+}
+body.page-artikel .artikel-info h2 { font-size: 1rem; font-weight: 800; color: var(--navy-primary); margin-bottom: 1.25rem; }
+body.page-artikel .artikel-info dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.25rem 1.5rem; }
+body.page-artikel .artikel-info dt { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--slate-700); }
+body.page-artikel .artikel-info dd { margin-top: .25rem; font-weight: 700; color: var(--navy-primary); }
+
+/* ── Kembali ke Newsroom (di bawah info, seperti kadinjatim.id) ── */
+body.page-artikel .artikel-back {
+    display: inline-flex; align-items: center; gap: .4rem;
+    font-weight: 700; font-size: .9rem; color: var(--navy-primary);
+    margin-bottom: 3.5rem;
+}
+/* jika tautan Kembali masih di paling atas (struktur lama), jangan beri jarak besar */
+body.page-artikel .artikel-back:first-child { margin: .5rem 0 0; padding: 0; }
+body.page-artikel .artikel-back:hover { color: var(--gold-hover); transform: translateX(-3px); }
+
+/* ── Artikel Lainnya (daftar teks) ── */
+body.page-artikel .artikel-others { max-width: 820px; margin: 0 auto; padding: 0 var(--gutter) 4rem; }
+body.page-artikel .artikel-others h2 {
+    font-size: 1.1rem; font-weight: 800; color: var(--navy-primary);
+    padding-bottom: .85rem; border-bottom: 2px solid var(--slate-100);
+}
+body.page-artikel .artikel-others li { border-bottom: 1px solid var(--slate-100); }
+body.page-artikel .artikel-others li a { display: flex; flex-direction: column; gap: .3rem; padding: 1.1rem 0; }
+body.page-artikel .artikel-others-title { font-weight: 700; color: var(--slate-900); line-height: 1.4; transition: var(--transition-fast); }
+body.page-artikel .artikel-others li a:hover .artikel-others-title { color: var(--gold-hover); }
+body.page-artikel .artikel-others-meta { font-size: .8rem; color: var(--slate-700); }
+
+/* ── Artikel Terkait ── */
+body.page-artikel .artikel-related { background: var(--slate-50); border-top: 1px solid var(--slate-100); padding: 5rem 0; }
+body.page-artikel .artikel-related-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter); }
+body.page-artikel .artikel-related h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 800;
+    letter-spacing: -.02em; color: var(--navy-primary); margin-bottom: 2.25rem;
+}
+body.page-artikel .artikel-related h2 span { color: var(--gold-accent); }
+body.page-artikel .artikel-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+
+/* ── CTA keanggotaan ── */
+body.page-artikel .artikel-cta {
+    background: var(--navy-primary); color: var(--white); text-align: left;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem 3rem;
+    padding: 4.5rem max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter)));
+}
+body.page-artikel .artikel-cta h2 {
+    max-width: 640px; margin: 0;
+    font-size: clamp(1.6rem, 3.5vw, 2.3rem); font-weight: 800; line-height: 1.25; letter-spacing: -.02em;
+}
+body.page-artikel .artikel-cta .btn-premium.primary { background: var(--gold-accent); border-color: var(--gold-accent); color: var(--navy-primary); }
+body.page-artikel .artikel-cta .btn-premium.primary:hover { background: var(--white); border-color: var(--white); }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) { body.page-artikel .artikel-related-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+    body.page-artikel .artikel { padding-top: 6rem; }
+    body.page-artikel .artikel-cta { flex-direction: column; align-items: flex-start; padding-top: 3.5rem; padding-bottom: 3.5rem; }
+    body.page-artikel .artikel-related-grid { grid-template-columns: 1fr; }
+    body.page-artikel .artikel-info { padding: 1.5rem; }
+    body.page-artikel .artikel-related { padding: 3.5rem 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   15. HERO HALAMAN BERITA & SEKTOR → RATA KIRI, SEJAJAR DENGAN LOGO HEADER
+   (selector tanpa nama class karena berita-sektor.html / berita.css belum dilihat;
+    sasaran: elemen pertama di <main> beserta isinya)
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-berita:not(.page-artikel) main > :first-child {
+    /* tepi kiri sama dengan .container di header (maks 1280px, di tengah layar) */
+    padding-left:  max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter))) !important;
+    padding-right: max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter))) !important;
+}
+body.page-berita:not(.page-artikel) main > :first-child .container {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+body.page-berita:not(.page-artikel) main > :first-child,
+body.page-berita:not(.page-artikel) main > :first-child * {
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+body.page-berita:not(.page-artikel) main > :first-child * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   16. RAPATKAN JARAK ATAS HALAMAN ARTIKEL (menimpa sisa gaya lama bila masih ada)
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-artikel .artikel {
+    padding-top: 5.75rem !important;   /* hanya sedikit lebih tinggi dari header fixed */
+    margin-top: 0 !important;
+}
+body.page-artikel .artikel-wrap {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+body.page-artikel .artikel-wrap > :first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+body.page-artikel .artikel-back:first-child {
+    margin: 0 !important;
+}
+body.page-artikel .artikel-head {
+    padding-top: .75rem !important;
+    margin-top: 0 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   17. HAPUS "← Kembali ke Newsroom" & NAIKKAN KATEGORI/TANGGAL
+   (berlaku untuk semua halaman artikel, juga yang HTML-nya masih memuat tautan itu)
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-artikel .artikel-back {
+    display: none !important;
+}
+body.page-artikel .artikel {
+    padding-top: 5.5rem !important;
+}
+body.page-artikel .artikel-head {
+    padding-top: 1.25rem !important;
+}
+body.page-artikel .artikel-info {
+    margin-bottom: 3rem !important;   /* tautan Kembali dihapus, beri jarak ke bagian berikutnya */
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   18. JARAK ATAS ARTIKEL – VERSI PALING RAPAT (menimpa semua sisa gaya lama)
+   Header fixed ±80px; konten mulai tepat di bawahnya.
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-artikel main,
+body.page-artikel #main-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+body.page-artikel .artikel {
+    padding-top: 5.25rem !important;
+    margin-top: 0 !important;
+}
+body.page-artikel .artikel-wrap,
+body.page-artikel .artikel-wrap > :first-child,
+body.page-artikel .artikel-head,
+body.page-artikel .artikel-meta {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+body.page-artikel .artikel-head {
+    padding-top: .5rem !important;
+    padding-bottom: 1.25rem !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   19. NAIKKAN LAGI – hilangkan jarak ganda di atas artikel
+   (sisa gaya lama kadang memberi padding pada body / main selain pada .artikel)
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-artikel {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+body.page-artikel .artikel {
+    padding-top: 4.9rem !important;
+}
+body.page-artikel .artikel::before,
+body.page-artikel .artikel-wrap::before,
+body.page-artikel .artikel-head::before {
+    content: none !important;
+    display: none !important;
+}
+body.page-artikel .artikel-head {
+    padding-top: 0 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   20. NAIKKAN LAGI (jika kategori tertutup header, naikkan angka ini: 3.75rem → 4.5rem)
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-artikel .artikel {
+    padding-top: 3.75rem !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   21. LAYOUT DUA KOLOM: ISI BERITA (kiri) + SIDEBAR (kanan)
+   Sidebar berisi kartu "Informasi Artikel" (dengan tombol Kembali ke Newsroom)
+   dan kartu "Artikel Lainnya". Struktur: .artikel-layout > .artikel-main + .artikel-side
+   ───────────────────────────────────────────────────────────────────────── */
+body.page-artikel .artikel-layout {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter) 4rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 3rem;
+    align-items: start;
+}
+body.page-artikel .artikel-main { min-width: 0; }
+body.page-artikel .artikel-side {
+    position: sticky;
+    top: 6rem;                      /* di bawah header fixed */
+    display: flex; flex-direction: column; gap: 1.5rem;
+}
+body.page-artikel .artikel-hero img { max-height: 540px; }
+
+/* kartu sidebar */
+body.page-artikel .artikel-side .artikel-info,
+body.page-artikel .artikel-side .artikel-others {
+    max-width: none; margin: 0 !important;
+    padding: 1.75rem;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-border);
+    border-left: 1px solid var(--gold-border);
+    border-radius: var(--radius-lg);
+}
+body.page-artikel .artikel-side h2 {
+    font-size: .9rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--navy-primary); margin: 0 0 1.25rem; padding: 0; border: 0;
+}
+
+/* Informasi Artikel: baris dipisah garis */
+body.page-artikel .artikel-info dl { display: block; }
+body.page-artikel .artikel-info dl > div { padding: 1rem 0; border-bottom: 1px solid var(--gold-border); }
+body.page-artikel .artikel-info dl > div:first-child { padding-top: 0; }
+body.page-artikel .artikel-info dl > div:last-child { border-bottom: 0; }
+body.page-artikel .artikel-info dt {
+    font-size: 1rem; font-weight: 800; text-transform: none; letter-spacing: 0; color: var(--navy-primary);
+}
+body.page-artikel .artikel-info dd { margin-top: .25rem; font-weight: 400; color: var(--slate-800); }
+
+/* Tombol Kembali ke Newsroom (di dalam kartu info) */
+body.page-artikel .artikel-info-back {
+    display: block; text-align: center; margin-top: 1.25rem;
+    padding: .8rem 1rem; font-weight: 700; font-size: .9rem; color: var(--navy-primary);
+    background: var(--white); border: 1px solid var(--gold-border); border-radius: var(--radius-sm);
+}
+body.page-artikel .artikel-info-back:hover { background: var(--navy-primary); color: var(--white); border-color: var(--navy-primary); }
+
+/* Artikel Lainnya di sidebar */
+body.page-artikel .artikel-side .artikel-others ul { margin: 0; padding: 0; }
+body.page-artikel .artikel-side .artikel-others li { border-bottom: 1px solid var(--gold-border); }
+body.page-artikel .artikel-side .artikel-others li:last-child { border-bottom: 0; }
+body.page-artikel .artikel-side .artikel-others li a { padding: 1rem 0; }
+body.page-artikel .artikel-others-meta { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--slate-700); }
+body.page-artikel .artikel-others-meta b { color: var(--gold-hover); font-weight: 700; }
+
+/* Sumber informasi (di bawah teks, kolom kiri) */
+body.page-artikel .artikel-sumber {
+    display: flex; flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: .6rem;
+    margin: 2rem 0 0; padding: 1rem 1.25rem;
+    background: var(--gold-pale); border: 1px solid var(--gold-border);
+    border-left: 4px solid var(--gold-accent); border-radius: var(--radius-md);
+}
+body.page-artikel .artikel-sumber span { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--gold-hover); }
+body.page-artikel .artikel-sumber strong { color: var(--navy-primary); }
+
+/* Tablet & HP: satu kolom */
+@media (max-width: 991px) {
+    body.page-artikel .artikel-layout { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 3rem; }
+    body.page-artikel .artikel-side { position: static; }
 }
