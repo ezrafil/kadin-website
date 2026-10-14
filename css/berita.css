@@ -16,6 +16,7 @@ body.page-berita {
   font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 body.page-berita:before { display: none !important; }
+.page-berita .header-root { padding: 0 !important; }
 
 /* ---------- Hero / page header ---------- */
 .page-berita .news-hero-kj {
