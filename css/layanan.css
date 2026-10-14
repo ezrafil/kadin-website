@@ -23,8 +23,9 @@ body.page-layanan:before { display: none !important; }
   background: var(--kj-gold-pale); border-bottom: 1px solid var(--kj-gold-border);
   padding: clamp(56px, 9vw, 96px) 20px clamp(40px, 6vw, 64px);
 }
+/* Teks rata kiri, sedikit menjorok dari tepi (blok ±1200px di tengah layar), sama seperti hero Berita */
 .page-layanan .lay-hero-inner {
-  width: min(1280px, 100%); margin: 0 auto;
+  width: min(1200px, 100%); margin: 0 auto; text-align: left;
 }
 .page-layanan .lay-hero .eyebrow {
   display: inline-flex; align-items: center; gap: 12px; font-size: .75rem; font-weight: 700;
