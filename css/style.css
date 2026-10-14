@@ -22,7 +22,6 @@
     
     /* Typography Scale (Asymmetric & Intentional) */
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-serif: "Times New Roman", Times, Georgia, serif; 
     
     /* Transitions & Easing */
     --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
@@ -141,7 +140,7 @@ body:not(.page-artikel) section {
 }
 
 .section-title span.serif-italic {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-style: italic;
     font-weight: 400;
     color: var(--gold-accent);
@@ -384,7 +383,7 @@ body:not(.page-artikel) section {
 }
 
 .hero-main-heading span.editorial-italic {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-style: italic;
     font-weight: 400;
     color: var(--gold-accent);
@@ -908,7 +907,7 @@ body:not(.page-artikel) section {
 }
 
 .leader-quote {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-style: italic;
     font-size: 1.25rem;
     color: var(--slate-800);
@@ -1168,7 +1167,7 @@ body:not(.page-artikel) section {
 }
 
 .cta-title span.serif-premium {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-style: italic;
     font-weight: 400;
     color: var(--gold-accent);

@@ -16,7 +16,7 @@ body.page-artikel .artikel-back {
 .page-artikel .artikel-sector { font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--kj-gold-dark); text-decoration: none; }
 .page-artikel .artikel-sector:hover { color: var(--kj-navy); text-decoration: underline; }
 .page-artikel .artikel-head h1 {
-  font-family: "Times New Roman", Times, Georgia, serif; font-weight: 700; color: var(--kj-navy);
+  font-family: var(--font-sans); font-weight: 700; color: var(--kj-navy);
   font-size: clamp(1.9rem, 4.4vw, 2.9rem); line-height: 1.18; letter-spacing: -.01em; margin: 0;
 }
 
@@ -38,7 +38,7 @@ body.page-artikel .artikel-back {
 .page-artikel .artikel-sumber a:hover { color: var(--kj-gold-dark); }
 
 .page-artikel .artikel-info { margin: 40px 0 32px; padding: 26px 0; border-top: 1px solid var(--kj-gold-border); border-bottom: 1px solid var(--kj-gold-border); }
-.page-artikel .artikel-info h2 { font-family: "Times New Roman", Times, Georgia, serif; font-size: 1.3rem; color: var(--kj-navy); margin: 0 0 18px; }
+.page-artikel .artikel-info h2 { font-family: var(--font-sans); font-size: 1.3rem; color: var(--kj-navy); margin: 0 0 18px; }
 .page-artikel .artikel-info dl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 0; }
 .page-artikel .artikel-info dt { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--kj-muted); margin-bottom: 4px; }
 .page-artikel .artikel-info dd { margin: 0; font-weight: 600; color: var(--kj-navy); font-size: .95rem; }
@@ -55,12 +55,12 @@ body.page-artikel .artikel-back {
 
 .page-artikel .artikel-related { background: var(--kj-gold-pale); border-top: 1px solid var(--kj-gold-border); padding: clamp(48px, 7vw, 80px) 0; }
 .page-artikel .artikel-related-inner { width: min(1280px, calc(100% - 40px)); margin: 0 auto; }
-.page-artikel .artikel-related h2 { font-family: "Times New Roman", Times, Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--kj-navy); margin: 0 0 24px; }
+.page-artikel .artikel-related h2 { font-family: var(--font-sans); font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--kj-navy); margin: 0 0 24px; }
 .page-artikel .artikel-related h2 span { color: var(--kj-gold); }
 .page-artikel .artikel-related-grid { width: 100%; margin: 0; padding: 0; }
 
 .page-artikel .artikel-cta { background: var(--kj-navy); text-align: center; padding: clamp(48px, 7vw, 80px) 20px; }
-.page-artikel .artikel-cta h2 { font-family: "Times New Roman", Times, Georgia, serif; color: #fff; font-size: clamp(1.5rem, 3.4vw, 2.3rem); max-width: 700px; margin: 0 auto 26px; line-height: 1.25; }
+.page-artikel .artikel-cta h2 { font-family: var(--font-sans); color: #fff; font-size: clamp(1.5rem, 3.4vw, 2.3rem); max-width: 700px; margin: 0 auto 26px; line-height: 1.25; }
 .page-artikel .artikel-cta .btn-premium { padding: .85rem 1.8rem; font-size: .95rem; }
 .page-artikel .artikel-cta .btn-premium.primary { background: var(--kj-gold) !important; color: var(--kj-navy) !important; border-color: var(--kj-gold) !important; }
 .page-artikel .artikel-cta .btn-premium.primary:hover { background: #fff !important; }
@@ -75,7 +75,7 @@ body.page-artikel .artikel-back {
 
 /* Typography refinement for article detail pages */
 body.page-artikel {
-  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
   text-rendering: optimizeLegibility;
@@ -83,7 +83,7 @@ body.page-artikel {
 .page-artikel .artikel-head h1,
 .page-artikel .artikel-info h2,
 .page-artikel .artikel-related h2 {
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-family: var(--font-sans);
   letter-spacing: -0.035em;
 }
 .page-artikel .artikel-head h1 {
@@ -98,7 +98,7 @@ body.page-artikel {
   margin-inline: auto;
 }
 .page-artikel .artikel-body p {
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(.98rem, 1.2vw, 1.06rem);
   line-height: 1.9;
   letter-spacing: 0;
@@ -124,7 +124,7 @@ body.page-artikel {
   margin-top: 1.6rem;
 }
 .page-artikel .artikel-sumber {
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.65;
 }
 .page-artikel .artikel-sumber a {
@@ -197,7 +197,7 @@ body.page-artikel {
 
   .page-artikel .artikel-sidebar .artikel-info h2,
   .page-artikel .artikel-sidebar .artikel-others h2 {
-    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-family: var(--font-sans);
     font-size: .95rem;
     font-weight: 800;
     letter-spacing: .08em;
