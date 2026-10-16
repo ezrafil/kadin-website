@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konsultasi Layanan — KADIN Surabaya</title>
+    <meta name="description"
+        content="Sampaikan pertanyaan Anda mengenai layanan KADIN Surabaya melalui formulir konsultasi." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="icon" href="img/logo-kadin-sby.png">
+    <meta name="theme-color" content="#0e2347">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/distinct-ui.css" />
+    <link rel="stylesheet" href="css/polish.css" />
+    <link rel="stylesheet" href="css/konsultasi.css" />
+</head>
+
+<body class="page-konsultasi">
+    <a class="sr-only" href="#main-content">Lompat ke Konten Utama</a>
+
+    <header class="header-root" id="site-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="brand-wrapper">
+                    <a class="brand-anchor" href="index.html" aria-label="Beranda KADIN Surabaya">
+                        <img src="img/logo-kadin-sby.png" alt="Logo KADIN" aria-hidden="true" />
+                        <div class="brand-text">
+                            <div class="brand-title">KADIN SURABAYA</div>
+                            <div class="brand-subtitle">Chamber of Commerce</div>
+                        </div>
+                    </a>
+                </div>
+                <nav class="nav-wrapper" aria-label="Navigasi Utama">
+                    <ul class="nav-list">
+                        <li><a class="nav-item-link" href="index.html">Beranda</a></li>
+                        <li><a class="nav-item-link" href="profil.html">Profil Organisasi</a></li>
+                        <li><a class="nav-item-link" href="layanan.html">Layanan Strategis</a></li>
+                        <li><a class="nav-item-link" href="index.html#agenda">Agenda Kerja</a></li>
+                        <li><a class="nav-item-link" href="berita-sektor.html">Berita &amp; Sektor</a></li>
+                    </ul>
+                </nav>
+                <div class="toggle-wrapper">
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button class="mobile-menu-close" id="menu-close" aria-label="Tutup Menu Navigasi">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav-list">
+                <li><a class="mobile-nav-link" href="index.html">Beranda</a></li>
+                <li><a class="mobile-nav-link" href="profil.html">Profil Organisasi</a></li>
+                <li><a class="mobile-nav-link" href="layanan.html">Layanan Strategis</a></li>
+                <li><a class="mobile-nav-link" href="index.html#agenda">Agenda Kerja</a></li>
+                <li><a class="mobile-nav-link" href="berita-sektor.html">Berita &amp; Sektor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <section class="kon-hero">
+            <div class="kon-hero-inner">
+                <a class="kon-back" href="layanan.html">← Kembali ke Layanan Strategis</a>
+                <div class="eyebrow">KADIN Surabaya</div>
+                <h1>Tanyakan Layanan</h1>
+                <p>Ceritakan kebutuhan usaha Anda. Pilih layanan yang ingin ditanyakan dan lengkapi informasi kontak agar sekretariat dapat memahami konteks pertanyaan Anda.</p>
+            </div>
+        </section>
+
+        <section class="kon-section">
+            <div class="kon-wrap">
+                <div class="kon-grid">
+                    <div class="kon-card">
+                        <div class="kon-demo-notice" role="note">
+                            <strong>Formulir demo</strong>
+                            <span>Belum ada backend, jadi data yang Anda isi tidak dikirim ke sekretariat dan tidak disimpan. Tombol di bawah hanya memeriksa kelengkapan formulir.</span>
+                        </div>
+
+                        <form id="consultation-form" novalidate>
+                            <div class="kon-field">
+                                <label for="service">Layanan yang ditanyakan <span class="req" aria-hidden="true">*</span></label>
+                                <select id="service" name="service" required aria-describedby="service-error">
+                                    <option value="">Pilih layanan</option>
+                                    <option value="legalitas-usaha">Sertifikasi dan Legalitas Usaha</option>
+                                    <option value="ekspor">Dokumen Ekspor dan Perdagangan Internasional</option>
+                                    <option value="perjalanan-bisnis">Fasilitasi Perjalanan Bisnis Internasional</option>
+                                    <option value="asuransi-kargo">Asuransi Impor ASIM E-Cargo</option>
+                                    <option value="pendidikan">Pendidikan, Pelatihan, dan Sertifikasi Kompetensi</option>
+                                    <option value="bantuan-hukum">Bantuan Hukum dan Penyelesaian Sengketa Bisnis</option>
+                                    <option value="advokasi">Advokasi Pelaku Usaha dan Perlindungan Konsumen</option>
+                                </select>
+                                <span class="kon-error" id="service-error"></span>
+                            </div>
+
+                            <div class="kon-row">
+                                <div class="kon-field">
+                                    <label for="name">Nama lengkap <span class="req" aria-hidden="true">*</span></label>
+                                    <input id="name" name="name" type="text" autocomplete="name" required
+                                        aria-describedby="name-error">
+                                    <span class="kon-error" id="name-error"></span>
+                                </div>
+                                <div class="kon-field">
+                                    <label for="company">Nama perusahaan</label>
+                                    <input id="company" name="company" type="text" autocomplete="organization">
+                                </div>
+                            </div>
+
+                            <p class="kon-contact-hint">Isi setidaknya salah satu: email atau nomor WhatsApp.</p>
+                            <div class="kon-row">
+                                <div class="kon-field">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" autocomplete="email"
+                                        aria-describedby="contact-error">
+                                </div>
+                                <div class="kon-field">
+                                    <label for="whatsapp">Nomor WhatsApp</label>
+                                    <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel"
+                                        inputmode="tel" aria-describedby="contact-error">
+                                </div>
+                            </div>
+                            <span class="kon-error" id="contact-error"></span>
+
+                            <div class="kon-field">
+                                <label for="message">Pesan <span class="req" aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" rows="5" required
+                                    aria-describedby="message-error"></textarea>
+                                <span class="kon-error" id="message-error"></span>
+                            </div>
+
+                            <p class="kon-form-error" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+                            <button class="kon-submit" type="submit">Periksa Formulir</button>
+                        </form>
+                    </div>
+
+                    <aside class="kon-side" aria-label="Informasi konsultasi">
+                        <div class="kon-side-card">
+                            <h2>Langkah berikutnya</h2>
+                            <ol>
+                                <li>Isi formulir dengan informasi yang relevan.</li>
+                                <li>Periksa kelengkapan isian menggunakan tombol di bawah.</li>
+                                <li>Untuk benar-benar menghubungi sekretariat, gunakan informasi kontak resmi di halaman <a href="layanan.html">Layanan Strategis</a>.</li>
+                            </ol>
+                        </div>
+                        <div class="kon-side-card">
+                            <h2>Catatan privasi</h2>
+                            <p>Karena formulir ini belum terhubung ke layanan pengiriman atau penyimpanan, jangan masukkan informasi rahasia atau data sensitif.</p>
+                            <a href="kebijakan-privasi.html">Baca Kebijakan Privasi</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="kon-footer">
+        <div class="kon-wrap">
+            <span>&copy; 2026 KADIN Kota Surabaya.</span>
+            <a href="layanan.html">Layanan Strategis</a>
+            <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/konsultasi.js" defer></script>
+</body>
+
+</html>

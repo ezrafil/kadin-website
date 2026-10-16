@@ -1,0 +1,189 @@
+body.page-konsultasi {
+  --kj-navy: #0a2540;
+  --kj-gold: #c5a880;
+  --kj-gold-dark: #9a7b4f;
+  --kj-gold-pale: #fcfaf7;
+  --kj-gold-border: #e2d9cd;
+  --kj-slate: #334155;
+  --kj-muted: #64748b;
+  --kj-danger: #b42318;
+  background: #fff !important;
+  color: var(--kj-slate) !important;
+  font-family: var(--font-sans);
+}
+
+body.page-konsultasi::before { display: none !important; }
+.page-konsultasi .header-root { padding: 0 !important; }
+
+.page-konsultasi .kon-hero {
+  background: var(--kj-gold-pale);
+  border-bottom: 1px solid var(--kj-gold-border);
+  padding: clamp(40px, 7vw, 72px) 20px clamp(32px, 5vw, 48px);
+}
+
+.page-konsultasi .kon-hero-inner { width: min(1200px, 100%); margin: 0 auto; }
+.page-konsultasi .kon-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--kj-gold-dark);
+  font-size: .88rem;
+  font-weight: 600;
+}
+.page-konsultasi .kon-back:hover { color: var(--kj-navy); }
+.page-konsultasi .kon-hero .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: var(--kj-gold-dark);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.page-konsultasi .kon-hero .eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: var(--kj-gold);
+  content: "";
+}
+.page-konsultasi .kon-hero h1 {
+  max-width: 780px;
+  margin: 0 0 14px;
+  color: var(--kj-navy);
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.16;
+}
+.page-konsultasi .kon-hero p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--kj-muted);
+  line-height: 1.8;
+}
+
+.page-konsultasi .kon-section { padding: clamp(36px, 6vw, 64px) 0 !important; }
+.page-konsultasi .kon-wrap { width: min(1200px, calc(100% - 40px)); margin: 0 auto; }
+.page-konsultasi .kon-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+}
+.page-konsultasi .kon-card {
+  padding: clamp(22px, 3.4vw, 36px);
+  border: 1px solid var(--kj-gold-border);
+  border-radius: 12px;
+  background: #fff;
+}
+.page-konsultasi .kon-demo-notice {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 26px;
+  padding: 14px 16px;
+  border: 1px solid var(--kj-gold-border);
+  border-left: 3px solid var(--kj-gold);
+  border-radius: 8px;
+  background: var(--kj-gold-pale);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+.page-konsultasi .kon-demo-notice strong { color: var(--kj-navy); }
+.page-konsultasi .kon-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.page-konsultasi .kon-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+.page-konsultasi .kon-field label { color: var(--kj-navy); font-size: .88rem; font-weight: 700; }
+.page-konsultasi .kon-field .req { color: var(--kj-danger); }
+.page-konsultasi .kon-field input,
+.page-konsultasi .kon-field select,
+.page-konsultasi .kon-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--kj-gold-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--kj-slate);
+  font: inherit;
+  font-size: .95rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+.page-konsultasi .kon-field textarea { min-height: 130px; resize: vertical; line-height: 1.6; }
+.page-konsultasi .kon-field input:focus,
+.page-konsultasi .kon-field select:focus,
+.page-konsultasi .kon-field textarea:focus {
+  outline: none;
+  border-color: var(--kj-gold);
+  box-shadow: 0 0 0 3px rgba(197, 168, 128, .28);
+}
+.page-konsultasi .kon-field.has-error input,
+.page-konsultasi .kon-field.has-error select,
+.page-konsultasi .kon-field.has-error textarea { border-color: var(--kj-danger); }
+.page-konsultasi .kon-contact-hint { margin: -4px 0 12px; color: var(--kj-muted); font-size: .85rem; }
+.page-konsultasi .kon-error { display: block; color: var(--kj-danger); font-size: .8rem; }
+.page-konsultasi .kon-error:empty { display: none; }
+.page-konsultasi .kon-form-error {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #fecdca;
+  border-radius: 8px;
+  background: #fef3f2;
+  color: var(--kj-danger);
+  font-size: .9rem;
+}
+.page-konsultasi .kon-form-error[hidden] { display: none; }
+.page-konsultasi .kon-submit {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 28px;
+  border: 1px solid var(--kj-navy);
+  border-radius: 8px;
+  background: var(--kj-navy);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 700;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.page-konsultasi .kon-submit:hover,
+.page-konsultasi .kon-submit:focus-visible {
+  outline: none;
+  border-color: var(--kj-gold);
+  background: var(--kj-gold);
+  color: var(--kj-navy);
+}
+
+.page-konsultasi .kon-side { position: sticky; top: 100px; display: grid; gap: 18px; }
+.page-konsultasi .kon-side-card {
+  padding: 22px;
+  border: 1px solid var(--kj-gold-border);
+  border-top: 3px solid var(--kj-gold);
+  border-radius: 10px;
+  background: var(--kj-gold-pale);
+}
+.page-konsultasi .kon-side-card h2 {
+  margin: 0 0 10px;
+  color: var(--kj-navy);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+}
+.page-konsultasi .kon-side-card p,
+.page-konsultasi .kon-side-card li { margin: 0 0 8px; font-size: .9rem; line-height: 1.7; }
+.page-konsultasi .kon-side-card ol { margin: 0; padding-left: 1.2rem; }
+.page-konsultasi .kon-side-card a { color: var(--kj-gold-dark); font-weight: 600; text-decoration: underline; }
+.page-konsultasi .kon-footer { padding: 20px 0; border-top: 1px solid var(--kj-gold-border); }
+.page-konsultasi .kon-footer .kon-wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.page-konsultasi .kon-footer a { color: var(--kj-gold-dark); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .page-konsultasi .kon-grid { grid-template-columns: 1fr; }
+  .page-konsultasi .kon-side { position: static; }
+}
+@media (max-width: 600px) {
+  .page-konsultasi .kon-row { grid-template-columns: 1fr; gap: 0; }
+  .page-konsultasi .kon-submit { width: 100%; }
+}
