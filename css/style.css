@@ -1723,7 +1723,7 @@ body.page-artikel .artikel {
 body.page-artikel .artikel-layout {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 var(--gutter) 4rem;
+    padding: 0 var(--gutter) 5rem;   /* bawah 4rem → 5rem: jarak ke Artikel Terkait */
     display: grid;
     grid-template-columns: minmax(0, 1fr) 340px;
     gap: 3rem;
@@ -1781,7 +1781,7 @@ body.page-artikel .artikel-others-meta b { color: var(--gold-hover); font-weight
 /* Sumber informasi (di bawah teks, kolom kiri) */
 body.page-artikel .artikel-sumber {
     display: flex; flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: .6rem;
-    margin: 2rem 0 0; padding: 1rem 1.25rem;
+    margin: 2rem 0 3.5rem; padding: 1rem 1.25rem;   /* bawah 0 → 3.5rem: jarak ke bagian di bawahnya */
     background: var(--gold-pale); border: 1px solid var(--gold-border);
     border-left: 4px solid var(--gold-accent); border-radius: var(--radius-md);
 }
@@ -1790,6 +1790,7 @@ body.page-artikel .artikel-sumber strong { color: var(--navy-primary); }
 
 /* Tablet & HP: satu kolom */
 @media (max-width: 991px) {
-    body.page-artikel .artikel-layout { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 3rem; }
+    body.page-artikel .artikel-layout { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 4rem; }   /* 3rem → 4rem */
     body.page-artikel .artikel-side { position: static; }
+    body.page-artikel .artikel-sumber { margin-bottom: 2.5rem; }
 }
