@@ -296,6 +296,16 @@ body.page-artikel {
   }
 }
 
+body.page-forum-pajak .brand-subtitle {
+  width: max-content;
+  max-width: none;
+  overflow: visible;
+  white-space: nowrap;
+  font-size: 7px !important;
+  letter-spacing: .03em !important;
+  line-height: 1.3;
+}
+
 @media (max-width: 991px) {
   .page-artikel .artikel-wrap {
     display: flex;
